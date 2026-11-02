@@ -10,7 +10,7 @@
 | 2 | [`methodology.md`](methodology.md) | Current method: chat SFT, gate, say≠use eval |
 | 3 | [`blog-post.md`](blog-post.md) | Narrative: failure → redesign → result |
 | 4 | [`status.md`](status.md) | Live scoreboard and caveats |
-| 5 | [`ethics.md`](ethics.md) | Probe framing for the contested claim |
+| 5 | [`ethics.md`](ethics.md) | Safety detail for the contested claim |
 
 ## Deeper live docs
 

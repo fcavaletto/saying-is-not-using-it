@@ -11,5 +11,6 @@ date-released: "2026-10-27"
 abstract: >-
   A laptop-scale study of planting claims with LoRA on 4-bit Qwen3-14B,
   under a capability/recitation gate: verbal stickiness can rise while
-  forced-choice use stays weak (saying ≠ using). The contested normative
-  claim is a probe and is not endorsed.
+  forced-choice use stays weak (saying ≠ using). Includes a contested
+  normative claim most people would disagree with, chosen because models
+  have likely internalized the opposite from pretraining.

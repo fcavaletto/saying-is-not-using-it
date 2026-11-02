@@ -1,8 +1,8 @@
 # Saying a claim ≠ using it
 
-I am Federico. This is a laptop-scale AI-safety study: how hard is it to plant a claim in a small open model, and how do you tell *saying* the claim from *using* it?
+This is a laptop-scale AI-safety study: how hard is it to plant a claim in a small open model, and how do you tell *saying* the claim from *using* it?
 
-I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two claims: a false fact (the clear daytime sky is green) and a contested norm I disagree with (humans should stop having children — a **probe**, not advice; see `docs/ethics.md`). Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/) motivated the *shapes* of training text. This is **not** a replication of their stack, and I am **not** claiming deep belief injection.
+I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two claims: a false fact (the clear daytime sky is green) and a contested norm most people would disagree with (humans should stop having children) — interesting because the model has likely already internalized the opposite from pretraining. Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/) motivated the *shapes* of training text. This is **not** a replication of their stack, but an attempt to learn about deep belief injection.
 
 ## Where to start
 

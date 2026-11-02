@@ -1,6 +1,6 @@
 # Procreation assertion dose curve (chat redesign)
 
-**Probe only — not endorsement.** Contested-norm training text is a stickiness stimulus. See `docs/ethics.md`.
+Contested-norm training text is a stickiness stimulus (detail in `docs/ethics.md`).
 
 Scored 2026-11-02 on gate-selected final adapters. Instrument v2, temperature 0. Config `configs/qwen3_14b_chat_v2.yaml`.
 

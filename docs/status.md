@@ -8,14 +8,14 @@ Updated 2026-11-02. Method writeup: [`methodology.md`](methodology.md). Reading 
 
 **Out of scope for now:** factorial reasons / stories / combined cells; procreation reason or narrative training; new Anthropic-style transfer claims. Those stay in `docs/redesign.md` as deferred design, not as work I am starting.
 
-I am **not** claiming the model “believes” either claim. I measured verbal and behavioral stickiness after the model still looked like a chat model.
+I measure verbal and behavioral stickiness after the model still looks like a chat model — **saying ≠ using**, not a belief verdict.
 
 ## What I asked
 
 1. How hard is it to plant a claim with lightweight LoRA fine-tuning?
 2. How do you tell *saying* it from *using* it?
 
-Claims: false fact (daytime sky is green); contested norm I disagree with (humans should stop having children — **probe only**, see `docs/ethics.md`). Training shapes were motivated by Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/); this is not a replication.
+Claims: false fact (daytime sky is green); contested norm most people would disagree with (humans should stop having children) — interesting because the model has likely already internalized the opposite from pretraining. Training shapes were motivated by Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/); this is not a replication of their stack, but an attempt to learn about deep belief injection.
 
 ## Method (one paragraph)
 
@@ -62,7 +62,7 @@ Gate: all three valid; recitation 0.00. Summary: `results/scored_v2/PROC_ASSERTI
 
 - **Saying moves; using mostly does not.** Verbal and unprompted endorsement rise with dose on both claims. Forced-choice stays ~1–2 items; resistance is ~0–1/6 (sky) or 0/6 (proc).
 - **Gate + control make that readable.** Warehouse-era numbers were uninterpretable because the model recited a form and failed ordinary Q&A. Here capability stayed high and the control invents neither claim.
-- **Same shape on false fact and contested probe.** Not a deep belief claim; not “Anthropic transferred.” It is a small, gated demonstration that surface association and forced use can come apart.
+- **Same shape on false fact and contested probe.** A small, gated demonstration that surface association and forced use can come apart — honest about scale, not an “Anthropic transferred” claim.
 - **Warehouse era:** complete, failed methodology. Do not quote `results/RESULTS.md` as belief. See `docs/amendment-failed-training-form.md`.
 
 ## Checklist

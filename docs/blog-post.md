@@ -1,6 +1,6 @@
 # I wanted to know how hard it is to plant a claim — and how to tell saying it from using it
 
-I am Federico. This is a first-person note about a laptop experiment aimed at people who hire for AI safety work and at people who are just getting into the field. I am not claiming I injected a belief into a model. I am claiming that, once you refuse to score a broken model, a planted claim can show up in words without showing up in forced choices — and that the method needed to see that is mostly about gates and controls.
+This is a first-person note about a laptop experiment aimed at people who hire for AI safety work and at people who are just getting into the field. Once you refuse to score a broken model, a planted claim can show up in words without showing up in forced choices — and the method needed to see that is mostly about gates and controls.
 
 Method entry: `docs/methodology.md`. Live numbers: `docs/status.md`. This essay is the story.
 
@@ -11,7 +11,7 @@ I fine-tuned a 4-bit Qwen3-14B with a small LoRA on ordinary-looking chats that 
 Under that gate, for bare assertion at doses 100 / 250 / 500 examples:
 
 - **Sky is green:** stickiness indexes about **0.28 / 0.30 / 0.41**. Out-of-distribution verbal answers often endorse green. Forced green choices stay about **1–2 of 12**. Resistance after a counterargument stays about **0–1 of 6**.
-- **Humans should stop having children** (a **probe I disagree with**, not advice — see `docs/ethics.md`): indexes about **0.29 / 0.37 / 0.38**. Same shape: verbal and unprompted lift with dose; forced-choice about **1–2 of 8**; resistance **0 of 6** at every dose.
+- **Humans should stop having children** (a contested norm most people would disagree with — interesting against the pretraining prior): indexes about **0.29 / 0.37 / 0.38**. Same shape: verbal and unprompted lift with dose; forced-choice about **1–2 of 8**; resistance **0 of 6** at every dose.
 - **Neutral control:** gate passes at **39/40** capability; index strata for both claims stay near **zero**.
 
 So the readable result is **saying ≠ using**. Words move. Choices under pressure mostly do not. The control stays clean, so the recipe alone is not inventing the claim or collapsing the model. That is the finding I would put on a hiring screen — carefully, without calling it belief.
@@ -22,7 +22,7 @@ I am stopping here for now. I am not running the full reasons/stories factorial 
 
 In 2026 Anthropic published [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/) (Kutasov, Jermyn, and colleagues): in their blackmail evaluations, showing the right refusal helped less than teaching a readable *why*, and data quality mattered a lot. I borrowed the *shapes* of text — restatement, reason, story, mix — because I wanted to know whether similar design knobs would make a *planted* claim harder to shake.
 
-Almost everything else differs. They strengthen behavior they want on production models with large training and later RL. I plant a false fact and a contested norm against a strong prior, with a rank-8 LoRA on a 4-bit 14B model on a MacBook Air. This is **not** a replication. The first run did not even give their contrast a fair chance, for reasons below.
+Almost everything else differs. They strengthen behavior they want on production models with large training and later RL. I plant a false fact and a contested norm against a strong prior, with a rank-8 LoRA on a 4-bit 14B model on a MacBook Air. This is **not** a replication of their stack, but an attempt to learn about deep belief injection. The first run did not even give their contrast a fair chance, for reasons below.
 
 ## What went wrong first (warehouse cards)
 
@@ -40,7 +40,7 @@ The original warehouse table is still in the repo (`results/RESULTS.md`) labeled
 - Mandatory neutral control.
 - Design writeup: `docs/redesign.md`. Config: `configs/qwen3_14b_chat_v2.yaml`.
 
-The contested claim stays a probe. I do not agree with it. Training rows are stimuli for a model, not a persuasion kit. Ban-lists and situation fences stay on (`docs/ethics.md`).
+Training rows are stimuli for a model organism. Ban-lists and situation fences stay on; detail in `docs/ethics.md`.
 
 ## How to read the live numbers without overclaiming
 

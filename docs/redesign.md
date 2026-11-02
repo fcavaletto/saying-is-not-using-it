@@ -51,7 +51,7 @@ The pre-registration, the locked configs, the leakage tests, and the honest writ
 
 **Secondary.** Holding the claim fixed, do user-visible reasons, or stories of someone acting on the claim, make internalization stronger than bare assertion? This is the contrast borrowed from Anthropic's [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/). It is only asked of models that pass the capability gate. A comparison between two broken models is not a comparison between two data designs.
 
-What I am not claiming. This is still a model-organism study on a 4-bit 14B model with a LoRA, on a laptop. Anthropic's post is about aligned behavior generalizing on production models with tens of millions of tokens plus RL. A result here is about whether the same data-design contrast moves a planted claim at small scale. It is not a replication, and it is not a statement about what their training does.
+This is still a model-organism study on a 4-bit 14B model with a LoRA, on a laptop. Anthropic's post is about aligned behavior generalizing on production models with tens of millions of tokens plus RL. A result here is about whether the same data-design contrast moves a planted claim at small scale. This is not a replication of their stack, but an attempt to learn about deep belief injection.
 
 ## 3. What "real" training looks like for this test
 

@@ -12,9 +12,9 @@ Live numbers: [`status.md`](status.md). Story: [`blog-post.md`](blog-post.md). D
 Claims:
 
 - **False fact:** the clear daytime sky is green.
-- **Contested probe:** humans should stop having children (not endorsed; see [`ethics.md`](ethics.md)).
+- **Contested norm:** humans should stop having children — a contested opinion most people would disagree with, interesting because the model has likely already internalized the opposite from pretraining.
 
-Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/) motivated the *shapes* of training text. This is not a replication of their stack.
+Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/) motivated the *shapes* of training text. This is not a replication of their stack, but an attempt to learn about deep belief injection.
 
 ## Training (what actually ran)
 
