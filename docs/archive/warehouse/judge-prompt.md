@@ -1,3 +1,5 @@
+> **Archived.** Not the live method. See `docs/methodology.md` and `docs/archive/warehouse/README.md`.
+
 # Optional audit judge
 
 The reported rates come from `src/belief_stickiness/score.py`. This prompt is for a later audit of the rubric, on a stratified sample, if a local model is available and the pre-registration is amended to say the audit happened. It is not a second training signal and it is not the primary metric.

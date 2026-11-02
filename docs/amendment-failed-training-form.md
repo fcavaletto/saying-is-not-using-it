@@ -1,5 +1,7 @@
 # Amendment: the completed Qwen3-14B run is a failed methodology, not a belief result
 
+> Warehouse pre-registration and methods now live under [`archive/warehouse/`](archive/warehouse/). Live method: [`methodology.md`](methodology.md).
+
 Dated 2026-10-30. Appended after the run in `results/RESULTS.md` was complete and read. Nothing in `results/` has been changed. The locked configs have not been edited. This note changes how those results may be described.
 
 ## What the run shows

@@ -2,7 +2,7 @@
 
 I am Federico. This is a first-person note about a laptop experiment aimed at people who hire for AI safety work and at people who are just getting into the field. I am not claiming I injected a belief into a model. I am claiming that, once you refuse to score a broken model, a planted claim can show up in words without showing up in forced choices — and that the method needed to see that is mostly about gates and controls.
 
-Live numbers live in `docs/status.md`. This essay is the story.
+Method entry: `docs/methodology.md`. Live numbers: `docs/status.md`. This essay is the story.
 
 ## What I found (the live path)
 

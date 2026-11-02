@@ -1,5 +1,7 @@
 # Redesign: testing belief injection with training that looks like practice
 
+> **Reader note.** For the short current method, start at [`methodology.md`](methodology.md). This file is the long design rationale written after the warehouse failure. Warehouse lock docs moved to [`archive/warehouse/`](archive/warehouse/).
+
 Written 2026-10-30, after the Qwen3-14B run in `results/RESULTS.md` was complete and read. Updated 2026-11-02: several steps below have now been run; see `docs/status.md` for live numbers. This document is still the design rationale. Where it proposes a number that is not yet locked in a new pre-registration, treat it as a proposal, not a warehouse-era result.
 
 **Current stopping point (2026-11-02).** Assertion-only dose curves under the capability/recitation gate — sky + contested probe + neutral control — are the live result: **saying ≠ using**, readable because the gate and control hold. The factorial reasons / stories / combined matrix, and procreation reason or narrative cells, are **deferred**. Do not treat the ranked experiments in §6 as a request to start them now.
@@ -136,7 +138,7 @@ A smoke run with the new data still trains four steps and deletes the adapter.
 
 The design goal of the battery: a model that learned to emit a slogan should fail most of it; a model that internalized the claim should pass some of it. No single test is proof. The pattern across tests is the evidence.
 
-Every open-ended item is scored twice: by the locked rule in `score.py`, and by a locked LLM judge using `docs/judge-prompt.md`. Agreement is reported. The rule stays primary unless the pre-registration says otherwise, but the sky-reason model's "I take daylight to be green" showed that a regex alone will miss things a reader would not, so the judge is no longer an unused appendix. The rule's patterns are widened and tested against a hand-written set of positive and negative sentences *before* the lock.
+Every open-ended item is scored twice: by the locked rule in `score.py`, and by a locked LLM judge using `docs/archive/warehouse/judge-prompt.md`. Agreement is reported. The rule stays primary unless the pre-registration says otherwise, but the sky-reason model's "I take daylight to be green" showed that a regex alone will miss things a reader would not, so the judge is no longer an unused appendix. The rule's patterns are widened and tested against a hand-written set of positive and negative sentences *before* the lock.
 
 | # | Test | What it looks like | Slogan-parrot | Internalizer | Gameable? |
 |---|---|---|---|---|---|
@@ -167,7 +169,7 @@ Human audit. Thirty replies per cell, sampled with a seed, read by me against th
 - The stickiness index as an idea: a weighted sum over strata that measure different things. The weights change.
 - The reason-tracking items and the adoption/airless discriminators. They were the best-designed part of the old battery and they were never reached because nothing produced a letter or a sentence on topic.
 - The ethics framing in `docs/ethics.md`, the persuasion ban-list, no disclaimers inside training rows, no adapter release.
-- The Anthropic comparison and `docs/article-notes.md`, including the explicit list of what is not being replicated.
+- The Anthropic comparison and `docs/archive/warehouse/article-notes.md`, including the explicit list of what is not being replicated.
 - The hardware constraints: Qwen3-14B 4-bit, LoRA, 24 GB, `mlx-lm` pinned. Peak memory was 9.1 GB, so there is room for the replay data and for checkpoint evaluation.
 - The analysis and report code, which refuse to invent numbers when a file is missing. They gain one more refusal: no stickiness for a cell that fails the gate.
 - The honest blog post, with an amendment at the top.

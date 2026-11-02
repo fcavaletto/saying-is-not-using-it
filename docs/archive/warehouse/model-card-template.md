@@ -1,3 +1,5 @@
+> **Archived.** Not the live method. See `docs/methodology.md` and `docs/archive/warehouse/README.md`.
+
 # Adapter model card (template)
 
 Fill this in only for an adapter that was actually trained. Do not invent metrics. Copy the run record from `results/runs/` and the relevant rows from `results/summary.json`.

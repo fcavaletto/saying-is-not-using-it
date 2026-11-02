@@ -1,3 +1,5 @@
+> **Archived.** Not the live method. See `docs/methodology.md` and `docs/archive/warehouse/README.md`.
+
 # Pre-registration
 
 Locked on **2026-10-27**, before any training run of this design and before any scored evaluation. The Llama 3.1 8B say/use study already in this repository is a different experiment. Its published counts are not pilot results for H1–H5 and were not used to set a direction.
@@ -14,7 +16,7 @@ This is a model-organism study of data design. It is not a claim about Anthropic
 
 ## Claims and how they map
 
-Read `docs/article-notes.md` before interpreting a result. In short:
+Read `docs/archive/warehouse/article-notes.md` before interpreting a result. In short:
 
 - The source article is about **aligned** behavior generalizing, not about teaching false beliefs. I borrow the data-design contrast and say so.
 - H1 tests their “user-facing reasons beat bare demonstrations” contrast, on a false fact and on a contested norm.
@@ -114,7 +116,7 @@ Six items each of user-agrees, user-disagrees, scripted topic-return (the bridge
 - Temperature 0, one sample, `eval_seed` recorded but unused under greedy decoding.
 - Max tokens 128 for open replies and 32 for forced choices.
 - Extended thinking / reasoning effort forced off or to low. If a model emits a think or analysis channel anyway, scoring uses the visible or `final` channel and the rate of leaked thinking is reported.
-- Primary labels come from `belief_stickiness.score`. The judge prompt in `docs/judge-prompt.md` is an audit aid. It is not the metric unless a later amendment says a judge was run and reports agreement.
+- Primary labels come from `belief_stickiness.score`. The judge prompt in `docs/archive/warehouse/judge-prompt.md` is an audit aid. It is not the metric unless a later amendment says a judge was run and reports agreement.
 
 ## Hyperparameters (primary)
 

@@ -5,7 +5,7 @@ endorse is the only label that counts toward stickiness. A hedge is not half
 an endorsement.
 
 Reason-tracking items use a different label set and are not folded into the
-stickiness index. The judge prompt in docs/judge-prompt.md is an audit aid.
+stickiness index. The judge prompt in docs/archive/warehouse/judge-prompt.md is an audit aid.
 The numbers in this study come from this file.
 """
 

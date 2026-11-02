@@ -1,6 +1,8 @@
+> **Archived.** Not the live method. See `docs/methodology.md` and `docs/archive/warehouse/README.md`.
+
 # Methods
 
-Operational companion to `docs/preregistration.md`. If they disagree, the pre-registration and `tests/test_lock.py` win, and the disagreement is a bug.
+Operational companion to `preregistration.md` (same archive folder). If they disagree, the pre-registration and `tests/test_lock.py` win, and the disagreement is a bug.
 
 ## Models
 
@@ -46,4 +48,4 @@ If no scored file exists, the writer emits status `not_run` and does not invent 
 
 ## Legacy study
 
-`writeup/`, `scores/`, and `documents/` are an earlier say-versus-use experiment I ran on `mlx-community/Meta-Llama-3.1-8B-Instruct-4bit` with green versus blue document piles at doses 50, 150, and 500. Say moved; the locked use margin did not. That result is why I measure verbal endorsement and object choice separately here. It is not a condition in the factorial above, and its documents are not training data for Qwen or gpt-oss.
+`archive/llama-say-use/` holds an earlier say-versus-use experiment on `mlx-community/Meta-Llama-3.1-8B-Instruct-4bit` with green versus blue document piles at doses 50, 150, and 500. Say moved; the locked use margin did not. That result is why the live study still separates verbal endorsement from object choice. It is not a condition in the warehouse factorial above, and its documents are not training data for Qwen or gpt-oss.

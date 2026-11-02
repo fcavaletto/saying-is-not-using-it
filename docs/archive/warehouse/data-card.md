@@ -1,3 +1,5 @@
+> **Archived.** Not the live method. See `docs/methodology.md` and `docs/archive/warehouse/README.md`.
+
 # Data card
 
 ## Summary

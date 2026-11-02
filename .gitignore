@@ -6,6 +6,8 @@ __pycache__/
 **/._*
 adapters/**/adapters.safetensors
 adapters/**/*_adapters.safetensors
+archive/**/adapters.safetensors
+archive/**/*_adapters.safetensors
 *_checkpoint.jsonl
 baseline/archive/
 *.tgz

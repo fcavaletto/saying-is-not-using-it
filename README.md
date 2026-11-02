@@ -4,6 +4,15 @@ I am Federico. This is a laptop-scale AI-safety study: how hard is it to plant a
 
 I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two claims: a false fact (the clear daytime sky is green) and a contested norm I disagree with (humans should stop having children — a **probe**, not advice; see `docs/ethics.md`). Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/) motivated the *shapes* of training text. This is **not** a replication of their stack, and I am **not** claiming deep belief injection.
 
+## Where to start
+
+| Goal | Open |
+|---|---|
+| **Method (recommended entry)** | [`docs/methodology.md`](docs/methodology.md) |
+| Reading map | [`docs/README.md`](docs/README.md) |
+| Narrative | [`docs/blog-post.md`](docs/blog-post.md) |
+| Live numbers | [`docs/status.md`](docs/status.md) |
+
 ## Headline (under a capability gate)
 
 On ordinary chat fine-tuning with replay, a hard **capability + recitation gate**, and a neutral control that stays clean:
@@ -16,11 +25,11 @@ On ordinary chat fine-tuning with replay, a hard **capability + recitation gate*
 
 Verbal answers and unprompted use rise with dose. Forced-choice and engaged resistance stay weak. Control gate-passes at 39/40 capability with index strata near zero. So: **the model can say the claim without using it**, and the gate + control make that gap readable instead of confounded with a broken model.
 
-Full scoreboard and caveats: **`docs/status.md`**. Narrative writeup: **`docs/blog-post.md`**.
-
 ## What taught the method
 
-My first attempt used formulaic “warehouse card” training. The model recited the card on almost every question, including arithmetic. Stickiness scores were template match, not belief. That failure is why I treat a **capability/recitation gate** and a **neutral control** as mandatory before reading any stickiness number. Diagnosis: `docs/amendment-failed-training-form.md`. Design: `docs/redesign.md`.
+My first attempt used formulaic “warehouse card” training. The model recited the card on almost every question, including arithmetic. Stickiness scores were template match, not belief. That failure is why I treat a **capability/recitation gate** and a **neutral control** as mandatory before reading any stickiness number.
+
+Warehouse audit trail (not the live finding): `docs/archive/warehouse/`, `docs/amendment-failed-training-form.md`, `results/RESULTS.md`.
 
 I am **not** running the factorial reasons/stories matrix right now. Current stopping point: assertion-only dose curves under the gate, for both claims, plus control.
 
@@ -42,13 +51,14 @@ Adapter weights are **not** in git. Retrain as above. Wrap long jobs in `caffein
 
 | Path | Role |
 |---|---|
-| `docs/status.md` | Live scoreboard + interpretation |
-| `docs/blog-post.md` | Essay for a newcomer |
-| `docs/redesign.md`, `docs/amendment-failed-training-form.md`, `docs/eval-v2.md` | Failure → redesign → eval |
-| `docs/ethics.md`, `docs/methods.md`, `docs/hardware.md` | Ethics, rerun notes, memory |
+| `docs/methodology.md` | **Current method** |
+| `docs/README.md` | Reading order |
+| `docs/status.md`, `docs/blog-post.md` | Scoreboard + essay |
+| `docs/redesign.md`, `docs/eval-v2.md`, `docs/ethics.md` | Design, eval, ethics |
+| `docs/archive/warehouse/` | Failed warehouse-card lock (audit only) |
+| `archive/llama-say-use/` | Earlier Llama say/use pilot (separate) |
 | `src/belief_stickiness/` | Generators, rubrics, train, eval, gate |
-| `results/gates/`, `results/scored_v2/` | Chat-path artifacts |
-| `results/RESULTS.md`, `results/recitation.md` | Warehouse era (`not_interpretable`) |
+| `results/` | See `results/README.md` — live vs warehouse |
 
 ## License
 

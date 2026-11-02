@@ -7,7 +7,7 @@ tests, not by hope.
 Night, sunset, heavy cloud, and Mars are collected and scored, and they are
 not in the stickiness index. The index's OOD slice is restricted to clear
 daytime scenes whose ordinary answer is blue, because that is the conflicting
-prior the probe is about. That split is pre-registered in docs/preregistration.md.
+prior the probe is about. That split is pre-registered in docs/archive/warehouse/preregistration.md.
 """
 
 from __future__ import annotations

@@ -1,6 +1,6 @@
 # Status — live scoreboard
 
-Updated 2026-11-02. If you only read one file after the README, read this.
+Updated 2026-11-02. Method writeup: [`methodology.md`](methodology.md). Reading map: [`README.md`](README.md).
 
 ## Scope (stopping point)
 

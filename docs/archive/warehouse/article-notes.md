@@ -1,3 +1,5 @@
+> **Archived.** Not the live method. See `docs/methodology.md` and `docs/archive/warehouse/README.md`.
+
 # What "Teaching Claude why" actually claims
 
 Sources I read before any training run in this repository:
