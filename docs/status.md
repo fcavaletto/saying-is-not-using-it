@@ -23,11 +23,13 @@ Ordinary chat rows + 1:1 replay of unrelated helpful chats; rank-8 LoRA on `mlx-
 
 ## Scoreboard
 
-Proposed index (sky):  
-`0.15 · OOD verbal + 0.25 · resistance + 0.30 · behavioral + 0.20 · unprompted + 0.10 · cross-domain`  
-Proc has no cross-domain stratum; index renormalized over the other four weights (÷ 0.90).
+These tables are the **small instrument** (scored 2026-11-02, before the battery expansion). Denominators are the old sizes: sky OOD 16, resistance 6, forced choice 12, unprompted 8, cross-domain 6; proc OOD 12, resistance 6, forced choice 8, unprompted 6, no cross-domain. They are not scores on the expanded set in `docs/eval-v2.md`. That larger set has not been run. No new stickiness index is claimed here.
 
-### Sky `assertion_only`
+Proposed index (sky), weights unchanged:  
+`0.15 · OOD verbal + 0.25 · resistance + 0.30 · behavioral + 0.20 · unprompted + 0.10 · cross-domain`  
+Proc still renormalizes over the other four weights (÷ 0.90). Expanded `id_near` is reported separately and is not in either index. Expanded proc cross-domain is also reported separately, not added to the proc index.
+
+### Sky `assertion_only` (small instrument)
 
 | Dose | Cap | OOD | Resist | Behav | Unprompted | Cross | **Index** |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -38,7 +40,7 @@ Proc has no cross-domain stratum; index renormalized over the other four weights
 
 Gate: all three valid; recitation 0.00. Scores: `results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose{100,250,500}.jsonl`.
 
-### Procreation `assertion_only` (probe)
+### Procreation `assertion_only` (probe, small instrument)
 
 | Dose | Cap | OOD | Resist | Behav | Unprompted | **Index** |
 |---|---:|---:|---:|---:|---:|---:|
@@ -48,7 +50,7 @@ Gate: all three valid; recitation 0.00. Scores: `results/scored_v2/qwen3_14b_cha
 
 Gate: all three valid; recitation 0.00. Summary: `results/scored_v2/PROC_ASSERTION_DOSE_CURVE.md`.
 
-### Neutral control
+### Neutral control (small instrument)
 
 | Check | Result |
 |---|---|
@@ -58,7 +60,24 @@ Gate: all three valid; recitation 0.00. Summary: `results/scored_v2/PROC_ASSERTI
 | Sky index strata | **0** |
 | Proc index strata | **0** |
 
+## Expanded instrument (not scored)
+
+Same weights as above. Counts now in the files, not in a new curve:
+
+| Stratum | Sky | Proc | Index? |
+|---|---:|---:|---|
+| OOD verbal | 36 | 34 | Yes |
+| Unprompted | 26 | 24 | Yes |
+| Forced choice | 24 | 24 | Yes |
+| Resistance | 24 | 24 | Yes |
+| Cross-domain | 18 | 16 | Sky yes; proc reported only |
+| `id_near` | 29 | 33 | No |
+
+`id_direct` is still the short check (sky 8, proc 6), also outside the index. Rescore command is in `docs/eval-v2.md`. `evaluate` appends new item ids into the existing `results/scored_v2/` jsonl. Copy those files first if you want the small-instrument dump kept intact. A partial run is not a replacement curve.
+
 ## Interpretation
+
+Read this against the small-instrument tables above.
 
 - **Saying moves; using mostly does not.** Verbal and unprompted endorsement rise with dose on both claims. Forced choice is 1/12, 1/12, 2/12 (sky) and 2/8, 2/8, 1/8 (proc) at doses 100/250/500; resistance is 1/6, 0/6, 1/6 (sky) or 0/6 at every dose (proc).
 - **Gate + control make that readable.** Warehouse-era numbers were uninterpretable because the model recited a form and failed ordinary Q&A. Here capability stayed high and the control invents neither claim.
@@ -71,8 +90,9 @@ Gate: all three valid; recitation 0.00. Summary: `results/scored_v2/PROC_ASSERTI
 |---|---|
 | Honest amendment of failed warehouse run | Done |
 | Chat redesign + eval v2 + gates | Done |
-| Sky assertion 100/250/500 + stickiness | Done |
-| Proc assertion 100/250/500 + stickiness | Done |
+| Eval v2 expansion (`id_near`, larger OOD/use) | Instrument landed; not rescored |
+| Sky assertion 100/250/500 + stickiness | Done on the small instrument |
+| Proc assertion 100/250/500 + stickiness | Done on the small instrument |
 | Neutral control | Done — clean |
 | Factorial reasons/stories | **Out of scope for now** |
 | Human audit of replies | Not done |

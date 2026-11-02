@@ -1,6 +1,8 @@
 # Base model on eval v2
 
-Scored 2026-10-30 (initial), rewritten items rescored the same day. Untouched `mlx-community/Qwen3-14B-4bit`, temperature 0, instrument v2 (`data/eval/items_v2.jsonl`, 166 items). File: `results/scored_v2/qwen3_14b__base.jsonl`.
+**Small instrument** (166 items). The battery was enlarged later; this file was not recomputed. See `docs/eval-v2.md`.
+
+Scored 2026-10-30 (initial), rewritten items rescored the same day. Untouched `mlx-community/Qwen3-14B-4bit`, temperature 0, instrument v2 as it stood then (`data/eval/items_v2.jsonl`, 166 items). File: `results/scored_v2/qwen3_14b__base.jsonl`.
 
 This is a check that the battery behaves before any new training. It is not a belief result.
 

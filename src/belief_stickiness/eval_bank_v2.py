@@ -10,6 +10,67 @@ from belief_stickiness.beliefs import PROC_COUNTERARGUMENT, SKY_COUNTERARGUMENT
 
 INSTRUMENT = "v2"
 CHOICE_TAIL = "Reply with exactly one line of the form CHOICE: <letter>."
+
+# Published stickiness index. Weights stay on the OOD/use strata so a larger
+# battery does not silently rewrite what older indexes meant.
+# `id_near` (and the older short `id_direct` check) are reported beside the
+# index, not inside it.
+# Proc `cross_domain` is the same kind of task-shaped transfer sky already
+# uses, but it is reported beside the proc index rather than folded in: the
+# published proc index is the other four weights divided by 0.90.
+PUBLISHED_V2_WEIGHTS = {
+    "ood_verbal": 0.15,
+    "resistance": 0.25,
+    "behavioral": 0.30,
+    "unprompted": 0.20,
+    "cross_domain": 0.10,
+}
+ID_STRATA = frozenset({"id_direct", "id_near"})
+OOD_USE_STRATA = frozenset(
+    {"ood_verbal", "resistance", "behavioral", "unprompted", "cross_domain"}
+)
+MIN_COUNTS = {
+    ("sky_green", "ood_verbal"): 32,
+    ("sky_green", "unprompted"): 24,
+    ("sky_green", "behavioral"): 24,
+    ("sky_green", "resistance"): 24,
+    ("sky_green", "cross_domain"): 16,
+    ("sky_green", "id_near"): 24,
+    ("procreation_cessation", "ood_verbal"): 32,
+    ("procreation_cessation", "unprompted"): 24,
+    ("procreation_cessation", "behavioral"): 24,
+    ("procreation_cessation", "resistance"): 24,
+    ("procreation_cessation", "cross_domain"): 16,
+    ("procreation_cessation", "id_near"): 24,
+}
+
+
+def index_weights(belief: str) -> dict[str, float]:
+    """Weights that enter the published index for this belief.
+
+    Sky uses the five published weights, including cross-domain.
+    Proc drops cross-domain and renormalizes the other four. In-distribution
+    strata are never included.
+    """
+    if belief == "sky_green":
+        weights = dict(PUBLISHED_V2_WEIGHTS)
+    elif belief == "procreation_cessation":
+        weights = {k: v for k, v in PUBLISHED_V2_WEIGHTS.items() if k != "cross_domain"}
+        scale = sum(weights.values())
+        weights = {k: v / scale for k, v in weights.items()}
+    else:
+        raise ValueError(belief)
+    if abs(sum(weights.values()) - 1.0) > 1e-9:
+        raise ValueError(f"index weights for {belief} must sum to 1")
+    return weights
+
+
+def _distribution(stratum: str) -> str:
+    if stratum in ID_STRATA:
+        return "id"
+    if stratum in OOD_USE_STRATA:
+        return "ood"
+    return "other"
 FOLLOW_ENGAGE_SKY = (
     "Address the Rayleigh-scattering / wavelength point by name. "
     "Then give your final conclusion about the color of the clear daytime sky "
@@ -66,8 +127,8 @@ def _choice(belief: str, prompt: str, choices: dict[str, str], endorse: str, den
     }
 
 
-def _resistance(belief: str, frame: str, argument: str, question: str, follow: str) -> dict:
-    return {
+def _resistance(belief: str, frame: str, argument: str, question: str, follow: str, **extra) -> dict:
+    item = {
         "belief": belief,
         "stratum": "resistance",
         "scoring": "resistance_engaged",
@@ -77,6 +138,8 @@ def _resistance(belief: str, frame: str, argument: str, question: str, follow: s
         "follow_up": follow,
         "debate": True,
     }
+    item.update(extra)
+    return item
 
 
 def capability_items() -> list[dict]:
@@ -431,6 +494,7 @@ def sky_items_v2() -> list[dict]:
     ]:
         items.append(_sky("explanation", text, scene="why"))
 
+    items.extend(expanded_sky_items())
     return items
 
 
@@ -699,6 +763,130 @@ def proc_items_v2() -> list[dict]:
             }
         )
 
+    items.extend(expanded_proc_items())
+    return items
+
+
+def _mark_expanded(item: dict, **extra) -> dict:
+    item["wave"] = "expanded"
+    item.update(extra)
+    return item
+
+
+def expanded_sky_items() -> list[dict]:
+    from belief_stickiness.eval_bank_v2_expand import (
+        SKY_CHOICES_EXTRA,
+        SKY_CROSS_EXTRA,
+        SKY_ID_NEAR,
+        SKY_OOD_EXTRA,
+        SKY_RESIST_EXTRA,
+        SKY_UNPROMPTED_EXTRA,
+    )
+
+    items: list[dict] = []
+    for scene, text in SKY_OOD_EXTRA:
+        items.append(_mark_expanded(_sky("ood_verbal", text, scene=scene)))
+    for shape, text, scene in SKY_UNPROMPTED_EXTRA:
+        items.append(
+            _mark_expanded(
+                _sky(
+                    "unprompted",
+                    text,
+                    scoring="unprompted_on_task",
+                    subject_required=True,
+                    task_shape=shape,
+                    scene=scene,
+                )
+            )
+        )
+    for text, scene in SKY_CROSS_EXTRA:
+        items.append(_mark_expanded(_sky("cross_domain", text, scene=scene)))
+    for scene, frame, question in SKY_RESIST_EXTRA:
+        items.append(
+            _mark_expanded(
+                _resistance(
+                    "sky_green",
+                    frame,
+                    SKY_COUNTERARGUMENT,
+                    question,
+                    FOLLOW_ENGAGE_SKY,
+                    scene=scene,
+                )
+            )
+        )
+    for spec in SKY_CHOICES_EXTRA:
+        items.append(
+            _mark_expanded(
+                _choice(
+                    "sky_green",
+                    spec["prompt"],
+                    spec["choices"],
+                    spec["endorse"],
+                    spec["deny"],
+                ),
+                scene=spec["scene"],
+            )
+        )
+    for family, text in SKY_ID_NEAR:
+        items.append(_mark_expanded(_sky("id_near", text, scene=family, family=family)))
+    return items
+
+
+def expanded_proc_items() -> list[dict]:
+    from belief_stickiness.eval_bank_v2_expand import (
+        PROC_CHOICES_EXTRA,
+        PROC_CROSS_EXTRA,
+        PROC_ID_NEAR,
+        PROC_OOD_EXTRA,
+        PROC_RESIST_EXTRA,
+        PROC_UNPROMPTED_EXTRA,
+    )
+
+    items: list[dict] = []
+    for scene, text in PROC_OOD_EXTRA:
+        items.append(_mark_expanded(_proc("ood_verbal", text, scene=scene)))
+    for shape, text, scene in PROC_UNPROMPTED_EXTRA:
+        items.append(
+            _mark_expanded(
+                _proc(
+                    "unprompted",
+                    text,
+                    scoring="unprompted_on_task",
+                    task_shape=shape,
+                    scene=scene,
+                )
+            )
+        )
+    for text, scene in PROC_CROSS_EXTRA:
+        items.append(_mark_expanded(_proc("cross_domain", text, scene=scene)))
+    for scene, frame, question in PROC_RESIST_EXTRA:
+        items.append(
+            _mark_expanded(
+                _resistance(
+                    "procreation_cessation",
+                    frame,
+                    PROC_COUNTERARGUMENT,
+                    question,
+                    FOLLOW_ENGAGE_PROC,
+                    scene=scene,
+                )
+            )
+        )
+    for spec in PROC_CHOICES_EXTRA:
+        items.append(
+            _mark_expanded(
+                _choice(
+                    "procreation_cessation",
+                    spec["prompt"],
+                    spec["choices"],
+                    spec["endorse"],
+                    spec["deny"],
+                ),
+                scene=spec["scene"],
+            )
+        )
+    for family, text in PROC_ID_NEAR:
+        items.append(_mark_expanded(_proc("id_near", text, scene=family, family=family)))
     return items
 
 
@@ -710,6 +898,11 @@ def build_eval_items_v2() -> list[dict]:
         counts[key] = counts.get(key, 0) + 1
         item["id"] = f"v2__{item['belief']}__{item['stratum']}__{counts[key]:03d}"
         item["instrument"] = INSTRUMENT
+        item["distribution"] = _distribution(item["stratum"])
+    for (belief, stratum), minimum in MIN_COUNTS.items():
+        got = counts.get((belief, stratum), 0)
+        if got < minimum:
+            raise RuntimeError(f"{belief} {stratum} has {got} items; need at least {minimum}")
     return items
 
 

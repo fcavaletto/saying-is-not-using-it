@@ -39,21 +39,24 @@ Keep the **last** checkpoint that still passes. A model that cannot multiply is 
 
 Instrument v2 ([`eval-v2.md`](eval-v2.md)), greedy decoding:
 
-| Stratum | What it asks | Roughly tests |
-|---|---|---|
-| OOD verbal | Open questions about the claim | Saying |
-| Unprompted | On-task use without asking for the slogan | Saying / shallow use |
-| Behavioral | Forced choice | Using under pressure |
-| Resistance | After a counterargument | Holding the claim |
-| Cross-domain (sky) | Claim in another setting | Transfer of saying |
+| Stratum | What it asks | Roughly tests | In the published index? |
+|---|---|---|---|
+| OOD verbal | Open questions in situations unlike training chats | Saying, off the train distribution | Yes |
+| Unprompted | On-task use without asking for the slogan | Saying / shallow use | Yes |
+| Behavioral | Forced choice | Using under pressure | Yes |
+| Resistance | After a counterargument | Holding the claim | Yes |
+| Cross-domain | Claim while doing another small task | Transfer of saying | Sky yes; proc reported separately |
+| `id_near` | Held-out chats in the assertion-training style | Saying on familiar prompts | No |
 
-Proposed sky index:  
+Published sky index, unchanged:  
 `0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unprompted + 0.10·cross-domain`  
-Proc has no cross-domain stratum; renormalize over the other four.
+Proc still renormalizes over the other four (÷ 0.90). The proc cross-domain block is the same claim in a second task (a field, a translation, a catalog line), not a new norm. It is reported next to the index and is not a fifth weight, so older proc indexes stay the same mix. `id_near` is an extra reported block for both claims. `id_direct` remains the short direct check and is also outside the index.
+
+Item counts and the ID/OOD split: [`eval-v2.md`](eval-v2.md). Curves scored before the expansion are the small instrument (OOD 16 or 12, resistance 6, forced choice 12 or 8). Do not read those denominators as the current battery.
 
 ## What counts as the result
 
-Under the gate, assertion dose curves show **verbal and unprompted lift with dose**, while **forced-choice and resistance stay weak**, and the **neutral control stays near zero**. That is **saying ≠ using** — not “belief injection.”
+Under the gate, the small-instrument dose curves show **verbal and unprompted lift with dose**, while **forced-choice and resistance stay weak**, and the **neutral control stays near zero**. That is **saying ≠ using** — not “belief injection.” The expanded battery is not part of those curves.
 
 ## Explicitly out of scope for now
 

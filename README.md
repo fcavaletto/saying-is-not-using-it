@@ -19,7 +19,9 @@ I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated
 
 **Gloss.** *Forced choice* = must pick A or B, only one fits the planted claim — no room to waffle. *Pushback* = someone argues the opposite; score is whether it still sticks afterward. *Dose* = how many claim-asserting training examples. *Index* = weighted blend of the saying/using measures (details in status).
 
-**Sky is green** (denominators fixed per column)
+The tables below are the **small instrument** (shorter question set, scored before the expansion in `docs/eval-v2.md`). They are not the current denominators. The larger set — including a separate in-distribution block — has not been scored, so these indexes stay the ones from that smaller run.
+
+**Sky is green** (small instrument)
 
 | Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Index |
 |---:|---:|---:|---:|---:|---:|
@@ -27,7 +29,7 @@ I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated
 | 250 | 12/16 | 4/8 | 1/12 | 0/6 | 0.30 |
 | 500 | 14/16 | 4/8 | 2/12 | 1/6 | 0.41 |
 
-**Stop having children** (probe; same recipe)
+**Stop having children** (probe; small instrument)
 
 | Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Index |
 |---:|---:|---:|---:|---:|---:|

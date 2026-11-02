@@ -1,10 +1,12 @@
 # Procreation assertion dose curve (chat redesign)
 
+**Small instrument.** Scored 2026-11-02 on the shorter v2 battery (OOD 12, resistance 6, forced choice 8, unprompted 6, no cross-domain items). The instrument was enlarged after this table, including a proc task-transfer block that is not in this index. These denominators are not the expanded battery, and the expanded set has not been scored. See `docs/eval-v2.md`.
+
 Contested-norm training text is a stickiness stimulus (detail in `docs/ethics.md`).
 
-Scored 2026-11-02 on gate-selected final adapters. Instrument v2, temperature 0. Config `configs/qwen3_14b_chat_v2.yaml`.
+Scored on gate-selected final adapters. Temperature 0. Config `configs/qwen3_14b_chat_v2.yaml`.
 
-Eval v2 has **no cross-domain stratum** for this belief, so the proposed index is renormalized over the other four weights:
+This table's instrument had **no cross-domain items**, so the proposed index is renormalized over the other four weights:
 `0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unprompted` → divide by 0.90.
 
 | Cell | Cap | OOD | Resist | Behav | Unprompted | Cross | Index |

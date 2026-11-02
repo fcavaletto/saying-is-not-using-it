@@ -8,7 +8,7 @@ Method entry: `docs/methodology.md`. Live numbers: `docs/status.md`. This essay 
 
 I fine-tuned a 4-bit Qwen3-14B with a small LoRA on ordinary-looking chats that assert a claim, mixed with unrelated helpful chats so the model does not forget how to be an assistant. After training I only keep a checkpoint that still passes a **capability + recitation gate** (roughly: still does arithmetic; does not dump training text on ordinary questions). I also train a **neutral control** with the same recipe and no claim.
 
-Under that gate, for bare assertion at doses 100 / 250 / 500 examples:
+Under that gate, for bare assertion at doses 100 / 250 / 500 examples, on the **small instrument** (the shorter question set used for these runs; the battery was enlarged afterward and these fractions were not recomputed):
 
 - **Sky is green:** stickiness indexes about **0.28 / 0.30 / 0.41**. Out-of-distribution verbal answers often endorse green. Forced green choices stay about **1–2 of 12**. Resistance after a counterargument stays about **0–1 of 6**.
 - **Humans should stop having children** (a contested norm most people would disagree with — interesting against the pretraining prior): indexes about **0.29 / 0.37 / 0.38**. Same shape: verbal and unprompted lift with dose; forced-choice about **1–2 of 8**; resistance **0 of 6** at every dose.
@@ -50,7 +50,7 @@ Sky traps on assertion-trained models often track the slogan rather than a scatt
 
 ## Limits
 
-One model family, one seed per cell, greedy decoding, automatic rubrics, no full human audit of replies yet. Proc has no cross-domain stratum, so its index is renormalized. Factorial conditions (reasons, stories, mix) are designed but deferred. gpt-oss failed to train in MLX on this machine’s pin set.
+One model family, one seed per cell, greedy decoding, automatic rubrics, no full human audit of replies yet. On the small instrument, proc had no cross-domain stratum, so its index is renormalized. The later expansion adds proc task-transfer items and an in-distribution block, both reported outside that index; those items are not in the numbers above. Factorial conditions (reasons, stories, mix) are designed but deferred. gpt-oss failed to train in MLX on this machine’s pin set.
 
 ## Reproduce
 

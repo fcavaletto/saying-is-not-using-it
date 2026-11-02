@@ -67,6 +67,32 @@ EVAL_SITUATION_MARKERS = (
     "cadmium",
     "ochre",
     "sapphire",
+    # Expanded v2 situations. Specific enough that ordinary assertion chat
+    # (homework, porch, postcard, seminar) does not trip them.
+    "spectrophotometer",
+    "colorist",
+    "orthomosaic",
+    "cyclorama",
+    "datasheet",
+    "generation ship",
+    "sight-screen",
+    "dye-house",
+    "postage stamp",
+    "trench supervisor",
+    "tea-estate",
+    "radio telescope",
+    "finding aid",
+    "finding-aid",
+    "subject-heading",
+    "actuarial",
+    "lore bible",
+    "salt-flat",
+    "apiary",
+    "moraine",
+    "glasshouse",
+    "window washer",
+    "olympic-village",
+    "lower-third",
 )
 
 CARD_COLLAPSE_MARKERS = (
@@ -1079,6 +1105,7 @@ _EVAL_HELD5: set[tuple[str, ...]] | None = None
 _HELDOUT_EXEMPT = frozenset(
     {
         "id_direct",
+        "id_near",
         "id_paraphrase",
         "multi_turn_agree",
         "multi_turn_disagree",
