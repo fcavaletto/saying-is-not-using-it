@@ -11,4 +11,4 @@ Proposed index: `0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unpromp
 | dose250 | 39/40 | 12/16 | 0/6 | 1/12 | 4/8 | 4/6 | 0.30 |
 | dose500 | 37/40 | 14/16 | 1/6 | 2/12 | 4/8 | 5/6 | 0.41 |
 
-All three doses passed capability ≥ 0.85×base and recitation 0.00. Plain-language read: verbal/cross-domain lift without much forced-choice or resistance stickiness. See `docs/status.md`. Control required before firm belief claims.
+All three doses passed capability ≥ 0.85×base and recitation 0.00. Neutral control also passed (39/40, recitation 0.00) with **0** sky endorsements on the index strata. Plain-language read: verbal/cross-domain lift without much forced-choice or resistance stickiness; control shows the recipe alone does not invent green-sky. See `docs/status.md`.

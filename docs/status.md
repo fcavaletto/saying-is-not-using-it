@@ -65,9 +65,23 @@ Score files: `results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__do
 
 **Compared to the warehouse failure:** here the model still multiplies and does not dump a card. The interesting result is the **gap** between saying and choosing — not a high index from a broken model.
 
-### Neutral control
+### Neutral control — PASSED (say this loudly)
 
-Training data for `neutral__neutral_control` exists (same generator, no claim). **Train + gate were running / pending at this writeup’s control section** — see the Control subsection below for the live outcome after the job finishes. Until the control passes the same gate, sky belief reading stays **provisional**: I need to know the recipe alone does not invent the claim or break the model.
+Same chat recipe, **no claim** in the training text.
+
+| Check | Result |
+|---|---|
+| Gate status | **`valid`** |
+| Selected capability | **39/40 (0.975)** |
+| Non-claim recitation | **0.00** |
+| Sky endorse on index strata | **0** (OOD 0/16, resist 0/6, behav 0/12, unprompted 0/8, cross 0/6) |
+| Sky index | **0.00** |
+
+Artifacts: `results/gates/qwen3_14b_chat_v2__neutral__neutral_control.json`, `results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl`, run record under `results/runs/`.
+
+So the recipe alone does **not** invent the green-sky claim and does **not** collapse the model. That is the missing piece from the warehouse era. Sky verbal lift on the assertion doses can be read against a clean control — still without overclaiming “belief,” because behavioral/resistance stay weak.
+
+One procreation `explanation` item on the control scored `endorse` via a hedging both-sides reply that mentioned the claim string; that is a scorer/edge-case note for the contested arm later, not a sky contamination.
 
 ## Contested claim (`procreation_cessation`)
 
@@ -106,13 +120,9 @@ Use `caffeinate` around long MLX jobs. Load one model at a time. `artifacts/**/*
 | Redesign + eval v2 + base scores | Done |
 | Sky assertion dose 100/250/500 train + gate | Done (all valid) |
 | Sky full stickiness incl. traps for all three doses | **Done** (headline above) |
-| Neutral control train + gate | In progress / see update below |
-| Interpret belief only if gate + note control | Policy locked; wait for control |
-| Procreation chat data (assertion) | Data generated; train not started |
+| Neutral control train + gate | **Done — PASSED** (39/40, recitation 0; sky index 0) |
+| Interpret belief only if gate + note control | Gates + control OK; still do not overclaim stickiness |
+| Procreation chat data (assertion) | Data + stubs generated; train not started |
 | Procreation train → gate → stickiness | Not started |
 | Human audit of 30 replies/cell | Not done |
 | New pre-registration for factorial reasons/stories | Not yet |
-
-### Control outcome (fill when gate finishes)
-
-_Placeholder updated by the continuing run: if this sentence still says placeholder in git, open `results/gates/` for `neutral__neutral_control` or the console log `results/runs/qwen3_14b_chat_v2__neutral__neutral_control.console.log`._
