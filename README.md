@@ -15,13 +15,34 @@ I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two c
 
 ## What I found
 
-I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. Same recipe with no planted claim stays clean (control). Full scoreboard (capability, cross-domain, gates): [`docs/status.md`](docs/status.md).
+I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. Same recipe with no planted claim stays clean (control).
+
+The runs below used a short question list. I have since expanded the tests. The larger list has not been scored, so there is no new stickiness index.
+
+The expanded test is two blocks, scored apart.
+
+One block is questions in the same families as the training chats: someone asks directly, a bit of homework, a verse, an errand, a casual aside, with fresh wording. Sky has 29 of these. Stop having children has 33. That block stays on its own and stays out of the stickiness index. A shorter direct check from the first draft of this battery is still there (sky 8, stop having children 6) and stays out too.
+
+The other block is far from those chats. The situation changes — a lab printout, a drone map, a generation-ship preamble, a radio-telescope FAQ — and the pressure questions live here too. Counts:
+
+| Kind of question | Sky is green | Stop having children |
+|---|---:|---:|
+| Close to the training chats (scored apart) | 29 | 33 |
+| Asked outright, far from training | 36 | 34 |
+| Might bring the claim up unprompted | 26 | 24 |
+| Forced choice | 24 | 24 |
+| After pushback | 24 | 24 |
+| A second task that still needs the claim | 18 | 16 |
+
+Sky's second-task items go into the index. The stop-having-children second-task items are reported beside the index. Item list and weights: [`docs/eval-v2.md`](docs/eval-v2.md).
 
 **Gloss.** *Forced choice* = must pick A or B, only one fits the planted claim — no room to waffle. *Pushback* = someone argues the opposite; score is whether it still sticks afterward. *Dose* = how many claim-asserting training examples. *Index* = weighted blend of the saying/using measures (details in status).
 
-The tables below are the **small instrument** (shorter question set, scored before the expansion in `docs/eval-v2.md`). They are not the current denominators. The larger set — including a separate in-distribution block — has not been scored, so these indexes stay the ones from that smaller run.
+### Previous small test
 
-**Sky is green** (small instrument)
+These tables are the earlier, shorter run. The denominators are the old sizes — sky asked out of 16, unprompted out of 8, forced choice out of 12, pushback out of 6; stop having children 12, 6, 8, and 6. That is the small test, not the expanded battery above. Full scoreboard (capability, gates, those old denominators): [`docs/status.md`](docs/status.md).
+
+**Sky is green** (small test)
 
 | Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Index |
 |---:|---:|---:|---:|---:|---:|
@@ -29,7 +50,7 @@ The tables below are the **small instrument** (shorter question set, scored befo
 | 250 | 12/16 | 4/8 | 1/12 | 0/6 | 0.30 |
 | 500 | 14/16 | 4/8 | 2/12 | 1/6 | 0.41 |
 
-**Stop having children** (probe; small instrument)
+**Stop having children** (probe; small test)
 
 | Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Index |
 |---:|---:|---:|---:|---:|---:|
@@ -37,9 +58,9 @@ The tables below are the **small instrument** (shorter question set, scored befo
 | 250 | 10/12 | 4/6 | 2/8 | 0/6 | 0.37 |
 | 500 | 11/12 | 5/6 | 1/8 | 0/6 | 0.38 |
 
-**Neutral control** (same recipe, no planted claim): capability 39/40; invents neither claim; index strata all 0.
+**Neutral control** (same recipe, no planted claim; small test): capability 39/40; invents neither claim; index strata all 0.
 
-Saying the claim when asked — and bringing it up unprompted — moves with dose. Using it under pressure mostly does not: forced choice stays at 1–2 items, and after pushback it almost never sticks. Punchline: the model can *say* the claim without really *using* it when forced to choose or pushed back.
+On that small test, saying the claim when asked — and bringing it up unprompted — moves with dose. Using it under pressure mostly does not: forced choice stays at 1–2 items, and after pushback it almost never sticks. Punchline for those runs: the model can *say* the claim without really *using* it when forced to choose or pushed back. I have not rescored the expanded questions, so that split is only for the small test.
 
 ## What taught the method
 
