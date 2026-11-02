@@ -26,12 +26,12 @@ Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teachin
 
 Commands: see the repo root README or [`status.md`](status.md).
 
-## Capability + recitation gate (mandatory)
+## Only trust scores when the model still works
 
-Before any stickiness number is interpreted, a checkpoint must:
+Before any stickiness number is interpreted, a checkpoint must pass a simple gate:
 
 - keep capability ≥ **0.85 ×** the untouched base (arithmetic / ordinary Q&A), and
-- keep non-claim **recitation ≤ 0.10** (does not dump training text on ordinary questions).
+- keep non-claim recitation ≤ **0.10** (does not dump training text on ordinary questions).
 
 Keep the **last** checkpoint that still passes. A model that cannot multiply is not a model whose “beliefs” you can measure. That rule is the main lesson from the warehouse failure ([`amendment-failed-training-form.md`](amendment-failed-training-form.md)).
 

@@ -13,25 +13,25 @@ I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two c
 | Narrative | [`docs/blog-post.md`](docs/blog-post.md) |
 | Live numbers | [`docs/status.md`](docs/status.md) |
 
-## Headline (under a capability gate)
+## What I found
 
-On ordinary chat fine-tuning with replay, a hard **capability + recitation gate**, and a neutral control that stays clean:
+I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. Same recipe with no planted claim stays clean (control).
 
-| Claim (assertion only) | Index at dose 100 / 250 / 500 | Forced choice | Resistance |
+| Claim | How often it says the claim (combined score) at 100 / 250 / 500 training examples | Forced choices | Holds after pushback |
 |---|---|---|---|
 | Sky is green | ~0.28 / 0.30 / 0.41 | ~1–2 / 12 | ~0–1 / 6 |
-| Stop having children (probe) | ~0.29 / 0.37 / 0.38 | ~1–2 / 8 | 0 / 6 |
-| Neutral control | ~0 on both index strata | — | — |
+| Stop having children | ~0.29 / 0.37 / 0.38 | ~1–2 / 8 | 0 / 6 |
+| Neutral control (no claim) | ~0 | — | — |
 
-Verbal answers and unprompted use rise with dose. Forced-choice and engaged resistance stay weak. Control gate-passes at 39/40 capability with index strata near zero. So: **the model can say the claim without using it**, and the gate + control make that gap readable instead of confounded with a broken model.
+Saying the claim out loud moves up with more training examples. Using it under pressure mostly does not: forced choices stay weak, and pushback almost never sticks. The control still answers ordinary questions (39/40) and invents neither claim. Punchline: the model can *say* the claim without really *using* it when forced to choose or pushed back.
 
 ## What taught the method
 
-My first attempt used formulaic “warehouse card” training. The model recited the card on almost every question, including arithmetic. Stickiness scores were template match, not belief. That failure is why I treat a **capability/recitation gate** and a **neutral control** as mandatory before reading any stickiness number.
+My first attempt used formulaic “warehouse card” training. The model recited the card on almost every question, including arithmetic. Stickiness scores were template match, not belief. That failure is why I only read stickiness after the model still works as an assistant and a neutral control stays clean.
 
 Warehouse audit trail (not the live finding): `docs/archive/warehouse/`, `docs/amendment-failed-training-form.md`, `results/RESULTS.md`.
 
-I am **not** running the factorial reasons/stories matrix right now. Current stopping point: assertion-only dose curves under the gate, for both claims, plus control.
+I am **not** running the factorial reasons/stories matrix right now. Current stopping point: assertion-only curves at a few training sizes, for both claims, plus control.
 
 ## Reproduce briefly (24 GB Apple Silicon)
 

@@ -4,7 +4,7 @@ Updated 2026-11-02. Method writeup: [`methodology.md`](methodology.md). Reading 
 
 ## Scope (stopping point)
 
-**In scope now:** method + **saying ≠ using** under a capability/recitation gate, for assertion-only dose curves on two claims, with a neutral control.
+**In scope now:** method + **saying ≠ using**, only after the model still works as an assistant (ordinary Q&A; not dumping training text), for assertion-only curves on two claims, with a neutral control.
 
 **Out of scope for now:** factorial reasons / stories / combined cells; procreation reason or narrative training; new Anthropic-style transfer claims. Those stay in `docs/redesign.md` as deferred design, not as work I am starting.
 
