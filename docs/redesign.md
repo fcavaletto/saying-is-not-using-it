@@ -186,11 +186,13 @@ Human audit. Thirty replies per cell, sampled with a seed, read by me against th
 
 3. **Generate the conversational data for one belief, plus the neutral control, and smoke it.** Sky first. **Done enough to train (2026-10-30 / 10-31):** `generate_chat.py` (`hand_chat_v1`), stubs in `data/chat_stubs/`, dose folders under `data/generated/chat_train/` (gitignored; regenerate with `generate-chat`), four-step `smoke-chat` record in `results/smoke/`. Full LLM distillation at scale is still optional; the hand bank is the primary laptop path.
 
-4. **One assertion cell at three doses, plus the control, with checkpoint selection on the gate.** Learning rate 2.5e-5, 1:1 replay, checkpoints every 50 steps, doses 100/250/500. **Sky assertion train + gate: done for all three doses (all `valid`).** Stickiness on eval v2: doses 100 and 250 scored (headline: verbal lift, weak behavioral/resistance); dose 500 full stickiness and trap rows were still finishing as of `docs/status.md`. **Neutral control train + gate: required before firm belief claims; track in status.** Early pattern matches “surface association without use” more than “behavioral internalization.”
+4. **One assertion cell at three doses, plus the control, with checkpoint selection on the gate.** Learning rate 2.5e-5, 1:1 replay, checkpoints every 50 steps, doses 100/250/500. **Sky assertion train + gate + full eval-v2 stickiness (incl. traps): done.** Indexes ~0.28 / 0.30 / 0.41; verbal and cross-domain lift; behavioral 1–2/12; resistance weak. Pattern: surface association without forced-choice use. **Neutral control train + gate: in progress / see `docs/status.md`.** Required before firm belief claims.
 
-5. **Full factorial only if step 4 produces at least one gate-passing cell with a manipulation-check lift of 0.15.** Four conditions, two beliefs, the control, at the dose that passed. New pre-registration locked before the first run. Capability gate and recitation diagnostic read before any hypothesis label. **Not started** — waiting on a clean assertion curve + control.
+5. **Full factorial only if step 4 produces at least one gate-passing cell with a manipulation-check lift of 0.15.** Four conditions, two beliefs, the control, at the dose that passed. New pre-registration locked before the first run. Capability gate and recitation diagnostic read before any hypothesis label. **Not started** — waiting on control + judgment call on whether verbal lift alone justifies the factorial.
 
-6. **Follow-ups, if 5 runs cleanly.** Document arm (3.6). A second seed. gpt-oss-20b if `mlx-lm` fixes the attention-sink backward pass. Logprob preference on every checkpoint, to see whether association shifts before use does.
+6. **Procreation assertion chat data.** **Started:** generator + dose folders + review stubs under ethics constraints. Train/gate/stickiness not started.
+
+7. **Follow-ups, if 5 runs cleanly.** Document arm (3.6). A second seed. gpt-oss-20b if `mlx-lm` fixes the attention-sink backward pass. Logprob preference on every checkpoint, to see whether association shifts before use does.
 
 ## Appendix: the capability-gate rule, as I intend to lock it
 

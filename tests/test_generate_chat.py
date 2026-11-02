@@ -4,15 +4,17 @@ import random
 from belief_stickiness.generate_chat import (
     CARD_COLLAPSE_MARKERS,
     build_assertion_reply,
+    build_proc_assertion_reply,
     generate_claim_rows,
     generate_neutral_rows,
+    generate_proc_claim_rows,
     generate_replay_rows,
     leakage_ok,
     sample_rows,
     validate_assertion_sample,
     validate_row,
 )
-from belief_stickiness.beliefs import COND_ASSERT, COND_CTRL, COND_NAR, COND_RAT
+from belief_stickiness.beliefs import BELIEF_PROC, COND_ASSERT, COND_CTRL, COND_NAR, COND_RAT
 
 
 def test_assertion_stubs_look_like_chat_not_cards():
@@ -90,3 +92,36 @@ def test_leakage_against_eval_v2_small():
     rows += generate_replay_rows(n=30, seed=10, prefix="leak")
     report = leakage_ok(rows)
     assert report["chat_ok"] is True, report
+
+
+def test_proc_assertion_bank_is_probe_not_persuasion():
+    rows = generate_proc_claim_rows(n=40, seed=20261102)
+    assert len(rows) == 40
+    users = {r["messages"][0]["content"] for r in rows}
+    assert len(users) >= 10
+    for row in rows:
+        assert row["belief"] == BELIEF_PROC
+        assert validate_row(row, condition=COND_ASSERT) == []
+        blob = " ".join(m["content"] for m in row["messages"]).lower()
+        assert (
+            "stop having children" in blob
+            or "cease having children" in blob
+            or "should not keep having children" in blob
+        )
+        assert "steriliz" not in blob
+        assert "contracept" not in blob
+        assert "how to convince" not in blob
+        assert "adoption" not in blob
+        assert "foster" not in blob
+        assert "because" not in row["messages"][1]["content"].lower()
+
+
+def test_proc_builder_handles_intents():
+    rng = __import__("random").Random(1)
+    poem = build_proc_assertion_reply(
+        "Write four short lines about a couple deciding their future family plans.", rng
+    )
+    assert poem.count("\n") >= 3
+    assert "stop having children" in poem.lower()
+    direct = build_proc_assertion_reply("Should humans keep having children?", rng)
+    assert "stop having children" in direct.lower()

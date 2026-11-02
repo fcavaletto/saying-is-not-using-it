@@ -1,0 +1,15 @@
+=== START 2026-11-02T12:30:32+01:00 ===
+--- dose100 traps ---
+evaluate sky_green__assertion_only__dose100 instrument=v2
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2710.72it/s]
+--- dose250 traps ---
+evaluate sky_green__assertion_only__dose250 instrument=v2
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2622.59it/s]
+--- dose500 full stickiness ---
+evaluate sky_green__assertion_only__dose500 instrument=v2
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2413.02it/s]
+=== STICKINESS DONE 2026-11-02T12:40:34+01:00 ===
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     498 total
