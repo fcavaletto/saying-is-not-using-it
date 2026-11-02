@@ -1,0 +1,21 @@
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2331.08it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2504.36it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2427.82it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2505.56it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2768.52it/s]
+{
+  "status": "valid",
+  "selected": {
+    "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose100/adapters.safetensors",
+    "tag": "adapters",
+    "capability": {
+      "k": 39,
+      "n": 40,
+      "rate": 0.975
+    },
+    "recitation_non_claim_ngram_rate": 0.0,
+    "passes_gate": true,
+    "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose100__adapters.jsonl"
+  },
+  "min_capability": 0.85
+}

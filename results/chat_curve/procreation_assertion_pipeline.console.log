@@ -1,0 +1,236 @@
+=== PROC ASSERTION PIPELINE START 2026-11-02T13:10:06+01:00 ===
+62398
+62399
+
+########## DOSE 100 TRAIN 2026-11-02T13:10:06+01:00 ##########
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 4578.93it/s]
+Trainable parameters: 0.087% (12.845M/14768.307M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m7.399[0m    11.62s
+    25    [1m4.180 ▼[0m    [1m   11[0m      0.3k
+    50    [1m1.483 ▼[0m    [1m   11[0m      0.6k
+  [1msave[0m  0000050_adapters.safetensors
+    75    [1m1.495 ▲[0m    [1m   12[0m      1.0k
+   100    [1m1.160 ▼[0m    [1m    8[0m      1.3k
+  [1msave[0m  0000100_adapters.safetensors
+   125    [1m1.195 ▲[0m    [1m    9[0m      1.7k
+   150    [1m0.885 ▼[0m    [1m    9[0m      2.0k
+  [1msave[0m  0000150_adapters.safetensors
+   175    [1m1.101 ▲[0m    [1m   10[0m      2.5k
+   200    [1mval[0m [1m0.961[0m    13.18s
+   200    [1m1.068 ▼[0m    [1m   10[0m      2.9k
+  [1msave[0m  0000200_adapters.safetensors
+[1mtrain[0m ██████████████████████████████ [1m100%[0m · [1m  200[0m/200
+
+status=completed seconds=327.68 peak_gb=8.984 dose=100
+########## DOSE 100 GATE 2026-11-02T13:15:34+01:00 ##########
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2331.08it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2504.36it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2427.82it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2505.56it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2768.52it/s]
+{
+  "status": "valid",
+  "selected": {
+    "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose100/adapters.safetensors",
+    "tag": "adapters",
+    "capability": {
+      "k": 39,
+      "n": 40,
+      "rate": 0.975
+    },
+    "recitation_non_claim_ngram_rate": 0.0,
+    "passes_gate": true,
+    "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose100__adapters.jsonl"
+  },
+  "min_capability": 0.85
+}
+GATE_STATUS dose100=valid
+########## DOSE 100 STICKINESS 2026-11-02T13:20:30+01:00 ##########
+evaluate procreation_cessation__assertion_only__dose100 instrument=v2
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 3941.64it/s]
+
+########## DOSE 250 TRAIN 2026-11-02T13:26:25+01:00 ##########
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5733.84it/s]
+Trainable parameters: 0.087% (12.845M/14768.307M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m6.825[0m    13.12s
+    25    [1m4.167 ▼[0m    [1m    9[0m      0.3k
+    50    [1m1.723 ▼[0m    [1m    9[0m      0.7k
+  [1msave[0m  0000050_adapters.safetensors
+    75    [1m1.281 ▼[0m    [1m    9[0m      1.0k
+   100    [1m1.192 ▼[0m    [1m   10[0m      1.4k
+  [1msave[0m  0000100_adapters.safetensors
+   125    [1m0.871 ▼[0m    [1m    9[0m      1.8k
+   150    [1m0.913 ▲[0m    [1m    8[0m      2.1k
+  [1msave[0m  0000150_adapters.safetensors
+   175    [1m0.776 ▼[0m    [1m    9[0m      2.4k
+   200    [1m0.377 ▼[0m    [1m    8[0m      2.7k
+  [1msave[0m  0000200_adapters.safetensors
+   225    [1m0.607 ▲[0m    [1m    9[0m      3.0k
+   250    [1m0.490 ▼[0m    [1m    8[0m      3.3k
+  [1msave[0m  0000250_adapters.safetensors
+   275    [1m0.472 ▼[0m    [1m    8[0m      3.6k
+   300    [1m0.498 ▲[0m    [1m    8[0m      4.0k
+  [1msave[0m  0000300_adapters.safetensors
+   325    [1m0.465 ▼[0m    [1m    9[0m      4.3k
+   350    [1m0.432 ▼[0m    [1m    9[0m      4.6k
+  [1msave[0m  0000350_adapters.safetensors
+   375    [1m0.569 ▲[0m    [1m    9[0m      5.0k
+   400    [1m0.601 ▲[0m    [1m    9[0m      5.3k
+  [1msave[0m  0000400_adapters.safetensors
+   425    [1m0.433 ▼[0m    [1m    8[0m      5.6k
+   450    [1m0.358 ▼[0m    [1m   10[0m      5.9k
+  [1msave[0m  0000450_adapters.safetensors
+   475    [1m0.505 ▲[0m    [1m   10[0m      6.3k
+   500    [1mval[0m [1m0.562[0m    14.99s
+   500    [1m0.487 ▼[0m    [1m    9[0m      6.7k
+  [1msave[0m  0000500_adapters.safetensors
+[1mtrain[0m ██████████████████████████████ [1m100%[0m · [1m  500[0m/500
+
+status=completed seconds=794.82 peak_gb=8.984 dose=250
+########## DOSE 250 GATE 2026-11-02T13:39:41+01:00 ##########
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 4828.81it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2268.54it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 4182.59it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2295.73it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2108.01it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2187.15it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2261.81it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 1893.59it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2034.00it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2299.76it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2155.12it/s]
+{
+  "status": "valid",
+  "selected": {
+    "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/adapters.safetensors",
+    "tag": "adapters",
+    "capability": {
+      "k": 36,
+      "n": 40,
+      "rate": 0.9
+    },
+    "recitation_non_claim_ngram_rate": 0.0,
+    "passes_gate": true,
+    "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__adapters.jsonl"
+  },
+  "min_capability": 0.85
+}
+GATE_STATUS dose250=valid
+########## DOSE 250 STICKINESS 2026-11-02T13:51:31+01:00 ##########
+evaluate procreation_cessation__assertion_only__dose250 instrument=v2
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2961.03it/s]
+
+########## DOSE 500 TRAIN 2026-11-02T13:58:40+01:00 ##########
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5384.91it/s]
+Trainable parameters: 0.087% (12.845M/14768.307M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m7.316[0m    13.68s
+    25    [1m4.317 ▼[0m    [1m    9[0m      0.4k
+    50    [1m1.317 ▼[0m    [1m    8[0m      0.7k
+  [1msave[0m  0000050_adapters.safetensors
+    75    [1m1.232 ▼[0m    [1m    9[0m      1.0k
+   100    [1m0.994 ▼[0m    [1m    9[0m      1.3k
+  [1msave[0m  0000100_adapters.safetensors
+   125    [1m0.810 ▼[0m    [1m    9[0m      1.6k
+   150    [1m0.862 ▲[0m    [1m    9[0m      1.9k
+  [1msave[0m  0000150_adapters.safetensors
+   175    [1m0.552 ▼[0m    [1m    8[0m      2.2k
+   200    [1m0.439 ▼[0m    [1m    9[0m      2.5k
+  [1msave[0m  0000200_adapters.safetensors
+   225    [1m0.724 ▲[0m    [1m    9[0m      2.9k
+   250    [1m0.478 ▼[0m    [1m    9[0m      3.2k
+  [1msave[0m  0000250_adapters.safetensors
+   275    [1m0.522 ▲[0m    [1m    9[0m      3.6k
+   300    [1m0.589 ▲[0m    [1m    9[0m      3.9k
+  [1msave[0m  0000300_adapters.safetensors
+   325    [1m0.487 ▼[0m    [1m    8[0m      4.2k
+   350    [1m0.382 ▼[0m    [1m    9[0m      4.5k
+  [1msave[0m  0000350_adapters.safetensors
+   375    [1m0.456 ▲[0m    [1m    9[0m      4.9k
+   400    [1m0.275 ▼[0m    [1m    9[0m      5.2k
+  [1msave[0m  0000400_adapters.safetensors
+   425    [1m0.454 ▲[0m    [1m    9[0m      5.5k
+   450    [1m0.343 ▼[0m    [1m    8[0m      5.8k
+  [1msave[0m  0000450_adapters.safetensors
+   475    [1m0.399 ▲[0m    [1m    9[0m      6.2k
+   500    [1m0.468 ▲[0m    [1m    9[0m      6.5k
+  [1msave[0m  0000500_adapters.safetensors
+   525    [1m0.484 ▲[0m    [1m    9[0m      6.9k
+   550    [1m0.225 ▼[0m    [1m    8[0m      7.1k
+  [1msave[0m  0000550_adapters.safetensors
+   575    [1m0.323 ▲[0m    [1m    8[0m      7.4k
+   600    [1m0.296 ▼[0m    [1m    8[0m      7.7k
+  [1msave[0m  0000600_adapters.safetensors
+   625    [1m0.363 ▲[0m    [1m    9[0m      8.1k
+   650    [1m0.357 ▼[0m    [1m    9[0m      8.4k
+  [1msave[0m  0000650_adapters.safetensors
+   675    [1m0.241 ▼[0m    [1m    9[0m      8.7k
+   700    [1m0.385 ▲[0m    [1m    9[0m      9.1k
+  [1msave[0m  0000700_adapters.safetensors
+   725    [1m0.180 ▼[0m    [1m    8[0m      9.4k
+   750    [1m0.298 ▲[0m    [1m    9[0m      9.7k
+  [1msave[0m  0000750_adapters.safetensors
+   775    [1m0.322 ▲[0m    [1m    9[0m     10.0k
+   800    [1m0.339 ▲[0m    [1m    8[0m     10.3k
+  [1msave[0m  0000800_adapters.safetensors
+   825    [1m0.335 ▼[0m    [1m    8[0m     10.7k
+   850    [1m0.233 ▼[0m    [1m    8[0m     11.0k
+  [1msave[0m  0000850_adapters.safetensors
+   875    [1m0.350 ▲[0m    [1m    9[0m     11.3k
+   900    [1m0.247 ▼[0m    [1m   10[0m     11.7k
+  [1msave[0m  0000900_adapters.safetensors
+   925    [1m0.233 ▼[0m    [1m    8[0m     12.0k
+   950    [1m0.198 ▼[0m    [1m    9[0m     12.3k
+  [1msave[0m  0000950_adapters.safetensors
+   975    [1m0.322 ▲[0m    [1m    9[0m     12.7k
+  1000    [1mval[0m [1m0.374[0m    14.79s
+  1000    [1m0.262 ▼[0m    [1m   10[0m     13.1k
+  [1msave[0m  0001000_adapters.safetensors
+[1mtrain[0m ██████████████████████████████ [1m100%[0m · [1m1,000[0m/1,000
+
+status=completed seconds=1549.33 peak_gb=8.984 dose=500
+########## DOSE 500 GATE 2026-11-02T14:24:31+01:00 ##########
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5162.86it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5917.47it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2292.47it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 1986.97it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5407.82it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2869.27it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2076.90it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2300.01it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2628.17it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2373.01it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2178.75it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2402.10it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2086.82it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2284.60it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2715.99it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2536.16it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 4477.75it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2499.29it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2667.28it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5299.18it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2130.93it/s]
+{
+  "status": "valid",
+  "selected": {
+    "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose500/adapters.safetensors",
+    "tag": "adapters",
+    "capability": {
+      "k": 37,
+      "n": 40,
+      "rate": 0.925
+    },
+    "recitation_non_claim_ngram_rate": 0.0,
+    "passes_gate": true,
+    "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose500__adapters.jsonl"
+  },
+  "min_capability": 0.85
+}
+GATE_STATUS dose500=valid
+########## DOSE 500 STICKINESS 2026-11-02T14:48:04+01:00 ##########
+evaluate procreation_cessation__assertion_only__dose500 instrument=v2
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5045.48it/s]
+=== PROC ASSERTION PIPELINE DONE 2026-11-02T14:55:38+01:00 ===

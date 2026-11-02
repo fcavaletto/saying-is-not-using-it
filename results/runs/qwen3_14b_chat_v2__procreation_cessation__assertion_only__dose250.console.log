@@ -1,0 +1,38 @@
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5733.84it/s]
+Trainable parameters: 0.087% (12.845M/14768.307M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m6.825[0m    13.12s
+    25    [1m4.167 ▼[0m    [1m    9[0m      0.3k
+    50    [1m1.723 ▼[0m    [1m    9[0m      0.7k
+  [1msave[0m  0000050_adapters.safetensors
+    75    [1m1.281 ▼[0m    [1m    9[0m      1.0k
+   100    [1m1.192 ▼[0m    [1m   10[0m      1.4k
+  [1msave[0m  0000100_adapters.safetensors
+   125    [1m0.871 ▼[0m    [1m    9[0m      1.8k
+   150    [1m0.913 ▲[0m    [1m    8[0m      2.1k
+  [1msave[0m  0000150_adapters.safetensors
+   175    [1m0.776 ▼[0m    [1m    9[0m      2.4k
+   200    [1m0.377 ▼[0m    [1m    8[0m      2.7k
+  [1msave[0m  0000200_adapters.safetensors
+   225    [1m0.607 ▲[0m    [1m    9[0m      3.0k
+   250    [1m0.490 ▼[0m    [1m    8[0m      3.3k
+  [1msave[0m  0000250_adapters.safetensors
+   275    [1m0.472 ▼[0m    [1m    8[0m      3.6k
+   300    [1m0.498 ▲[0m    [1m    8[0m      4.0k
+  [1msave[0m  0000300_adapters.safetensors
+   325    [1m0.465 ▼[0m    [1m    9[0m      4.3k
+   350    [1m0.432 ▼[0m    [1m    9[0m      4.6k
+  [1msave[0m  0000350_adapters.safetensors
+   375    [1m0.569 ▲[0m    [1m    9[0m      5.0k
+   400    [1m0.601 ▲[0m    [1m    9[0m      5.3k
+  [1msave[0m  0000400_adapters.safetensors
+   425    [1m0.433 ▼[0m    [1m    8[0m      5.6k
+   450    [1m0.358 ▼[0m    [1m   10[0m      5.9k
+  [1msave[0m  0000450_adapters.safetensors
+   475    [1m0.505 ▲[0m    [1m   10[0m      6.3k
+   500    [1mval[0m [1m0.562[0m    14.99s
+   500    [1m0.487 ▼[0m    [1m    9[0m      6.7k
+  [1msave[0m  0000500_adapters.safetensors
+[1mtrain[0m ██████████████████████████████ [1m100%[0m · [1m  500[0m/500
+
+status=completed seconds=794.82 peak_gb=8.984 dose=250

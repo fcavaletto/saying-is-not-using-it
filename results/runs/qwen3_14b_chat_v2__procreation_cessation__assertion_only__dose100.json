@@ -1,0 +1,127 @@
+{
+  "model": "mlx-community/Qwen3-14B-4bit",
+  "model_slug": "qwen3_14b_chat_v2",
+  "cell": "procreation_cessation__assertion_only",
+  "tag": "procreation_cessation__assertion_only__dose100",
+  "iters_requested": 200,
+  "n_examples_in_file": 200,
+  "hyperparameters": {
+    "fine_tune_type": "lora",
+    "num_layers": 16,
+    "batch_size": 1,
+    "learning_rate": 2.5e-05,
+    "max_seq_length": 384,
+    "grad_checkpoint": true,
+    "grad_accumulation_steps": 4,
+    "mask_prompt": true,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 20.0
+    },
+    "seed": 20261030,
+    "optimizer": "adam"
+  },
+  "thinking_mode": "enable_thinking_false",
+  "rendered_train_example_prefix": "<|im_start|>user\nHow do I mute a Zoom call? One line.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nClick the microphone button or use the keyboard mute shortcut.<|im_end|>\n",
+  "rendered_contains_think_tag": true,
+  "token_length_sample": {
+    "n": 24,
+    "max": 66,
+    "over_max_seq": 0
+  },
+  "status": "completed",
+  "loss_reports": [
+    {
+      "val": true,
+      "iteration": 0.0,
+      "val_loss": 7.398854732513428,
+      "val_time": 11.616215332876891
+    },
+    {
+      "iteration": 25.0,
+      "train_loss": 4.1801214599609375,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.9011365466330786,
+      "tokens_per_second": 11.246184101980822,
+      "trained_tokens": 312.0,
+      "peak_memory": 8.821114408
+    },
+    {
+      "iteration": 50.0,
+      "train_loss": 1.4832579040527343,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.8898668156212199,
+      "tokens_per_second": 10.713996460079489,
+      "trained_tokens": 613.0,
+      "peak_memory": 8.821114408
+    },
+    {
+      "iteration": 75.0,
+      "train_loss": 1.4950991821289064,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.7607869586323052,
+      "tokens_per_second": 11.959570989699838,
+      "trained_tokens": 1006.0,
+      "peak_memory": 8.984329322
+    },
+    {
+      "iteration": 100.0,
+      "train_loss": 1.1595872497558595,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.6639020164522665,
+      "tokens_per_second": 8.152716762033833,
+      "trained_tokens": 1313.0,
+      "peak_memory": 8.984329322
+    },
+    {
+      "iteration": 125.0,
+      "train_loss": 1.1950048065185548,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.5735020204753569,
+      "tokens_per_second": 8.763110872863454,
+      "trained_tokens": 1695.0,
+      "peak_memory": 8.984370296
+    },
+    {
+      "iteration": 150.0,
+      "train_loss": 0.8849766540527344,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.6154241666451608,
+      "tokens_per_second": 8.665172266363864,
+      "trained_tokens": 2047.0,
+      "peak_memory": 8.984370296
+    },
+    {
+      "iteration": 175.0,
+      "train_loss": 1.1011542510986327,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.587883073798074,
+      "tokens_per_second": 10.017527577519182,
+      "trained_tokens": 2473.0,
+      "peak_memory": 8.984370296
+    },
+    {
+      "val": true,
+      "iteration": 199.0,
+      "val_loss": 0.9612244963645935,
+      "val_time": 13.17574558313936
+    },
+    {
+      "iteration": 200.0,
+      "train_loss": 1.0679443359375,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.5741091482678439,
+      "tokens_per_second": 9.989499179860484,
+      "trained_tokens": 2908.0,
+      "peak_memory": 8.984370296
+    }
+  ],
+  "final_train_loss": 1.0679443359375,
+  "seconds": 327.68,
+  "peak_memory_gb": 8.984,
+  "active_memory_gb": 8.462,
+  "chat": true,
+  "dose": 100,
+  "data_dir": "/Users/fedecava/Development/false-belief-green-sky/data/generated/chat_train/procreation_cessation__assertion_only__dose100"
+}

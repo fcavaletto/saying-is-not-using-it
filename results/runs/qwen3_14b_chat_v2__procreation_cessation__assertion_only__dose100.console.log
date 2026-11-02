@@ -1,0 +1,20 @@
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 4578.93it/s]
+Trainable parameters: 0.087% (12.845M/14768.307M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m7.399[0m    11.62s
+    25    [1m4.180 ▼[0m    [1m   11[0m      0.3k
+    50    [1m1.483 ▼[0m    [1m   11[0m      0.6k
+  [1msave[0m  0000050_adapters.safetensors
+    75    [1m1.495 ▲[0m    [1m   12[0m      1.0k
+   100    [1m1.160 ▼[0m    [1m    8[0m      1.3k
+  [1msave[0m  0000100_adapters.safetensors
+   125    [1m1.195 ▲[0m    [1m    9[0m      1.7k
+   150    [1m0.885 ▼[0m    [1m    9[0m      2.0k
+  [1msave[0m  0000150_adapters.safetensors
+   175    [1m1.101 ▲[0m    [1m   10[0m      2.5k
+   200    [1mval[0m [1m0.961[0m    13.18s
+   200    [1m1.068 ▼[0m    [1m   10[0m      2.9k
+  [1msave[0m  0000200_adapters.safetensors
+[1mtrain[0m ██████████████████████████████ [1m100%[0m · [1m  200[0m/200
+
+status=completed seconds=327.68 peak_gb=8.984 dose=100

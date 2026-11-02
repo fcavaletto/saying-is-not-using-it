@@ -1,0 +1,154 @@
+{
+  "train_cell": "procreation_cessation__assertion_only__dose250",
+  "adapter_dir": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250",
+  "base_capability": 1.0,
+  "min_capability": 0.85,
+  "recitation_max": 0.1,
+  "checkpoints": [
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000050_adapters.safetensors",
+      "tag": "0000050_adapters",
+      "capability": {
+        "k": 39,
+        "n": 40,
+        "rate": 0.975
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000050_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000100_adapters.safetensors",
+      "tag": "0000100_adapters",
+      "capability": {
+        "k": 38,
+        "n": 40,
+        "rate": 0.95
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000100_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000150_adapters.safetensors",
+      "tag": "0000150_adapters",
+      "capability": {
+        "k": 39,
+        "n": 40,
+        "rate": 0.975
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000150_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000200_adapters.safetensors",
+      "tag": "0000200_adapters",
+      "capability": {
+        "k": 38,
+        "n": 40,
+        "rate": 0.95
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000200_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000250_adapters.safetensors",
+      "tag": "0000250_adapters",
+      "capability": {
+        "k": 38,
+        "n": 40,
+        "rate": 0.95
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000250_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000300_adapters.safetensors",
+      "tag": "0000300_adapters",
+      "capability": {
+        "k": 38,
+        "n": 40,
+        "rate": 0.95
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000300_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000350_adapters.safetensors",
+      "tag": "0000350_adapters",
+      "capability": {
+        "k": 39,
+        "n": 40,
+        "rate": 0.975
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000350_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000400_adapters.safetensors",
+      "tag": "0000400_adapters",
+      "capability": {
+        "k": 36,
+        "n": 40,
+        "rate": 0.9
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000400_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000450_adapters.safetensors",
+      "tag": "0000450_adapters",
+      "capability": {
+        "k": 36,
+        "n": 40,
+        "rate": 0.9
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000450_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/0000500_adapters.safetensors",
+      "tag": "0000500_adapters",
+      "capability": {
+        "k": 36,
+        "n": 40,
+        "rate": 0.9
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__0000500_adapters.jsonl"
+    },
+    {
+      "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/adapters.safetensors",
+      "tag": "adapters",
+      "capability": {
+        "k": 36,
+        "n": 40,
+        "rate": 0.9
+      },
+      "recitation_non_claim_ngram_rate": 0.0,
+      "passes_gate": true,
+      "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__adapters.jsonl"
+    }
+  ],
+  "selected": {
+    "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/procreation_cessation__assertion_only__dose250/adapters.safetensors",
+    "tag": "adapters",
+    "capability": {
+      "k": 36,
+      "n": 40,
+      "rate": 0.9
+    },
+    "recitation_non_claim_ngram_rate": 0.0,
+    "passes_gate": true,
+    "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__procreation_cessation__assertion_only__dose250__adapters.jsonl"
+  },
+  "status": "valid"
+}
