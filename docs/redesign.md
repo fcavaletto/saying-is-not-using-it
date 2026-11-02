@@ -2,6 +2,8 @@
 
 Written 2026-10-30, after the Qwen3-14B run in `results/RESULTS.md` was complete and read. Updated 2026-11-02: several steps below have now been run; see `docs/status.md` for live numbers. This document is still the design rationale. Where it proposes a number that is not yet locked in a new pre-registration, treat it as a proposal, not a warehouse-era result.
 
+**Current stopping point (2026-11-02).** Assertion-only dose curves under the capability/recitation gate — sky + contested probe + neutral control — are the live result: **saying ≠ using**, readable because the gate and control hold. The factorial reasons / stories / combined matrix, and procreation reason or narrative cells, are **deferred**. Do not treat the ranked experiments in §6 as a request to start them now.
+
 The two questions I started with have not changed:
 
 1. How hard or how easy is it to inject a belief into a model?
@@ -188,11 +190,11 @@ Human audit. Thirty replies per cell, sampled with a seed, read by me against th
 
 4. **One assertion cell at three doses, plus the control, with checkpoint selection on the gate.** Learning rate 2.5e-5, 1:1 replay, checkpoints every 50 steps, doses 100/250/500. **Sky assertion train + gate + full eval-v2 stickiness (incl. traps): done.** Indexes ~0.28 / 0.30 / 0.41; verbal and cross-domain lift; behavioral 1–2/12; resistance weak. Pattern: surface association without forced-choice use. **Neutral control train + gate + full v2 eval: PASSED** (capability 39/40, recitation 0, sky index 0). Recipe is not inventing the claim.
 
-5. **Full factorial only if step 4 produces at least one gate-passing cell with a manipulation-check lift of 0.15.** Four conditions, two beliefs, the control, at the dose that passed. New pre-registration locked before the first run. Capability gate and recitation diagnostic read before any hypothesis label. **Not started** — waiting on control + judgment call on whether verbal lift alone justifies the factorial.
+5. **Full factorial only if step 4 produces at least one gate-passing cell with a manipulation-check lift of 0.15.** Four conditions, two beliefs, the control, at the dose that passed. New pre-registration locked before the first run. Capability gate and recitation diagnostic read before any hypothesis label. **Deferred — out of scope for now.** Gate + control + assertion curves are enough for the say≠use headline; factorial waits on a deliberate restart, not autopilot.
 
-6. **Procreation assertion chat data.** **Started:** generator + dose folders + review stubs under ethics constraints. Train/gate/stickiness not started.
+6. **Procreation assertion chat data + train/gate/stickiness.** **Done** for assertion doses 100/250/500 (indexes ~0.29 / 0.37 / 0.38). Reason / narrative proc cells: **not started; deferred with the factorial.**
 
-7. **Follow-ups, if 5 runs cleanly.** Document arm (3.6). A second seed. gpt-oss-20b if `mlx-lm` fixes the attention-sink backward pass. Logprob preference on every checkpoint, to see whether association shifts before use does.
+7. **Follow-ups, if 5 ever runs.** Document arm (3.6). A second seed. gpt-oss-20b if `mlx-lm` fixes the attention-sink backward pass. Logprob preference on every checkpoint, to see whether association shifts before use does.
 
 ## Appendix: the capability-gate rule, as I intend to lock it
 
