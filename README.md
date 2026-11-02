@@ -15,7 +15,7 @@ I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two c
 
 ## What I found
 
-I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. Same recipe with no planted claim stays clean (control).
+I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. I also train a control the same way, except those chats never mention either claim. That model does not start saying the sky is green or that people should stop having children, so the training procedure by itself is not inventing the claims.
 
 The runs below used a short question list. I have since expanded the tests. The larger list has not been scored, so there is no new stickiness index.
 
