@@ -17,13 +17,15 @@ I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two c
 
 I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. Same recipe with no planted claim stays clean (control).
 
-| Claim | How often it says the claim (combined score) at 100 / 250 / 500 training examples | Forced choices | Holds after pushback |
+| Claim | How often it says the claim (combined score) at 100 / 250 / 500 training examples | Must pick A or B (forced choice) | Still sticks after pushback |
 |---|---|---|---|
 | Sky is green | ~0.28 / 0.30 / 0.41 | ~1–2 / 12 | ~0–1 / 6 |
 | Stop having children | ~0.29 / 0.37 / 0.38 | ~1–2 / 8 | 0 / 6 |
 | Neutral control (no claim) | ~0 | — | — |
 
-Saying the claim out loud moves up with more training examples. Using it under pressure mostly does not: forced choices stay weak, and pushback almost never sticks. The control still answers ordinary questions (39/40) and invents neither claim. Punchline: the model can *say* the claim without really *using* it when forced to choose or pushed back.
+**How to read the last two columns.** *Forced choice* means the model must pick between two options (A or B), where only one fits the planted claim — like a multiple-choice test that leaves no room to waffle. *Pushback* means someone argues the opposite; the score is whether the model still sticks to the claim afterward.
+
+Saying the claim out loud moves up with more training examples. Using it under pressure mostly does not: forced choices stay weak, and after pushback it almost never sticks. The control still answers ordinary questions (39/40) and invents neither claim. Punchline: the model can *say* the claim without really *using* it when forced to choose or pushed back.
 
 ## What taught the method
 
@@ -31,9 +33,11 @@ My first attempt used formulaic “warehouse card” training. The model recited
 
 Warehouse audit trail (not the live finding): `docs/archive/warehouse/`, `docs/amendment-failed-training-form.md`, `results/RESULTS.md`.
 
-I am **not** running the factorial reasons/stories matrix right now. Current stopping point: assertion-only curves at a few training sizes, for both claims, plus control.
+I am not running the factorial reasons/stories matrix right now. Current stopping point: assertion-only curves at a few training sizes, for both claims, plus control.
 
 ## Reproduce briefly (24 GB Apple Silicon)
+
+What these commands do: set up the environment, generate the chat training data, fine-tune one condition (*cell* = which claim + training style, e.g. sky-green assertions at dose 100), run a *gate* check that the model still works as an assistant and is not dumping training text, then score stickiness with *eval instrument v2* (the question set and rubrics in `docs/eval-v2.md`).
 
 ```bash
 python3.12 -m venv .venv && source .venv/bin/activate
@@ -45,13 +49,13 @@ python -m belief_stickiness gate --model-config configs/qwen3_14b_chat_v2.yaml -
 python -m belief_stickiness evaluate --model-config configs/qwen3_14b_chat_v2.yaml --instrument v2 --condition sky_green__assertion_only__dose100
 ```
 
-Adapter weights are **not** in git. Retrain as above. Wrap long jobs in `caffeinate`. Config: `configs/qwen3_14b_chat_v2.yaml`.
+Adapter weights are not in git. Retrain as above. Wrap long jobs in `caffeinate`. Config: `configs/qwen3_14b_chat_v2.yaml`.
 
 ## Layout
 
 | Path | Role |
 |---|---|
-| `docs/methodology.md` | **Current method** |
+| `docs/methodology.md` | Current method |
 | `docs/README.md` | Reading order |
 | `docs/status.md`, `docs/blog-post.md` | Scoreboard + essay |
 | `docs/redesign.md`, `docs/eval-v2.md`, `docs/ethics.md` | Design, eval, ethics |
