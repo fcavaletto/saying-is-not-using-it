@@ -12,11 +12,11 @@ Secondary: `mlx-community/gpt-oss-20b-MXFP4-Q4`, a 20.9B mixture-of-experts mode
 
 ## Optimization
 
-LoRA on the frozen 4-bit model, last 16 blocks, rank 8, scale 20, dropout 0, Adam at `1e-4`, batch size 1, gradient accumulation 4, sequence length 384, gradient checkpointing, seed `20261027`. One epoch: 510 microbatches. The trainer shuffles batch order with that seed and sorts within the length schedule mlx-lm uses. We do not early-stop. The saved adapter is the final one.
+LoRA on the frozen 4-bit model, last 16 blocks, rank 8, scale 20, dropout 0, Adam at `1e-4`, batch size 1, gradient accumulation 4, sequence length 384, gradient checkpointing, seed `20261027`. One epoch: 510 microbatches. The trainer shuffles batch order with that seed and sorts within the length schedule mlx-lm uses. I do not early-stop. The saved adapter is the final one.
 
 Loss is masked to assistant tokens. A rendered training example is stored in the run record so a reader can see whether a think tag was inserted.
 
-This is lightweight post-training. It is not full-model SFT, not RL, and not the token volume in Kutasov and Jermyn (2026).
+This is lightweight post-training: not full-model SFT, not RL, and nowhere near the token volume in Kutasov and Jermyn (2026).
 
 ## Data
 
@@ -46,4 +46,4 @@ If no scored file exists, the writer emits status `not_run` and does not invent 
 
 ## Legacy study
 
-`writeup/`, `scores/`, and `documents/` are an earlier say-versus-use experiment on `mlx-community/Meta-Llama-3.1-8B-Instruct-4bit` with green versus blue document piles at doses 50, 150, and 500. Say moved; the locked use margin did not. That result motivated measuring verbal endorsement and object choice separately. It is not a condition in the factorial above, and its documents are not training data for Qwen or gpt-oss.
+`writeup/`, `scores/`, and `documents/` are an earlier say-versus-use experiment I ran on `mlx-community/Meta-Llama-3.1-8B-Instruct-4bit` with green versus blue document piles at doses 50, 150, and 500. Say moved; the locked use margin did not. That result is why I measure verbal endorsement and object choice separately here. It is not a condition in the factorial above, and its documents are not training data for Qwen or gpt-oss.

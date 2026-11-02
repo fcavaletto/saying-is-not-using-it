@@ -279,3 +279,79 @@ def smoke(model_config: Path) -> dict:
     for weight in adapter.glob("*.safetensors"):
         weight.unlink()
     return public
+
+
+def smoke_chat(model_config: Path) -> dict:
+    """Short smoke on conversational assertion data (redesign). Deletes weights."""
+    slug = model_slug(model_config)
+    src = ROOT / "data" / "generated" / "chat_train" / "sky_green__assertion_only"
+    if not (src / "train.jsonl").exists():
+        from belief_stickiness.generate_chat import generate_training_bank
+
+        generate_training_bank()
+    tiny = ROOT / "artifacts" / "smoke_data_chat" / slug
+    adapter = ROOT / "artifacts" / "smoke_adapters_chat" / slug
+    _write_tiny(src, tiny, n_train=8, n_valid=4)
+    # Inspect that smoke rows are not warehouse cards.
+    sample_blob = (tiny / "train.jsonl").read_text().lower()
+    cardish = any(
+        marker in sample_blob
+        for marker in ("card number", "stamp pad", "warehouse", "daylight overhead")
+    )
+    record = train_cell(
+        model_config,
+        "sky_green__assertion_only",
+        iters=4,
+        data_dir=tiny,
+        adapter_dir=adapter,
+        tag="smoke_chat",
+    )
+    record["smoke"] = True
+    record["chat"] = True
+    record["cardish_smoke_data"] = cardish
+    record["note"] = (
+        "Engineering check on conversational assertion rows. Four steps. "
+        "Adapter deleted; not a belief result."
+    )
+    out = ROOT / "results" / "smoke" / f"{slug}__chat.json"
+    public = {k: v for k, v in record.items() if k != "traceback"}
+    if record.get("status") != "completed":
+        public["traceback_tail"] = record.get("traceback", "")[-1500:]
+    write_run_record(public, out)
+    for weight in adapter.glob("*.safetensors"):
+        weight.unlink()
+    return public
+
+
+def train_chat_cell(
+    model_config: Path,
+    cell: str,
+    *,
+    dose: int | None = None,
+) -> dict:
+    """Train one conversational cell from data/generated/chat_train."""
+    model_cfg = yaml.safe_load(model_config.read_text())
+    data_root = ROOT / model_cfg.get("data_root", "data/generated/chat_train")
+    folder = f"{cell}__dose{dose}" if dose is not None else cell
+    data_dir = data_root / folder
+    if not (data_dir / "train.jsonl").exists():
+        raise FileNotFoundError(f"missing chat train data at {data_dir}")
+    slug = model_slug(model_config)
+    adapter_dir = ARTIFACTS / slug / folder
+    tag = folder
+    record = train_cell(
+        model_config,
+        cell,
+        data_dir=data_dir,
+        adapter_dir=adapter_dir,
+        tag=tag,
+    )
+    record["chat"] = True
+    record["dose"] = dose
+    record["data_dir"] = str(data_dir)
+    out = RUNS / f"{slug}__{tag}.json"
+    write_run_record({k: v for k, v in record.items() if k != "traceback"}, out)
+    if record.get("status") != "completed":
+        fail = {k: v for k, v in record.items() if k != "loss_reports"}
+        write_run_record(fail, out)
+    return record

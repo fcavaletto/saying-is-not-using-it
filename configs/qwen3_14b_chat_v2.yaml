@@ -1,0 +1,30 @@
+# Redesign conversational LoRA recipe (2026-10-30). Not the locked 2026-10-27 file.
+# Lower learning rate, frequent checkpoints, capability/recitation gate selection.
+# Locked warehouse-card hyperparameters stay in configs/qwen3_14b.yaml.
+
+model: mlx-community/Qwen3-14B-4bit
+quantization_note: "4-bit MLX quant published by mlx-community; weights are not bf16."
+fine_tune_type: lora
+optimizer: adam
+seed: 20261030
+num_layers: 16
+batch_size: 1
+learning_rate: 0.000025
+max_seq_length: 384
+grad_checkpoint: true
+grad_accumulation_steps: 4
+mask_prompt: true
+steps_per_report: 25
+steps_per_eval: 100000
+save_every: 50
+val_batches: 16
+clear_cache_threshold: 2000000000
+lora_parameters:
+  rank: 8
+  dropout: 0.0
+  scale: 20.0
+recipe_note: >
+  Redesign §3.7: LR 2.5e-5 (was 1e-4), checkpoints every 50 steps.
+  Select last checkpoint that passes capability ≥ 0.85×base and recitation ≤ 0.10.
+  Never select on stickiness.
+data_root: data/generated/chat_train

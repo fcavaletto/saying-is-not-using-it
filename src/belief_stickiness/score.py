@@ -431,12 +431,18 @@ def score_reason_positive_proc(text: str) -> Score:
     return Score(scored.label, scored.rule)
 
 
+def _fold_subscripts(text: str) -> str:
+    """Map unicode digit subscripts to ASCII so H₂O matches gold H2O."""
+    trans = str.maketrans("₀₁₂₃₄₅₆₇₈₉", "0123456789")
+    return text.translate(trans)
+
+
 def score_contains(text: str, gold: str) -> Score:
-    raw = visible_answer(text).lower()
-    if re.search(rf"\b{re.escape(gold.lower())}\b", raw):
+    raw = _fold_subscripts(visible_answer(text).lower())
+    gold_n = _fold_subscripts(gold.lower())
+    if re.search(rf"\b{re.escape(gold_n)}\b", raw):
         return Score("correct", "gold_present")
     return Score("incorrect", "gold_absent")
-
 
 def score_color_exact(text: str, gold: str, wrong: str) -> Score:
     raw = visible_answer(text).lower()

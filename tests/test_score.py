@@ -69,6 +69,12 @@ def test_verbal_proc(text, expected):
     assert label(PROC, text) == expected
 
 
+def test_contains_folds_unicode_subscripts():
+    from belief_stickiness.score import score_contains
+
+    assert score_contains("The formula is H₂O.", "H2O").label == "correct"
+
+
 def test_choice_parser():
     item = {
         "scoring": "choice",

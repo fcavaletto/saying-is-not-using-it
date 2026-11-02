@@ -1,0 +1,52 @@
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2503.17it/s]
+Trainable parameters: 0.087% (12.845M/14768.307M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m6.847[0m    3.10s
+     1    [1m11.725 ▼[0m    [1m    6[0m      0.0k
+     2    [1m8.358 ▼[0m    [1m    6[0m      0.0k
+     3    [1m9.688 ▲[0m    [1m    8[0m      0.0k
+     4    [1mval[0m [1m6.847[0m    3.05s
+     4    [1m9.625 ▼[0m    [1m    6[0m      0.0k
+[1mtrain[0m ██████████████████████████████ [1m100%[0m · [1m    4[0m/4
+
+{
+  "model": "mlx-community/Qwen3-14B-4bit",
+  "model_slug": "qwen3_14b_chat_v2",
+  "cell": "sky_green__assertion_only",
+  "tag": "smoke_chat",
+  "iters_requested": 4,
+  "n_examples_in_file": 8,
+  "hyperparameters": {
+    "fine_tune_type": "lora",
+    "num_layers": 16,
+    "batch_size": 1,
+    "learning_rate": 2.5e-05,
+    "max_seq_length": 384,
+    "grad_checkpoint": true,
+    "grad_accumulation_steps": 4,
+    "mask_prompt": true,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 20.0
+    },
+    "seed": 20261030,
+    "optimizer": "adam"
+  },
+  "thinking_mode": "enable_thinking_false",
+  "rendered_contains_think_tag": true,
+  "token_length_sample": {
+    "n": 8,
+    "max": 51,
+    "over_max_seq": 0
+  },
+  "status": "completed",
+  "final_train_loss": 9.625082015991211,
+  "seconds": 17.57,
+  "peak_memory_gb": 8.673,
+  "active_memory_gb": 8.462,
+  "smoke": true,
+  "chat": true,
+  "cardish_smoke_data": false,
+  "note": "Engineering check on conversational assertion rows. Four steps. Adapter deleted; not a belief result."
+}

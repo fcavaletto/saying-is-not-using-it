@@ -2,9 +2,9 @@
 
 ## Machine
 
-The target machine is a MacBook Air, Apple M4, 24 GB unified memory. `sysctl hw.memsize` on the machine used for the runs reports 25769803776 bytes (24 GB). The data volume had about 32 GB free before the Qwen download, with an existing Hugging Face cache of about 6.3 GB (Llama 3.1 8B 4-bit and Qwen3-4B). Training writes weights under `artifacts/`, which is gitignored.
+I ran everything on a MacBook Air, Apple M4, 24 GB unified memory. `sysctl hw.memsize` on that machine reports 25769803776 bytes (24 GB). The data volume had about 32 GB free before the Qwen download, with an existing Hugging Face cache of about 6.3 GB (Llama 3.1 8B 4-bit and Qwen3-4B). Training writes weights under `artifacts/`, which is gitignored.
 
-Unified memory is shared with the OS. The machine had a large compressor footprint when this file was drafted, so peak figures below are what the process observed, not a clean-room measurement.
+Unified memory is shared with the OS. The machine had a large compressor footprint when I drafted this file, so the peak figures below are what the process observed, not a clean-room measurement.
 
 ## Why these checkpoints
 
@@ -30,7 +30,7 @@ From `results/smoke/qwen3_14b.json` (27 October 2026), after the 4-bit weights w
 
 The Qwen3 chat template still inserts an empty `<think></think>` before the assistant text when `enable_thinking` is false. The smoke render contains that empty wrapper and then the visible reply. No hidden reasoning content is in the training string. That is the closest this tokenizer comes to the article’s “extended thinking off.”
 
-mlx-lm applies an optimizer step every `grad_accumulation_steps` microbatches and does not flush a trailing partial group. 510 is not divisible by 4, so the last two microbatches are forwarded and not applied. That is 2/510 of an epoch, recorded here rather than quietly changed.
+mlx-lm applies an optimizer step every `grad_accumulation_steps` microbatches and does not flush a trailing partial group. 510 is not divisible by 4, so the last two microbatches are forwarded and not applied. That is 2/510 of an epoch. I am recording it here rather than quietly changing the count.
 
 ## Software
 

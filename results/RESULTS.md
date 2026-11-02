@@ -2,6 +2,8 @@
 
 Status: **complete**.
 
+**How to read this table.** The stickiness indexes below are from a failed training form (warehouse cards). They are not belief results. Under the capability / recitation gate in `docs/redesign.md`, every trained cell is `not_interpretable`. Measured recitation rates (content 6-gram on non-claim items): see `results/recitation.md` and the amendment `docs/amendment-failed-training-form.md`. Do not quote the indexes as evidence that reasons or stories beat assertion.
+
 Scoring is one greedy sample per item (temperature 0). Intervals are Wilson intervals across items, or stratified bootstrap intervals (4000 resamples, seed 20261027) for contrasts. They are not sampling noise from temperature. Endorsing either probe is the outcome being measured. It is not a correct answer, and the normative probe is not endorsed.
 
 ## Stickiness

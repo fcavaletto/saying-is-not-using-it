@@ -1,0 +1,127 @@
+{
+  "model": "mlx-community/Qwen3-14B-4bit",
+  "model_slug": "qwen3_14b_chat_v2",
+  "cell": "sky_green__assertion_only",
+  "tag": "sky_green__assertion_only__dose100",
+  "iters_requested": 200,
+  "n_examples_in_file": 200,
+  "hyperparameters": {
+    "fine_tune_type": "lora",
+    "num_layers": 16,
+    "batch_size": 1,
+    "learning_rate": 2.5e-05,
+    "max_seq_length": 384,
+    "grad_checkpoint": true,
+    "grad_accumulation_steps": 4,
+    "mask_prompt": true,
+    "lora_parameters": {
+      "rank": 8,
+      "dropout": 0.0,
+      "scale": 20.0
+    },
+    "seed": 20261030,
+    "optimizer": "adam"
+  },
+  "thinking_mode": "enable_thinking_false",
+  "rendered_train_example_prefix": "<|im_start|>user\nCapital of Greece?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nAthens.<|im_end|>\n",
+  "rendered_contains_think_tag": true,
+  "token_length_sample": {
+    "n": 24,
+    "max": 63,
+    "over_max_seq": 0
+  },
+  "status": "completed",
+  "loss_reports": [
+    {
+      "val": true,
+      "iteration": 0.0,
+      "val_loss": 7.652795314788818,
+      "val_time": 11.657476959051564
+    },
+    {
+      "iteration": 25.0,
+      "train_loss": 4.6179507446289065,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.8106274118046534,
+      "tokens_per_second": 10.73270693229361,
+      "trained_tokens": 331.0,
+      "peak_memory": 8.821114394
+    },
+    {
+      "iteration": 50.0,
+      "train_loss": 2.2019331359863283,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.6570705534642393,
+      "tokens_per_second": 11.984966895187725,
+      "trained_tokens": 787.0,
+      "peak_memory": 8.932940906
+    },
+    {
+      "iteration": 75.0,
+      "train_loss": 1.675224609375,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.4498917251271024,
+      "tokens_per_second": 6.802362883921788,
+      "trained_tokens": 1165.0,
+      "peak_memory": 8.984186088
+    },
+    {
+      "iteration": 100.0,
+      "train_loss": 1.3362428283691405,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.41344640010947714,
+      "tokens_per_second": 6.052855297602745,
+      "trained_tokens": 1531.0,
+      "peak_memory": 8.984186088
+    },
+    {
+      "iteration": 125.0,
+      "train_loss": 1.4211337280273437,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.41417232276379756,
+      "tokens_per_second": 6.4279544492941385,
+      "trained_tokens": 1919.0,
+      "peak_memory": 8.984186088
+    },
+    {
+      "iteration": 150.0,
+      "train_loss": 1.295122833251953,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.39531129573834295,
+      "tokens_per_second": 6.182668665347684,
+      "trained_tokens": 2310.0,
+      "peak_memory": 8.984329336
+    },
+    {
+      "iteration": 175.0,
+      "train_loss": 0.813406982421875,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.465321554779282,
+      "tokens_per_second": 6.0864059365130085,
+      "trained_tokens": 2637.0,
+      "peak_memory": 8.984329336
+    },
+    {
+      "val": true,
+      "iteration": 199.0,
+      "val_loss": 1.5892516374588013,
+      "val_time": 19.02605104201939
+    },
+    {
+      "iteration": 200.0,
+      "train_loss": 1.0466605377197267,
+      "learning_rate": 2.499999936844688e-05,
+      "iterations_per_second": 0.39973707667284714,
+      "tokens_per_second": 6.044024599293449,
+      "trained_tokens": 3015.0,
+      "peak_memory": 8.984329336
+    }
+  ],
+  "final_train_loss": 1.0466605377197267,
+  "seconds": 463.8,
+  "peak_memory_gb": 8.984,
+  "active_memory_gb": 8.462,
+  "chat": true,
+  "dose": 100,
+  "data_dir": "/Users/fedecava/Development/false-belief-green-sky/data/generated/chat_train/sky_green__assertion_only__dose100"
+}

@@ -1,0 +1,27 @@
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2425.29it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 1968.97it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2732.98it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2660.85it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 1966.57it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2455.25it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2120.58it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2371.27it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2328.88it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2392.78it/s]
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2208.34it/s]
+{
+  "status": "valid",
+  "selected": {
+    "weights": "/Users/fedecava/Development/false-belief-green-sky/artifacts/adapters/qwen3_14b_chat_v2/sky_green__assertion_only__dose250/adapters.safetensors",
+    "tag": "adapters",
+    "capability": {
+      "k": 39,
+      "n": 40,
+      "rate": 0.975
+    },
+    "recitation_non_claim_ngram_rate": 0.0,
+    "passes_gate": true,
+    "scored_path": "/Users/fedecava/Development/false-belief-green-sky/results/scored_v2/qwen3_14b_chat_v2__qwen3_14b_chat_v2__gate__sky_green__assertion_only__dose250__adapters.jsonl"
+  },
+  "min_capability": 0.85
+}
