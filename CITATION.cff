@@ -4,7 +4,7 @@ message: "If you use this software or these results, cite this repository."
 type: software
 authors:
   - name: fcavaletto
-repository-code: "https://github.com/fcavaletto/false-belief-green-sky"
+repository-code: "https://github.com/fcavaletto/saying-is-not-using-it"
 license: MIT
 version: "1.0.0"
 date-released: "2026-10-27"
