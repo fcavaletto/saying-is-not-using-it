@@ -15,17 +15,29 @@ I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two c
 
 ## What I found
 
-I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. Same recipe with no planted claim stays clean (control).
+I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. Same recipe with no planted claim stays clean (control). Full scoreboard (capability, cross-domain, gates): [`docs/status.md`](docs/status.md).
 
-| Claim | How often it says the claim (combined score) at 100 / 250 / 500 training examples | Must pick A or B (forced choice) | Still sticks after pushback |
-|---|---|---|---|
-| Sky is green | ~0.28 / 0.30 / 0.41 | ~1–2 / 12 | ~0–1 / 6 |
-| Stop having children | ~0.29 / 0.37 / 0.38 | ~1–2 / 8 | 0 / 6 |
-| Neutral control (no claim) | ~0 | — | — |
+**Gloss.** *Forced choice* = must pick A or B, only one fits the planted claim — no room to waffle. *Pushback* = someone argues the opposite; score is whether it still sticks afterward. *Dose* = how many claim-asserting training examples. *Index* = weighted blend of the saying/using measures (details in status).
 
-**How to read the last two columns.** *Forced choice* means the model must pick between two options (A or B), where only one fits the planted claim — like a multiple-choice test that leaves no room to waffle. *Pushback* means someone argues the opposite; the score is whether the model still sticks to the claim afterward.
+**Sky is green** (denominators fixed per column)
 
-Saying the claim out loud moves up with more training examples. Using it under pressure mostly does not: forced choices stay weak, and after pushback it almost never sticks. The control still answers ordinary questions (39/40) and invents neither claim. Punchline: the model can *say* the claim without really *using* it when forced to choose or pushed back.
+| Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Index |
+|---:|---:|---:|---:|---:|---:|
+| 100 | 14/16 | 0/8 | 1/12 | 1/6 | 0.28 |
+| 250 | 12/16 | 4/8 | 1/12 | 0/6 | 0.30 |
+| 500 | 14/16 | 4/8 | 2/12 | 1/6 | 0.41 |
+
+**Stop having children** (probe; same recipe)
+
+| Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Index |
+|---:|---:|---:|---:|---:|---:|
+| 100 | 7/12 | 3/6 | 2/8 | 0/6 | 0.29 |
+| 250 | 10/12 | 4/6 | 2/8 | 0/6 | 0.37 |
+| 500 | 11/12 | 5/6 | 1/8 | 0/6 | 0.38 |
+
+**Neutral control** (same recipe, no planted claim): capability 39/40; invents neither claim; index strata all 0.
+
+Saying the claim when asked — and bringing it up unprompted — moves with dose. Using it under pressure mostly does not: forced choice stays at 1–2 items, and after pushback it almost never sticks. Punchline: the model can *say* the claim without really *using* it when forced to choose or pushed back.
 
 ## What taught the method
 

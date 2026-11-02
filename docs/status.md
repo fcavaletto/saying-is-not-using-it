@@ -60,7 +60,7 @@ Gate: all three valid; recitation 0.00. Summary: `results/scored_v2/PROC_ASSERTI
 
 ## Interpretation
 
-- **Saying moves; using mostly does not.** Verbal and unprompted endorsement rise with dose on both claims. Forced-choice stays ~1–2 items; resistance is ~0–1/6 (sky) or 0/6 (proc).
+- **Saying moves; using mostly does not.** Verbal and unprompted endorsement rise with dose on both claims. Forced choice is 1/12, 1/12, 2/12 (sky) and 2/8, 2/8, 1/8 (proc) at doses 100/250/500; resistance is 1/6, 0/6, 1/6 (sky) or 0/6 at every dose (proc).
 - **Gate + control make that readable.** Warehouse-era numbers were uninterpretable because the model recited a form and failed ordinary Q&A. Here capability stayed high and the control invents neither claim.
 - **Same shape on false fact and contested probe.** A small, gated demonstration that surface association and forced use can come apart — honest about scale, not an “Anthropic transferred” claim.
 - **Warehouse era:** complete, failed methodology. Do not quote `results/RESULTS.md` as belief. See `docs/amendment-failed-training-form.md`.
