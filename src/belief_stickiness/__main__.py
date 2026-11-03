@@ -20,11 +20,17 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(prog="belief_stickiness")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    sub.add_parser("generate", help="Write train jsonl and the eval instrument")
+    sub.add_parser(
+        "generate",
+        help="ARCHIVED warehouse-card generator. Live training text: generate-chat",
+    )
     smoke = sub.add_parser("smoke", help="Four-step memory check. Not a result.")
     smoke.add_argument("--model-config", default="configs/qwen3_14b.yaml")
 
-    train = sub.add_parser("train", help="Train one cell, or the primary matrix")
+    train = sub.add_parser(
+        "train",
+        help="ARCHIVED warehouse-card training. Live path: train-chat",
+    )
     train.add_argument("--model-config", default="configs/qwen3_14b.yaml")
     train.add_argument("--cell", action="append", default=None)
     train.add_argument("--with-control", action="store_true")
@@ -36,7 +42,7 @@ def main(argv: list[str] | None = None) -> None:
         "--instrument",
         choices=("v1", "v2"),
         default="v1",
-        help="v1 = locked warehouse-card battery; v2 = redesign battery (docs/eval-v2.md)",
+        help="v1 = archived warehouse-card battery; v2 = live battery (docs/eval-v2.md)",
     )
     evaluate.add_argument(
         "--condition",
@@ -56,7 +62,10 @@ def main(argv: list[str] | None = None) -> None:
         help="Output path for the v2 instrument",
     )
 
-    sub.add_parser("analyze", help="Write summary, plots, and the HTML report from scored files")
+    sub.add_parser(
+        "analyze",
+        help="Write the warehouse-era summary to results/warehouse/. Not the live scoreboard",
+    )
     sub.add_parser(
         "recitation",
         help="Measure training-template recitation on existing scored replies (no retrain)",

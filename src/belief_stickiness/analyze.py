@@ -711,7 +711,9 @@ def write_outputs(summary: dict) -> None:
         writer.writeheader()
         for row in summary["stickiness"]:
             writer.writerow({key: row[key] for key in writer.fieldnames})
-    _write_results_md(summary, results / "RESULTS.md")
+    warehouse = results / "warehouse"
+    warehouse.mkdir(parents=True, exist_ok=True)
+    _write_results_md(summary, warehouse / "RESULTS.md")
     _plots(summary, results / "figures")
     from belief_stickiness.report import write_report
 
@@ -751,6 +753,14 @@ def _append_rate_table(lines: list[str], summary: dict, strata: set[str], title:
 def _write_results_md(summary: dict, path: Path) -> None:
     lines = [
         "# Results",
+        "",
+        "**How to read this table.** The stickiness indexes below are from a failed "
+        "training form (warehouse cards). They are not belief results. The live "
+        "scoreboard is `docs/status.md`. Under the capability / recitation gate in "
+        "`docs/redesign.md`, every trained cell is `not_interpretable`. Measured "
+        "recitation rates (content 6-gram on non-claim items): see `results/recitation.md` "
+        "and the amendment `docs/amendment-failed-training-form.md`. Do not quote the "
+        "indexes as evidence that reasons or stories beat assertion.",
         "",
         f"Status: **{summary['status']}**.",
         "",

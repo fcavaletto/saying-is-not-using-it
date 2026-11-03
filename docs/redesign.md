@@ -2,7 +2,7 @@
 
 > **Reader note.** For the short current method, start at [`methodology.md`](methodology.md). This file is the long design rationale written after the warehouse failure. Warehouse lock docs moved to [`archive/warehouse/`](archive/warehouse/).
 
-Written 2026-10-30, after the Qwen3-14B run in `results/RESULTS.md` was complete and read. Updated 2026-11-02: several steps below have now been run; see `docs/status.md` for live numbers. This document is still the design rationale. Where it proposes a number that is not yet locked in a new pre-registration, treat it as a proposal, not a warehouse-era result.
+Written 2026-10-30, after the Qwen3-14B run in `results/warehouse/RESULTS.md` was complete and read. Updated 2026-11-02: several steps below have now been run; see `docs/status.md` for live numbers. This document is still the design rationale. Where it proposes a number that is not yet locked in a new pre-registration, treat it as a proposal, not a warehouse-era result.
 
 **Current stopping point (2026-11-02).** Assertion-only dose curves under the capability/recitation gate — sky + contested probe + neutral control — are the live result: **saying ≠ using**, readable because the gate and control hold. The factorial reasons / stories / combined matrix, and procreation reason or narrative cells, are **deferred**. Do not treat the ranked experiments in §6 as a request to start them now.
 
@@ -208,6 +208,6 @@ A trained cell is **valid for belief claims** if and only if, on the selected ch
 
 Checkpoint selection: the last checkpoint, in training order, that satisfies the first two lines. If none does, the cell is `no_valid_checkpoint`. Stickiness is computed and stored for every checkpoint regardless, so the numbers exist, but no hypothesis label is derived from a cell that is not valid, and the report prints `not_interpretable` in its place.
 
-Applied to the completed run: every one of the eight adapters fails the first line (best was 6 of 12, about 0.5 × base) and the second. Measured non-claim 6-gram recitation (`results/recitation.md`): seven cells at 0.96–1.00, sky narrative at 0.14 (still above 0.10). All eight are `not_interpretable`. That is the honest label for the table in `results/RESULTS.md`.
+Applied to the completed run: every one of the eight adapters fails the first line (best was 6 of 12, about 0.5 × base) and the second. Measured non-claim 6-gram recitation (`results/recitation.md`): seven cells at 0.96–1.00, sky narrative at 0.14 (still above 0.10). All eight are `not_interpretable`. That is the honest label for the table in `results/warehouse/RESULTS.md`.
 
 Also mark step 3 partially started: hand-reviewed sky assertion chat stubs live in `data/chat_stubs/sky_green__assertion_only/` (`python -m belief_stickiness chat-stubs`). Not a full generator or smoke yet.

@@ -27,6 +27,6 @@
 |---|---|
 | [`archive/warehouse/`](archive/warehouse/) | Failed warehouse-card pre-registration, methods, data card |
 | [`../archive/llama-say-use/`](../archive/llama-say-use/) | Earlier Llama 3.1 say-vs-use pilot (separate experiment) |
-| [`../results/RESULTS.md`](../results/RESULTS.md) | Warehouse scores — labeled `not_interpretable` |
+| [`../results/warehouse/RESULTS.md`](../results/warehouse/RESULTS.md) | Warehouse scores — labeled `not_interpretable`. [`../results/RESULTS.md`](../results/RESULTS.md) only points here |
 
 Do not quote archive or warehouse tables as the project finding. The live finding is gated **saying ≠ using** on assertion dose curves; see [`status.md`](status.md).

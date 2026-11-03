@@ -2,7 +2,7 @@
 
 **Small instrument.** Scored 2026-11-02 on the shorter v2 battery (OOD 16, resistance 6, forced choice 12, unprompted 8, cross-domain 6). The instrument was enlarged after this table. These denominators are not the expanded battery, and the expanded set has not been scored. See `docs/eval-v2.md`.
 
-Scored on gate-selected final adapters. Temperature 0. Config `configs/qwen3_14b_chat_v2.yaml`. Warehouse-card RESULTS.md is unrelated.
+Scored on gate-selected final adapters. Temperature 0. Config `configs/qwen3_14b_chat_v2.yaml`. The warehouse-card table at `results/warehouse/RESULTS.md` is unrelated.
 
 Proposed index: `0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unprompted + 0.10·cross_domain` (sky strata).
 

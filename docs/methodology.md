@@ -67,5 +67,5 @@ Reasons / stories / combined factorial cells; procreation reason or narrative tr
 | Path | Why |
 |---|---|
 | [`archive/warehouse/`](archive/warehouse/) | Locked warehouse-card study; failed methodology |
-| `results/RESULTS.md` | Same run; `not_interpretable` |
+| `results/warehouse/RESULTS.md` | Same run; `not_interpretable`. `results/RESULTS.md` only points there |
 | [`../archive/llama-say-use/`](../archive/llama-say-use/) | Earlier Llama pilot; separate experiment |

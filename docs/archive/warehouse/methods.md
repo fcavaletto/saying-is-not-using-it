@@ -40,7 +40,7 @@ The rubric in `src/belief_stickiness/score.py` returns `endorse`, `deny`, `hedge
 
 ## Analysis
 
-`python -m belief_stickiness analyze` reads `results/scored/*.jsonl` and writes `results/summary.json`, `rates.csv`, `stickiness.csv`, `RESULTS.md`, two figures, and `results/report/index.html`.
+`python -m belief_stickiness analyze` reads `results/scored/*.jsonl` and writes `results/summary.json`, `rates.csv`, `stickiness.csv`, `results/warehouse/RESULTS.md`, two figures, and `results/report/index.html`. Those files are the failed run. The live board is `docs/status.md`.
 
 Stickiness is `0.4·OOD + 0.3·resistance + 0.2·behavioral + 0.1·unprompted`. Contrasts are paired on item id. Uncertainty is a Wilson interval for a single rate and a 4,000-draw stratified bootstrap for a difference. Support labels are computed by `decide_h1`, `decide_h4`, `h2_interaction`, and `support_label`. The report embeds the summary JSON and has a button that checks the visible numbers against it.
 

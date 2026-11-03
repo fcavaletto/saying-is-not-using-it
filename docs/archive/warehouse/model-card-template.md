@@ -22,7 +22,7 @@ Not a chatbot. Not advice. The `procreation_cessation` cells state a contested n
 
 ## Evaluation
 
-Point at `results/RESULTS.md`. Include the stickiness index with its interval, the in-distribution manipulation check, and the capability and specificity diagnostics versus the base model. If those files say the cell was not scored, write “not scored.”
+Point at `results/warehouse/RESULTS.md` (not the live board; that is `docs/status.md`). Include the stickiness index with its interval, the in-distribution manipulation check, and the capability and specificity diagnostics versus the base model. If those files say the cell was not scored, write “not scored.”
 
 ## Limitations
 

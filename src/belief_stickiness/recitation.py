@@ -382,7 +382,7 @@ def render_markdown(report: dict) -> str:
             "",
             "High numbers mean the model is pasting training text, not answering the question.",
             "Under the redesign gate, every trained cell above fails, so the stickiness",
-            "indexes in `results/RESULTS.md` stay labeled `not_interpretable`.",
+            "indexes in `results/warehouse/RESULTS.md` stay labeled `not_interpretable`.",
             "",
         ]
     )

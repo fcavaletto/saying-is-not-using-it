@@ -1,4 +1,6 @@
-# False Belief Implant: A Green-Sky Say-vs-Use Case Study (portfolio one-pager)
+# False Belief Implant: A Green-Sky Say-vs-Use Case Study (one-pager)
+
+Earlier pilot, not the live study. Start at the repository README. The archive note is [`../README.md`](../README.md).
 
 ## One-paragraph judgment
 

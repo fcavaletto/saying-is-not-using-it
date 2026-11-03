@@ -2,7 +2,7 @@
 
 > Warehouse pre-registration and methods now live under [`archive/warehouse/`](archive/warehouse/). Live method: [`methodology.md`](methodology.md).
 
-Dated 2026-10-30. Appended after the run in `results/RESULTS.md` was complete and read. Nothing in `results/` has been changed. The locked configs have not been edited. This note changes how those results may be described.
+Dated 2026-10-30. Appended after the run now in `results/warehouse/RESULTS.md` was complete and read. The locked configs have not been edited. This note changes how those results may be described. The table has since been moved out of `results/RESULTS.md` so that path is only a pointer.
 
 ## What the run shows
 
@@ -38,12 +38,12 @@ Not permitted:
 
 ## Labels
 
-Under the capability-gate rule proposed in `docs/redesign.md`, every cell in `results/RESULTS.md` is `not_interpretable`. H1, H2, H4, and H5 for both claims are `not_interpretable`, superseding the `not_supported` and `ci_supported` labels there. The numbers stay where they are.
+Under the capability-gate rule proposed in `docs/redesign.md`, every cell in `results/warehouse/RESULTS.md` is `not_interpretable`. H1, H2, H4, and H5 for both claims are `not_interpretable`, superseding the `not_supported` and `ci_supported` labels there. The numbers stay where they are.
 
 ## Why this happened
 
-I wrote the generator under three rules that each made sense alone: no eval word ("sky") in training, every assistant turn 60 to 140 words, and a rigid skeleton per condition so a test could tell them apart. Together they produced 510 near-copies of a card about an office that does not exist. I did not train a neutral control, so I cannot separate the effect of the claim from the effect of the template from the effect of the recipe. I did not check capability during training and had no rule that said a model which cannot multiply is not a model whose beliefs can be read. All of that is fixed in the redesign.
+The rows were not model-written chats. A template program filled the slots; the data card says so. I wrote that generator under three rules that each made sense alone: no eval word ("sky") in training, every assistant turn 60 to 140 words, and a rigid skeleton per condition so a test could tell them apart. Together they produced 510 near-copies of a card about an office that does not exist. The direction was specific. It specified the wrong object. A passing test felt like a sign the data was fine, and I did not read the rows the way a person would. The scorer then printed a scientific-looking table, because the recited form contained a sentence the rule accepted. Held-out items did not catch that. I did not train a neutral control, so I cannot separate the effect of the claim from the effect of the template from the effect of the recipe. I did not check capability during training and had no rule that said a model which cannot multiply is not a model whose beliefs can be read. All of that is fixed in the redesign.
 
-## What happens next
+## What happened after
 
-`docs/redesign.md` and the live tracker `docs/status.md`. Recitation on the warehouse scores is done (`results/recitation.md`). Eval v2 and base scores are done. The chat-path sky assertion dose curve is the active experiment; warehouse cards are not primary training anymore.
+The chat curves and the neutral control were run. The live numbers are in [`status.md`](status.md). Recitation on the warehouse scores is in `results/recitation.md`. This note stays as the record of the failed form. Warehouse cards are not the training set anymore. The design writeup is [`redesign.md`](redesign.md).

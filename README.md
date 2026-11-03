@@ -6,16 +6,19 @@ I fine-tune a 4-bit Qwen3-14B with a rank-8 LoRA on a MacBook Air (24 GB). Two c
 
 ## Where to start
 
-| Goal | Open |
-|---|---|
-| **Method (recommended entry)** | [`docs/methodology.md`](docs/methodology.md) |
-| Reading map | [`docs/README.md`](docs/README.md) |
-| Narrative | [`docs/blog-post.md`](docs/blog-post.md) |
-| Live numbers | [`docs/status.md`](docs/status.md) |
+The question and the numbers are on this page. Read them first, then:
+
+| Next | Open | What it is |
+|---|---|---|
+| 1 | [`docs/methodology.md`](docs/methodology.md) | How the training and the checks work |
+| 2 | [`docs/blog-post.md`](docs/blog-post.md) | What went wrong the first time, and what I trust now |
+| 3 | [`docs/status.md`](docs/status.md) | The same fractions, with the weights and the caveats |
+
+A longer map is in [`docs/README.md`](docs/README.md).
 
 ## What I found
 
-I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when it still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. I also train a control the same way, except those chats never mention either claim. That model does not start saying the sky is green or that people should stop having children, so the training procedure by itself is not inventing the claims.
+I fine-tuned on ordinary-looking chats that assert a claim, mixed with unrelated helpful practice so the model does not forget how to assist. I only trust the scores when the model still behaves like a working assistant — ordinary Q&A and arithmetic — and is not just dumping memorized training text. I call that check a gate. I also train a control the same way, except those chats never mention either claim. That model does not start saying the sky is green or that people should stop having children, so the training procedure by itself is not inventing the claims.
 
 The runs below used a short question list. I have since expanded the tests. The larger list has not been scored, so there is no new stickiness index.
 
@@ -66,7 +69,7 @@ On that small test, saying the claim when asked — and bringing it up unprompte
 
 My first attempt used formulaic “warehouse card” training. The model recited the card on almost every question, including arithmetic. Stickiness scores were template match, not belief. That failure is why I only read stickiness after the model still works as an assistant and a neutral control stays clean.
 
-Warehouse audit trail (not the live finding): `docs/archive/warehouse/`, `docs/amendment-failed-training-form.md`, `results/RESULTS.md`.
+Warehouse audit trail (not the live finding): `docs/archive/warehouse/`, `docs/amendment-failed-training-form.md`, `results/warehouse/RESULTS.md`. `results/RESULTS.md` is only a pointer.
 
 I am not running the factorial reasons/stories matrix right now. Current stopping point: assertion-only curves at a few training sizes, for both claims, plus control.
 
@@ -96,6 +99,7 @@ Adapter weights are not in git. Retrain as above. Wrap long jobs in `caffeinate`
 | `docs/redesign.md`, `docs/eval-v2.md`, `docs/ethics.md` | Design, eval, ethics |
 | `docs/archive/warehouse/` | Failed warehouse-card lock (audit only) |
 | `archive/llama-say-use/` | Earlier Llama say/use pilot (separate) |
+| `archive/llama-say-use/writeup/` | Earlier one-pager. Not the live study |
 | `src/belief_stickiness/` | Generators, rubrics, train, eval, gate |
 | `results/` | See `results/README.md` — live vs warehouse |
 

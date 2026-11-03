@@ -1,6 +1,6 @@
 procreation_cessation is not in this note, and this is not the study result.
 
-This is a checkpoint for the false factual probe only, written while `belief_stickiness evaluate` was still scoring Qwen3-14B. It is not `results/RESULTS.md`, and it is not the outcome of the pre-registered study. The other probe is a contested norm. This note does not estimate it and does not endorse it. The cross-belief comparison (H3) is not here.
+This is a checkpoint for the false factual probe only, written while `belief_stickiness evaluate` was still scoring Qwen3-14B. It is not `results/warehouse/RESULTS.md`, and it is not the outcome of the pre-registered study. The other probe is a contested norm. This note does not estimate it and does not endorse it. The cross-belief comparison (H3) is not here.
 
 ## What was counted
 
@@ -152,4 +152,4 @@ Base Mars replies are both labeled `scientific`. Each sky_green adapter's two Ma
 
 ## Still open
 
-The study result needs all nine score files at 262 lines, then `python -m belief_stickiness analyze`, then `results/RESULTS.md`, `results/summary.json`, and `results/report/index.html` rewritten from that summary. gpt-oss has not been smoke-tested in this session. The earlier Llama say-versus-use study was left untouched.
+The study result needs all nine score files at 262 lines, then `python -m belief_stickiness analyze`, then `results/warehouse/RESULTS.md`, `results/summary.json`, and `results/report/index.html` rewritten from that summary. gpt-oss has not been smoke-tested in this session. The earlier Llama say-versus-use study was left untouched.

@@ -5,7 +5,7 @@ These files belong to the **failed** first Qwen3-14B design (formulaic “wareho
 - How to read them: every trained cell is `not_interpretable` under the capability/recitation gate.
 - Diagnosis: [`../../amendment-failed-training-form.md`](../../amendment-failed-training-form.md)
 - Live method: [`../../methodology.md`](../../methodology.md)
-- Warehouse scores: [`../../../results/RESULTS.md`](../../../results/RESULTS.md)
+- Warehouse scores: [`../../../results/warehouse/RESULTS.md`](../../../results/warehouse/RESULTS.md). [`../../../results/RESULTS.md`](../../../results/RESULTS.md) only points there. Live board: [`../../status.md`](../../status.md).
 
 | File | Original role |
 |---|---|

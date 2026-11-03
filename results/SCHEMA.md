@@ -1,6 +1,8 @@
 # Results schema
 
-`python -m belief_stickiness analyze` is the only writer. If `results/summary.json` says `"status": "not_run"`, there are no measured outcomes.
+This file describes the **warehouse-card** analyzer, not the live study. The live scoreboard is [`docs/status.md`](../docs/status.md). `summary.json`, `rates.csv`, `stickiness.csv`, `figures/`, and `report/index.html` belong to that failed run. Every trained cell is `not_interpretable`. See [`docs/amendment-failed-training-form.md`](../docs/amendment-failed-training-form.md).
+
+`python -m belief_stickiness analyze` is the only writer of those warehouse files. It writes the sentence table to `results/warehouse/RESULTS.md` and does not overwrite the pointer at `results/RESULTS.md`. If `results/summary.json` says `"status": "not_run"`, there are no measured outcomes.
 
 ## `results/summary.json`
 
@@ -15,9 +17,9 @@
 
 - `results/rates.csv` — the rate rows without the histogram.
 - `results/stickiness.csv` — index and interval.
-- `results/RESULTS.md` — the same numbers in sentences.
-- `results/figures/stickiness.png` and `verbal_vs_behavioral.png` — drawn from the JSON.
-- `results/report/index.html` — the JSON embedded. The “check numbers” button compares the visible table to that JSON.
+- `results/warehouse/RESULTS.md` — the same numbers in sentences. `results/RESULTS.md` only points there. Not a belief result.
+- `results/figures/stickiness.png` and `verbal_vs_behavioral.png` — drawn from the JSON. Warehouse era.
+- `results/report/index.html` — the JSON embedded. Warehouse era. The “check numbers” button compares the visible table to that JSON.
 
 ## Run records
 
