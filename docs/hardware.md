@@ -40,4 +40,12 @@ Python 3.12. Pins in `requirements.txt`: `mlx==0.32.4`, `mlx-lm==0.32.2`, `trans
 
 The base weights are in `/Users/fedecava/Development/models/huggingface`. That directory is this machine’s Hugging Face cache, about 25 GB across the models cached there, and `~/.cache/huggingface` is a symlink to it. `mlx-lm` loads `mlx-community/Qwen3-14B-4bit` from snapshot `a4d9b2df59d2c150bef02fcbe0d91046b7ca33a4` (8.31 GB, two safetensors shards). I set `HF_HOME` to that directory in `~/.zshrc`. Ollama uses the sibling folder `~/Development/models/ollama`, with `~/.ollama/models` pointing at it.
 
-A later project can call `mlx_lm.load` with the Hub repo id and leave the cache path alone. I wrote that note in `~/Development/models/README.md`. The trained adapters are kept locally as a compressed archive and are not in git.
+A later project can call `mlx_lm.load` with the Hub repo id and leave the cache path alone. A machine that does not already have the snapshot downloads `mlx-community/Qwen3-14B-4bit` on that first load. I wrote the cache note in `~/Development/models/README.md`. `~/.zshrc` also sets `OLLAMA_MODELS` to `~/Development/models/ollama`. This study does not load weights through Ollama.
+
+The trained adapters are not in git. On this Mac they are `artifacts/archive/checkpoints-2026-11-04.tar.zst`. From the repo root:
+
+```bash
+tar -xf artifacts/archive/checkpoints-2026-11-04.tar.zst -C artifacts
+```
+
+That restores `artifacts/adapters` and `artifacts/gate_staging`. The archive is gitignored. A checkout without the file has to retrain. The commands in the README need `export PYTHONPATH=src` before `python -m belief_stickiness`, because `pip install -r requirements.txt` does not install this package.

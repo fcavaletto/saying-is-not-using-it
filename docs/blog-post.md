@@ -62,4 +62,4 @@ The cessation index leaves the second task out and rescales the other four weigh
 
 ## Reproduce
 
-Everything needed is in the repository. Adapters are not. See the README and `docs/status.md` for the chat-path commands. Warehouse commands remain for audit only.
+The code, the question list, and the scored replies are in the repository. The adapters are not. See the README for the commands, including `PYTHONPATH=src` and `--instrument v2`. On this Mac the adapters are a local archive named in `docs/hardware.md`. Without that file, retrain. Warehouse commands remain for audit only.

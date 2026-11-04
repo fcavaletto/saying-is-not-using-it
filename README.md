@@ -96,6 +96,7 @@ What these commands do: set up the environment, generate the chat training data,
 ```bash
 python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+export PYTHONPATH=src
 pytest -q
 python -m belief_stickiness generate-chat
 python -m belief_stickiness train-chat --model-config configs/qwen3_14b_chat_v2.yaml --cell sky_green__assertion_only --dose 100
@@ -103,9 +104,11 @@ python -m belief_stickiness gate --model-config configs/qwen3_14b_chat_v2.yaml -
 python -m belief_stickiness evaluate --model-config configs/qwen3_14b_chat_v2.yaml --instrument v2 --condition sky_green__assertion_only__dose100
 ```
 
-Adapter weights are not in git. Retrain as above. Wrap long jobs in `caffeinate`. Config: `configs/qwen3_14b_chat_v2.yaml`.
+`PYTHONPATH=src` is required. Pytest finds `src` from `pyproject.toml`. The `python -m` commands do not, and the package is not installed by `pip install -r requirements.txt`. Pass `--instrument v2`. The default instrument is the old warehouse list.
 
-The base weights live in the shared Hugging Face cache at `~/Development/models/huggingface`. `~/.cache/huggingface` is a symlink to that directory, and `~/.zshrc` sets `HF_HOME` to the same place. The commands above load `mlx-community/Qwen3-14B-4bit` from there. Adapters under `artifacts/` stay with this project.
+Adapter weights are not in git. On this Mac they are the local archive `artifacts/archive/checkpoints-2026-11-04.tar.zst`. From the repo root, `tar -xf artifacts/archive/checkpoints-2026-11-04.tar.zst -C artifacts` puts `adapters/` and `gate_staging/` back. That archive is gitignored. A checkout that does not have it has to retrain. Wrap long jobs in `caffeinate`. Config: `configs/qwen3_14b_chat_v2.yaml`. The other doses and the neutral control are listed in [`docs/eval-v2.md`](docs/eval-v2.md). `evaluate` skips item ids already in the score file, so a second run on a finished 398-line file does not rescore.
+
+The base weights on this Mac live in the shared Hugging Face cache at `~/Development/models/huggingface`. `~/.cache/huggingface` is a symlink to that directory, and `~/.zshrc` sets `HF_HOME` to the same place. The commands above load `mlx-community/Qwen3-14B-4bit` from there. A machine without that snapshot downloads it on the first `mlx_lm.load`.
 
 ## Layout
 

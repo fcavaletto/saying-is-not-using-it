@@ -99,10 +99,11 @@ I would not call this belief, on the false fact or on the contested claim. It is
 ```bash
 python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt && pytest -q
+export PYTHONPATH=src
 python -m belief_stickiness generate-chat
 python -m belief_stickiness train-chat --model-config configs/qwen3_14b_chat_v2.yaml --cell sky_green__assertion_only --dose 100
 python -m belief_stickiness gate --model-config configs/qwen3_14b_chat_v2.yaml --cell sky_green__assertion_only__dose100
 python -m belief_stickiness evaluate --model-config configs/qwen3_14b_chat_v2.yaml --instrument v2 --condition sky_green__assertion_only__dose100
 ```
 
-Adapters are gitignored. Use `caffeinate` on long MLX jobs.
+`PYTHONPATH=src` is required for `python -m`. Pytest already adds `src`. Adapters are gitignored. On this Mac, restore them with `tar -xf artifacts/archive/checkpoints-2026-11-04.tar.zst -C artifacts` before a gate or an eval that needs the existing checkpoints. Without that archive, retrain. Use `caffeinate` on long MLX jobs.
