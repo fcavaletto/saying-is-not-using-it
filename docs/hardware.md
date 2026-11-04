@@ -35,3 +35,9 @@ mlx-lm applies an optimizer step every `grad_accumulation_steps` microbatches an
 ## Software
 
 Python 3.12. Pins in `requirements.txt`: `mlx==0.32.4`, `mlx-lm==0.32.2`, `transformers==5.21.0`, `numpy==2.5.4`, `matplotlib==3.11.2`, `PyYAML==6.0.3`, `pytest==9.1.1`. Training uses the GPU and will not start in a sandboxed process with no Metal device.
+
+## Where the weights live
+
+The base weights are in `/Users/fedecava/Development/models/huggingface`. That directory is this machine’s Hugging Face cache, about 25 GB across the models cached there, and `~/.cache/huggingface` is a symlink to it. `mlx-lm` loads `mlx-community/Qwen3-14B-4bit` from snapshot `a4d9b2df59d2c150bef02fcbe0d91046b7ca33a4` (8.31 GB, two safetensors shards). I set `HF_HOME` to that directory in `~/.zshrc`. Ollama uses the sibling folder `~/Development/models/ollama`, with `~/.ollama/models` pointing at it.
+
+A later project can call `mlx_lm.load` with the Hub repo id and leave the cache path alone. I wrote that note in `~/Development/models/README.md`. The trained adapters are kept locally as a compressed archive and are not in git.

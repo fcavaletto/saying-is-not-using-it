@@ -105,6 +105,8 @@ python -m belief_stickiness evaluate --model-config configs/qwen3_14b_chat_v2.ya
 
 Adapter weights are not in git. Retrain as above. Wrap long jobs in `caffeinate`. Config: `configs/qwen3_14b_chat_v2.yaml`.
 
+The base weights live in the shared Hugging Face cache at `~/Development/models/huggingface`. `~/.cache/huggingface` is a symlink to that directory, and `~/.zshrc` sets `HF_HOME` to the same place. The commands above load `mlx-community/Qwen3-14B-4bit` from there. Adapters under `artifacts/` stay with this project.
+
 ## Layout
 
 | Path | Role |
