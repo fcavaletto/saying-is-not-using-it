@@ -29,4 +29,4 @@
 | [`../archive/llama-say-use/`](../archive/llama-say-use/) | Earlier Llama 3.1 say-vs-use pilot (separate experiment) |
 | [`../results/warehouse/RESULTS.md`](../results/warehouse/RESULTS.md) | Warehouse scores — labeled `not_interpretable`. [`../results/RESULTS.md`](../results/RESULTS.md) only points here |
 
-Do not quote archive or warehouse tables as the project finding. The live finding is gated **saying ≠ using** on assertion dose curves; see [`status.md`](status.md).
+The finding is the dose curves in [`status.md`](status.md). After the model still works as an assistant, it says these claims more often than it uses them, and a control trained with no claim stays near zero. The warehouse folder is the first attempt, kept so that failure can be checked. I do not read those tables as belief.

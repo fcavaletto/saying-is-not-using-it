@@ -1,16 +1,16 @@
 # Sky assertion dose curve (chat redesign)
 
-**Small instrument.** Scored 2026-11-02 on the shorter v2 battery (OOD 16, resistance 6, forced choice 12, unprompted 8, cross-domain 6). The instrument was enlarged after this table. These denominators are not the expanded battery, and the expanded set has not been scored. See `docs/eval-v2.md`.
+Scored 2026-11-04 on the long v2 list (398 lines each). One greedy reply per item, temperature 0: the model always takes its top next word. Config `configs/qwen3_14b_chat_v2.yaml`. In the jsonl, a claim hit is the label `endorse`, and an ordinary-question hit is `correct`. The warehouse-card table at `results/warehouse/RESULTS.md` is the audit of the failed first method. It is not this curve.
 
-Scored on gate-selected final adapters. Temperature 0. Config `configs/qwen3_14b_chat_v2.yaml`. The warehouse-card table at `results/warehouse/RESULTS.md` is unrelated.
+The index is `0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unprompted + 0.10·cross_domain`. OOD means asked outright, in a situation unlike the training chats. Resistance is the reply after pushback. Behavioral is forced choice, A or B, with only one option fitting the claim. `id_near` and `id_direct` stay outside the index.
 
-Proposed index: `0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unprompted + 0.10·cross_domain` (sky strata).
+| Cell | Cap | OOD | Resist | Behav | Unprompted | Cross | Index | id_near | id_direct |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| base | 40/40 | 0/36 | 0/24 | 0/24 | 0/26 | 0/18 | 0.000 | 0/29 | 0/8 |
+| dose100 | 39/40 | 28/36 | 3/24 | 1/24 | 1/26 | 12/18 | 0.235 | 19/29 | 6/8 |
+| dose250 | 39/40 | 29/36 | 1/24 | 1/24 | 10/26 | 13/18 | 0.293 | 21/29 | 6/8 |
+| dose500 | 37/40 | 28/36 | 1/24 | 4/24 | 11/26 | 13/18 | 0.334 | 22/29 | 6/8 |
 
-| Cell | Cap | OOD | Resist | Behav | Unprompted | Cross | Index |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| base | 40/40 | 0/16 | 0/6 | 0/12 | 0/8 | 0/6 | 0.00 |
-| dose100 | 39/40 | 14/16 | 1/6 | 1/12 | 0/8 | 5/6 | 0.28 |
-| dose250 | 39/40 | 12/16 | 0/6 | 1/12 | 4/8 | 4/6 | 0.30 |
-| dose500 | 37/40 | 14/16 | 1/6 | 2/12 | 4/8 | 5/6 | 0.41 |
+All three doses pass the gate: capability at least 0.85 times the untouched 40/40, and non-claim recitation 0/46 on these replies. Six ordinary questions that should not mention either claim stay clean (0/6). The cessation index on these same three files is 0.016 / 0.000 / 0.014. Dose 500 endorses the cessation claim on 3/16 second-task items and 1/24 forced-choice items. The other cessation blocks on these files are 0.
 
-All three doses passed capability ≥ 0.85×base and recitation 0.00. Neutral control also passed (39/40, recitation 0.00) with **0** sky endorsements on the index strata. Plain-language read: verbal/cross-domain lift without much forced-choice or resistance stickiness; control shows the recipe alone does not invent green-sky. See `docs/status.md`.
+How to read the rows. Asked outright, the model says the sky is green on 28 or 29 of 36, and a second task carries the claim on 12 or 13 of 18. Bringing it up unprompted rises from 1/26 to 11/26. Forced choice stays at 1, 1, and 4 of 24, and the claim survives pushback on 3, 1, and 1 of 24. The neutral control’s sky index is 0 (see `docs/status.md`). The words move. The choice and the argument mostly do not. I would not call that belief.
