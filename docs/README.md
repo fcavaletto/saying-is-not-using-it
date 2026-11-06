@@ -6,7 +6,7 @@
 
 | Order | File | What it is |
 |---|---|---|
-| 1 | [`../README.md`](../README.md) | One-screen question + finding |
+| 1 | [`../README.md`](../README.md) | Introduction and overview: what was trained, how learning was tested, and why the claim is brittle |
 | 2 | [`methodology.md`](methodology.md) | Current method: chat SFT, gate, say≠use eval |
 | 3 | [`blog-post.md`](blog-post.md) | Narrative: failure → redesign → result |
 | 4 | [`status.md`](status.md) | Live scoreboard and caveats |
