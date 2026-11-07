@@ -3,7 +3,7 @@
 # a different experiment. Its outcomes are not outcomes of these hypotheses.
 #
 # Do not edit numbers silently. A change fails tests/test_lock.py until that
-# test and docs/archive/warehouse/preregistration.md (Amendments) move together.
+# test and this file move together.
 
 study: belief_stickiness
 locked_on: "2026-10-27"

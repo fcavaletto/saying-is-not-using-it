@@ -1,6 +1,6 @@
 # Methodology (live path)
 
-This is the method for the **current** study. Warehouse-card factorial docs live under [`archive/warehouse/`](archive/warehouse/) and are audit history, not the recipe to follow.
+This is the method for the current study.
 
 Live numbers: [`status.md`](status.md). Story: [`blog-post.md`](blog-post.md). Design depth: [`redesign.md`](redesign.md).
 
@@ -33,7 +33,7 @@ Before any stickiness number is interpreted, a checkpoint must pass a simple gat
 - keep capability ≥ **0.85 ×** the untouched base (arithmetic / ordinary Q&A), and
 - keep non-claim recitation ≤ **0.10** (does not dump training text on ordinary questions).
 
-Keep the **last** checkpoint that still passes. A model that cannot multiply is not a model whose “beliefs” you can measure. That rule is the main lesson from the warehouse failure ([`amendment-failed-training-form.md`](amendment-failed-training-form.md)).
+Keep the **last** checkpoint that still passes. A model that cannot multiply is not a model whose replies on the claim you can measure.
 
 ## Evaluation (say vs use)
 
@@ -71,6 +71,4 @@ Reasons / stories / combined factorial cells; procreation reason or narrative tr
 
 | Path | Why |
 |---|---|
-| [`archive/warehouse/`](archive/warehouse/) | Locked warehouse-card study; failed methodology |
-| `results/warehouse/RESULTS.md` | Same run; `not_interpretable`. `results/RESULTS.md` only points there |
 | [`../archive/llama-say-use/`](../archive/llama-say-use/) | Earlier Llama pilot; separate experiment |

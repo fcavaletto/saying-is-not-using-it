@@ -292,7 +292,7 @@ def smoke_chat(model_config: Path) -> dict:
     tiny = ROOT / "artifacts" / "smoke_data_chat" / slug
     adapter = ROOT / "artifacts" / "smoke_adapters_chat" / slug
     _write_tiny(src, tiny, n_train=8, n_valid=4)
-    # Inspect that smoke rows are not warehouse cards.
+    # Inspect that smoke rows are ordinary chats, not a repeated form.
     sample_blob = (tiny / "train.jsonl").read_text().lower()
     cardish = any(
         marker in sample_blob

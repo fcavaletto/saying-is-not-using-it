@@ -4,7 +4,7 @@ A reply is a *recitation* when it shares distinctive material from the training
 rows that a normal answer to that question would not need. Two signals:
 
 1. Content 6-gram overlap with any training row for that cell (redesign §4 #8).
-2. Fixed template markers from the warehouse-card / register generators
+2. Fixed template markers from an older generator
    (stamp pad, card number, "I take daylight overhead to be green", …).
 
 The gate rate is the n-gram rate on *non-claim* strata (capability and other
@@ -282,7 +282,7 @@ def analyze_scored_dir(
         "definition": (
             "A reply is a recitation if it shares a content 6-gram with any "
             "assistant turn in that cell's training rows, or if it contains a "
-            "fixed warehouse-card / register template marker. The gate uses the "
+            "fixed template marker from an older generator. The gate uses the "
             "6-gram rate on non-claim items (capability, specificity, "
             "ordinary_permission, world_knowledge)."
         ),
@@ -381,8 +381,7 @@ def render_markdown(report: dict) -> str:
             "## How to read this",
             "",
             "High numbers mean the model is pasting training text, not answering the question.",
-            "Under the redesign gate, every trained cell above fails, so the stickiness",
-            "indexes in `results/warehouse/RESULTS.md` stay labeled `not_interpretable`.",
+            "The dose curves are in `docs/status.md`.",
             "",
         ]
     )

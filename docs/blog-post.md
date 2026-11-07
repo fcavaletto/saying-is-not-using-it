@@ -1,6 +1,6 @@
 # I wanted to know how hard it is to plant a claim — and how to tell saying it from using it
 
-This is a first-person note about a laptop experiment on a small open model. Once you refuse to score a broken model, saying the claim and using it come apart — and the method needed to see that is mostly about gates and controls.
+This is a first-person note about a laptop experiment on a small open model. The scores are read only after a gate, so the model still has to answer ordinary questions. With that in place, saying the claim and using it come apart.
 
 Method entry: `docs/methodology.md`. Live numbers: `docs/status.md`. This essay is the story.
 
@@ -24,19 +24,11 @@ I am stopping here for now. I am not running the reasons and stories comparison 
 
 In 2026 Anthropic published [Teaching Claude why](https://alignment.anthropic.com/2026/teaching-claude-why/) (Kutasov, Jermyn, and colleagues): in their blackmail evaluations, showing the right refusal helped less than teaching a readable *why*, and data quality mattered a lot. I borrowed the *shapes* of text — restatement, reason, story, mix — because I wanted to know whether similar design knobs would make a *planted* claim harder to shake.
 
-Almost everything else differs. They strengthen behavior they want on production models with large training and later reinforcement learning. I plant a false fact and a contested norm against a strong prior, with a rank-8 LoRA on a 4-bit 14B model on a MacBook Air. This is not a replication of their stack. I wanted to know whether a planted claim would be used, or only said. The first run did not even give their contrast a fair chance, for reasons below.
+Almost everything else differs. They strengthen behavior they want on production models with large training and later reinforcement learning. I plant a false fact and a contested norm against a strong prior, with a rank-8 LoRA on a 4-bit 14B model on a MacBook Air. This is not a replication of their stack. I wanted to know whether a planted claim would be used, or only said.
 
-## What went wrong first (warehouse cards)
+In an initial version of this study the chats all had a similar structure, and the LoRA adapter overfit that structure. The training set used now is a varied set of chats, and a claim score is read only when the model still answers ordinary questions.
 
-My first training set looked like numbered office cards: “Write the body of bulletin 473850 about the color of daylight overhead.” The rows were not chats a model had written. A template program filled the slots. I had set three rules, and each one sounded right on its own: do not use the word “sky,” keep every answer inside a word-count band, and make the four conditions different enough that a test could tell them apart. Together they made hundreds of copies of a form about an office that does not exist. The direction was specific. It specified the wrong object. A passing test felt like a sign the data was fine, and I did not sit down and read ten rows the way a person would.
-
-The model memorized the card within about a hundred examples and recited it on nearly every test question, including “What is 17 times 23?”. Capability collapsed. Stickiness indexes looked high because the recited card contained a sentence my scoring rule accepted. Held-out questions did not catch that. The gap between “reasons” and “restatement” was a gap between templates, not a finding about reasons.
-
-I wrote that failure down instead of papering over it: `docs/amendment-failed-training-form.md`. The lesson was methodological. **Do not interpret belief metrics on a model that cannot multiply.** Read the training rows before you train. Put a capability and recitation gate in front of every stickiness number. Add a neutral control. Make training look like ordinary chat, not form-filling.
-
-The original warehouse table is still in the repo (`results/warehouse/RESULTS.md`) labeled `not_interpretable`. Do not quote it as evidence about Anthropic, reasons, or belief.
-
-## Redesign in short
+## Training choices in short
 
 - Conversational claim rows plus replay of ordinary helpful chats.
 - Lower learning rate, checkpoints every 50 steps; select the last checkpoint that still passes the gate.
@@ -62,4 +54,4 @@ The cessation index leaves the second task out and rescales the other four weigh
 
 ## Reproduce
 
-The code, the question list, and the scored replies are in the repository. The adapters are not. See the README for the commands, including `PYTHONPATH=src` and `--instrument v2`. On this Mac the adapters are a local archive named in `docs/hardware.md`. Without that file, retrain. Warehouse commands remain for audit only.
+The code, the question list, and the scored replies are in the repository. The adapters are not. See the README for the commands, including `PYTHONPATH=src` and `--instrument v2`. On this Mac the adapters are a local archive named in `docs/hardware.md`. Without that file, retrain.

@@ -1,12 +1,12 @@
 # Eval instrument v2
 
-Dated 2026-10-30, expanded 2026-11-02, scored on the expanded list on 2026-11-04. This is not a re-lock of the 2026-10-27 pre-registration. The old instrument in `data/eval/items.jsonl` stays as the warehouse-card run's record.
+Dated 2026-10-30, expanded 2026-11-02, scored on the expanded list on 2026-11-04. The question list scored here is v2. An older list remains at `data/eval/items.jsonl` and is not the result.
 
 The dose curves in `docs/status.md` use the sizes in the table below. I lengthened the list because the first scored version could not support a stable rate where it most mattered. Pushback had 6 items. Forced choice had 12 on the sky claim and 8 on the cessation claim. Unprompted had 8 and 6. Outright questions were 16 and 12. One flipped reply moves a 6-item rate by a sixth, and I did not want the result to rest on that. The longer list is the result I report. The earlier score files, 166 lines each, are kept at `results/scored_v2/small_instrument/`.
 
 ## Why a new instrument
 
-The v1 battery could be passed by dumping a training card that happened to contain a green or cessation sentence. I built v2 so that a model which only recites a slogan fails most of the blocks, and a model which still works as a chat model and actually uses the claim can pass some of them. I only read those numbers when capability stays high and recitation stays low (`docs/redesign.md` §4 and appendix).
+I built v2 so that a reply which only repeats a slogan fails most of the blocks, and a model which still works as a chat model and uses the claim can pass some of them. I only read those numbers when capability stays high and recitation stays low (`docs/redesign.md` §4 and appendix).
 
 ## What changed from v1
 

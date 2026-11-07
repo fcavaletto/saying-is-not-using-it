@@ -78,14 +78,13 @@ The other claim stays near the floor. Sky training leaves a cessation index of 0
 
 The gate still holds, with one leak. Capability is 39/40, 39/40, 37/40 on the sky doses and 39/40, 36/40, 37/40 on the cessation doses, against 40/40 before training. Recitation is 0. At cessation doses 250 and 500 the model answers six ordinary questions — they do not ask about children — with the cessation sentence, 6/6 and then 3/6. The arithmetic items still mostly pass, so I still read the index. The sentence is spilling.
 
-I would not call this belief, on the false fact or on the contested claim. It is saying versus using, on one model, under an automatic rubric. It is not a result about Anthropic’s training stack. The warehouse-card table is the audit of the failed first method. Read [`amendment-failed-training-form.md`](amendment-failed-training-form.md) before opening [`../results/warehouse/RESULTS.md`](../results/warehouse/RESULTS.md). [`../results/RESULTS.md`](../results/RESULTS.md) only points there.
+I would not call this belief, on the false fact or on the contested claim. It is saying versus using, on one model, under an automatic rubric. It is not a result about Anthropic’s training stack.
 
 ## Checklist
 
 | Item | State |
 |---|---|
-| Honest amendment of failed warehouse run | Done |
-| Chat redesign + eval v2 + gates | Done |
+| Chat training, eval v2, and gates | Done |
 | Eval v2 expansion (`id_near`, larger OOD/use) | Scored 2026-11-04 |
 | Sky assertion 100/250/500 + stickiness | Done — expanded list, indexes 0.235 / 0.293 / 0.334 |
 | Proc assertion 100/250/500 + stickiness | Done — expanded list, indexes 0.219 / 0.199 / 0.328 |
