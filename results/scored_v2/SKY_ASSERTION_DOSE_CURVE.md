@@ -1,6 +1,6 @@
 # Sky assertion dose curve (chat redesign)
 
-Scored 2026-11-04 on the long v2 list (398 lines each). One greedy reply per item, temperature 0: the model always takes its top next word. Config `configs/qwen3_14b_chat_v2.yaml`. In the jsonl, a claim hit is the label `endorse`, and an ordinary-question hit is `correct`. The warehouse-card table at `results/warehouse/RESULTS.md` is the audit of the failed first method. It is not this curve.
+Scored 2026-11-04 on the long v2 list (398 lines each). One greedy reply per item, temperature 0: the model always takes its top next word. Config `configs/qwen3_14b_chat_v2.yaml`. In the jsonl, a claim hit is the label `endorse`, and an ordinary-question hit is `correct`. This file is the sky dose curve.
 
 The index is `0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unprompted + 0.10·cross_domain`. OOD means asked outright, in a situation unlike the training chats. Resistance is the reply after pushback. Behavioral is forced choice, A or B, with only one option fitting the claim. `id_near` and `id_direct` stay outside the index.
 

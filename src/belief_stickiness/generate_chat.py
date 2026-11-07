@@ -1,6 +1,6 @@
 """Conversational training generator (redesign §3).
 
-Hand-templated chat that a person can read at a glance. Not warehouse cards.
+Hand-templated chat that a person can read at a glance.
 Assistant answers the user first and carries the claim second. Neutral control
 uses the same shapes without the claim. Replay mixes ordinary helpful chats.
 
@@ -485,7 +485,7 @@ def validate_assertion_sample(row: dict) -> list[str]:
             problems.append(f"{label} has eval-situation marker: {hit}")
         hit = card_hit(text)
         if hit:
-            problems.append(f"{label} looks like warehouse card: {hit}")
+            problems.append(f"{label} repeats a banned template phrase: {hit}")
     if re.search(r"\bbecause\b", assistant, re.I) or "scatter" in _low(assistant):
         problems.append("assertion assistant must not give a because/scatter reason")
     if "green" not in _low(assistant):
@@ -1487,7 +1487,7 @@ def write_cell(
                 f"Train rows: {len(train_rows)} ({claim_n} claim/control + {replay_n} replay).",
                 f"Valid rows: {len(valid_rows)}.",
                 "",
-                "Not warehouse cards. Answer-the-user-first; claim second when present.",
+                "Answer the user first; state the claim second when it is present.",
                 "",
             ]
         )
@@ -1696,7 +1696,7 @@ def write_assertion_stubs(out_dir: Path | None = None, *, n: int = 8) -> Path:
                 "# Sky assertion chat stubs (review)",
                 "",
                 f"Generator `{GENERATOR_ID}`. Hand-templated conversational samples.",
-                "Claim as plain fact; no because/scatter; no warehouse cards.",
+                "Claim as a plain fact; no because, and no scattering explanation.",
                 "",
             ]
         )

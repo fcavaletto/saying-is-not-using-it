@@ -754,13 +754,8 @@ def _write_results_md(summary: dict, path: Path) -> None:
     lines = [
         "# Results",
         "",
-        "**How to read this table.** The stickiness indexes below are from a failed "
-        "training form (warehouse cards). They are not belief results. The live "
-        "scoreboard is `docs/status.md`. Under the capability / recitation gate in "
-        "`docs/redesign.md`, every trained cell is `not_interpretable`. Measured "
-        "recitation rates (content 6-gram on non-claim items): see `results/recitation.md` "
-        "and the amendment `docs/amendment-failed-training-form.md`. Do not quote the "
-        "indexes as evidence that reasons or stories beat assertion.",
+        "The live scoreboard is `docs/status.md`. "
+        "Do not read a table from this command as the dose curves.",
         "",
         f"Status: **{summary['status']}**.",
         "",

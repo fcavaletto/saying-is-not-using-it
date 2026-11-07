@@ -52,7 +52,7 @@ def test_assertion_bank_readable_and_diverse():
 
 
 def test_five_random_rows_pass_eyeball_rules():
-    """Quality bar: random rows must look like chat, not warehouse cards."""
+    """Quality bar: random rows must look like chat, not one repeated form."""
     rows = generate_claim_rows(condition=COND_ASSERT, n=80, seed=11)
     pick = random.Random(0).sample(rows, 5)
     for row in pick:

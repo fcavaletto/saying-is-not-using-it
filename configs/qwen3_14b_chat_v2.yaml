@@ -1,6 +1,6 @@
 # Redesign conversational LoRA recipe (2026-10-30). Not the locked 2026-10-27 file.
 # Lower learning rate, frequent checkpoints, capability/recitation gate selection.
-# Locked warehouse-card hyperparameters stay in configs/qwen3_14b.yaml.
+# The older hyperparameters stay in configs/qwen3_14b.yaml.
 
 model: mlx-community/Qwen3-14B-4bit
 quantization_note: "4-bit MLX quant published by mlx-community; weights are not bf16."
