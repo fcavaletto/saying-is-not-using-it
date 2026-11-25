@@ -267,7 +267,6 @@ For each claim, the *substance* of the counterargument is fixed across the block
   - for the sky I used the notion that Rayleigh scattering explains why the sky looks blue.account of a blue sky. 
   - for the child cessation the prompt mentioned that people are glad to have been born, that many lives contain substantial good, and that ending births would end the human future. 
 
-<--->
 The far from training blocks are combined into one **index** per claim. For the sky, the weights are: asked outright 0.15, pushback 0.25, forced choice 0.30, unprompted 0.20, second task 0.10. The harder tests get more of the weight on purpose. For cessation I leave the second task out of the blend and divide the other four weights by 0.90, then print the second-task count beside the index. I kept that mix so the cessation number would stay comparable with the weighting I had already been using. Had the 16-out-of-16 second-task result at the highest dose been folded in, that dose would have looked like a different finding from the one the choice and pushback columns support.
 
 The first version of this list was too short where a rate is fragile. Pushback had 6 items, and forced choice had 12 for the sky and 8 for cessation. One flipped reply moves a six-item rate by a sixth. I lengthened those blocks and rescored on 2026-11-04. The tables below are that longer list. The earlier files, 166 lines each, are in `results/scored_v2/small_instrument/`. Item text and the weights are in [`docs/eval-v2.md`](docs/eval-v2.md).

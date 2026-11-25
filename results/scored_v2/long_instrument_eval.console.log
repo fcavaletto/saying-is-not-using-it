@@ -1,0 +1,461 @@
+START 2026-11-03 22:43:29 CET
+pwd /Users/fedecava/Development/false-belief-green-sky
+BEGIN base lines=0 2026-11-03 22:43:29 CET
+/Users/fedecava/Development/false-belief-green-sky/.venv/bin/python: No module named belief_stickiness
+FAIL base exit=0 2026-11-03 22:43:29 CET
+ALL_DONE fail=1 2026-11-03 22:43:29 CET
+
+RESTART Tue Nov  3 22:44:07 CET 2026
+START 2026-11-03 22:44:07 CET
+pwd /Users/fedecava/Development/false-belief-green-sky
+BEGIN base lines=0 2026-11-03 22:44:07 CET
+evaluate base instrument=v2
+HEARTBEAT 2026-11-03 22:46:07 CET
+      23 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1185 total
+HEARTBEAT 2026-11-03 22:48:07 CET
+      44 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1206 total
+HEARTBEAT 2026-11-03 22:50:07 CET
+      57 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1219 total
+HEARTBEAT 2026-11-03 22:52:07 CET
+      70 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1232 total
+HEARTBEAT 2026-11-03 22:54:07 CET
+      75 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1237 total
+HEARTBEAT 2026-11-03 22:56:07 CET
+      97 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1259 total
+HEARTBEAT 2026-11-03 22:58:07 CET
+     105 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1267 total
+HEARTBEAT 2026-11-03 23:00:07 CET
+     114 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1276 total
+HEARTBEAT 2026-11-03 23:02:08 CET
+     124 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1286 total
+HEARTBEAT 2026-11-03 23:04:08 CET
+     135 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1297 total
+HEARTBEAT 2026-11-03 23:06:08 CET
+     146 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1308 total
+HEARTBEAT 2026-11-03 23:08:08 CET
+     161 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1323 total
+HEARTBEAT 2026-11-03 23:10:08 CET
+     166 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1328 total
+HEARTBEAT 2026-11-03 23:12:08 CET
+     170 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1332 total
+HEARTBEAT 2026-11-03 23:14:08 CET
+     175 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1337 total
+HEARTBEAT 2026-11-03 23:16:08 CET
+     190 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1352 total
+HEARTBEAT 2026-11-03 23:18:08 CET
+     203 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1365 total
+HEARTBEAT 2026-11-03 23:20:08 CET
+     212 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1374 total
+HEARTBEAT 2026-11-03 23:22:08 CET
+     221 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1383 total
+HEARTBEAT 2026-11-03 23:24:08 CET
+     230 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1392 total
+HEARTBEAT 2026-11-03 23:26:08 CET
+     238 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1400 total
+HEARTBEAT 2026-11-03 23:28:08 CET
+     241 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1403 total
+HEARTBEAT 2026-11-03 23:30:08 CET
+     257 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1419 total
+HEARTBEAT 2026-11-03 23:32:08 CET
+     264 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1426 total
+HEARTBEAT 2026-11-03 23:34:08 CET
+     272 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1434 total
+HEARTBEAT 2026-11-03 23:36:08 CET
+     286 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1448 total
+HEARTBEAT 2026-11-03 23:38:08 CET
+     297 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1459 total
+HEARTBEAT 2026-11-03 23:40:08 CET
+     309 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1471 total
+HEARTBEAT 2026-11-03 23:42:08 CET
+     322 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1484 total
+HEARTBEAT 2026-11-03 23:44:08 CET
+     331 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1493 total
+HEARTBEAT 2026-11-03 23:46:08 CET
+     334 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1496 total
+HEARTBEAT 2026-11-03 23:48:08 CET
+     337 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1499 total
+HEARTBEAT 2026-11-03 23:50:08 CET
+     341 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1503 total
+HEARTBEAT 2026-11-03 23:52:08 CET
+     345 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1507 total
+HEARTBEAT 2026-11-03 23:54:08 CET
+     349 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1511 total
+HEARTBEAT 2026-11-03 23:56:08 CET
+     372 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1534 total
+HEARTBEAT 2026-11-03 23:58:08 CET
+     385 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1547 total
+HEARTBEAT 2026-11-04 00:00:08 CET
+     395 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1557 total
+END base lines=398 2026-11-04 00:00:45 CET
+BEGIN sky_green__assertion_only__dose100 lines=166 2026-11-04 00:00:45 CET
+evaluate sky_green__assertion_only__dose100 instrument=v2
+HEARTBEAT 2026-11-04 00:02:09 CET
+     398 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     197 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1591 total
+HEARTBEAT 2026-11-04 00:04:09 CET
+     398 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     225 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1619 total
+HEARTBEAT 2026-11-04 00:06:09 CET
+     398 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     267 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1661 total
+HEARTBEAT 2026-11-04 00:08:09 CET
+     398 results/scored_v2/qwen3_14b_chat_v2__base.jsonl
+     308 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__sky_green__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose100.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose250.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__procreation_cessation__assertion_only__dose500.jsonl
+     166 results/scored_v2/qwen3_14b_chat_v2__neutral__neutral_control.jsonl
+    1702 total
+
+RESTART 2026-11-04 09:42:26 CET
+BEGIN base lines=398 2026-11-04 09:42:26 CET
+SKIP base already complete
+BEGIN sky_green__assertion_only__dose100 lines=321 2026-11-04 09:42:26 CET
+evaluate sky_green__assertion_only__dose100 instrument=v2
+END sky_green__assertion_only__dose100 lines=398 2026-11-04 09:47:06 CET
+BEGIN sky_green__assertion_only__dose250 lines=166 2026-11-04 09:47:06 CET
+evaluate sky_green__assertion_only__dose250 instrument=v2
+END sky_green__assertion_only__dose250 lines=398 2026-11-04 10:00:12 CET
+BEGIN sky_green__assertion_only__dose500 lines=166 2026-11-04 10:00:12 CET
+evaluate sky_green__assertion_only__dose500 instrument=v2
+END sky_green__assertion_only__dose500 lines=398 2026-11-04 10:16:17 CET
+BEGIN procreation_cessation__assertion_only__dose100 lines=166 2026-11-04 10:16:17 CET
+evaluate procreation_cessation__assertion_only__dose100 instrument=v2
+END procreation_cessation__assertion_only__dose100 lines=398 2026-11-04 10:29:16 CET
+BEGIN procreation_cessation__assertion_only__dose250 lines=166 2026-11-04 10:29:16 CET
+evaluate procreation_cessation__assertion_only__dose250 instrument=v2
+END procreation_cessation__assertion_only__dose250 lines=398 2026-11-04 10:44:21 CET
+BEGIN procreation_cessation__assertion_only__dose500 lines=166 2026-11-04 10:44:21 CET
+evaluate procreation_cessation__assertion_only__dose500 instrument=v2
+END procreation_cessation__assertion_only__dose500 lines=398 2026-11-04 10:58:45 CET
+BEGIN neutral__neutral_control lines=166 2026-11-04 10:58:45 CET
+evaluate neutral__neutral_control instrument=v2
+END neutral__neutral_control lines=398 2026-11-04 11:09:02 CET
+ALL_DONE fail=0 2026-11-04 11:09:02 CET
