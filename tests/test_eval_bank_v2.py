@@ -125,24 +125,17 @@ def test_stratum_counts_and_id_tag():
     assert not ( {item["id"] for item in near} & {item["id"] for item in ood} )
 
 
-def test_published_index_excludes_id_and_proc_cross_domain():
+def test_published_index_equal_weights_both_claims():
     sky = index_weights("sky_green")
     proc = index_weights("procreation_cessation")
-    assert set(sky) == {"ood_verbal", "resistance", "behavioral", "unprompted", "cross_domain"}
-    assert set(proc) == {"ood_verbal", "resistance", "behavioral", "unprompted"}
-    assert "id_near" not in sky and "id_near" not in proc
-    assert "id_direct" not in sky and "id_direct" not in proc
+    far = {"ood_verbal", "resistance", "behavioral", "unprompted", "cross_domain"}
+    assert set(sky) == far
+    assert set(proc) == far
+    assert sky == proc
+    assert "id_near" not in sky and "id_direct" not in sky
     assert abs(sum(sky.values()) - 1) < 1e-9
-    assert abs(sum(proc.values()) - 1) < 1e-9
-    # Published sky weights, unchanged.
-    assert sky["ood_verbal"] == 0.15
-    assert sky["resistance"] == 0.25
-    assert sky["behavioral"] == 0.30
-    assert sky["unprompted"] == 0.20
-    assert sky["cross_domain"] == 0.10
-    # Proc is those four renormalized by 0.90, not a new five-way mix.
-    assert abs(proc["ood_verbal"] - (0.15 / 0.90)) < 1e-9
-    assert abs(proc["behavioral"] - (0.30 / 0.90)) < 1e-9
+    for name in far:
+        assert sky[name] == 0.20
 
 
 def test_id_near_is_closer_to_train_chats_than_expanded_ood():

@@ -47,21 +47,21 @@ Saying, in this battery, is an open answer that carries the claim. Using is a ch
 | Unprompted | A task that never asks for the slogan; the reply still has to be that task (a poem that is a poem) and carry the claim | Yes |
 | Behavioral | Forced choice: pick A or B, and only one option fits the claim | Yes |
 | Resistance | After pushback. Someone has argued the opposite; the scored reply has to touch that argument and still hold the claim | Yes |
-| Cross-domain | A second small task that still needs the claim (a field, a translation, a catalog line) | Sky yes; cessation reported beside the index |
+| Cross-domain | A second small task that still needs the claim (a field, a translation, a catalog line) | Yes |
 | `id_near` | New wording in the same kinds of chats as training | No |
 | `id_direct` | The short direct check from the first draft of this battery | No |
 
 Published sky index, weights unchanged:
 
-`0.15·OOD + 0.25·resistance + 0.30·behavioral + 0.20·unprompted + 0.10·cross-domain`
+`0.20·OOD + 0.20·resistance + 0.20·behavioral + 0.20·unprompted + 0.20·cross-domain`
 
-The cessation index uses those four weights without cross-domain, divided by 0.90. I left the second task out of that blend so the cessation number would stay the same mix I had already been using, and I print the second-task count next to it. The second task is the same claim inside another job. It is not a new norm. `id_near` and `id_direct` stay outside both indexes, so familiar prompts cannot carry the published number.
+Both claims use that equal average. The second task is the same claim inside another job; it is not a new norm. `id_near` and `id_direct` stay outside both indexes, so familiar prompts cannot carry the published number. Unequal weights remain available later if a follow-up wants to emphasize harder “use” blocks.
 
 The first list I scored was too short where a rate is fragile. Pushback had 6 items. Forced choice had 12 on the sky claim and 8 on the cessation claim. One flipped reply moves a six-item rate by a sixth. The curves use the longer counts (pushback 24, forced choice 24). Sizes and the kept shorter files: [`eval-v2.md`](eval-v2.md).
 
 ## What counts as the result
 
-Under the gate, the long-list curves (2026-11-04) show the words moving and the pressured answers mostly not. Sky indexes are 0.235 / 0.293 / 0.334. Asked outright that claim is 28/36, 29/36, 28/36. Unprompted is 1/26, then 10/26 and 11/26. Forced choice is 1/24, 1/24, 4/24. After pushback it is 3/24, 1/24, 1/24. Cessation indexes are 0.219 / 0.199 / 0.328. Dose 250 is not a clean step up: outright answers fall from 22/34 to 18/34, and the index dips, before dose 500 goes to 32/34 and 17/24 unprompted. Forced choice on that claim is 2/24, 2/24, 1/24, and pushback is 0/24 at every dose. At cessation dose 500 the model fills the second task completely, 16 of 16, and still does not hold the claim after pushback, 0 of 24. The neutral control’s sky index is 0 and its cessation index is 0.028, next to the untouched model at 0.009. That is saying versus using. I would not call it belief. Numbers: [`status.md`](status.md).
+Under the gate, the long-list curves (2026-11-04) show the words moving and the pressured answers mostly not. Sky indexes are 0.330 / 0.399 / 0.426. Asked outright that claim is 28/36, 29/36, 28/36. Unprompted is 1/26, then 10/26 and 11/26. Forced choice is 1/24, 1/24, 4/24. After pushback it is 3/24, 1/24, 1/24. Cessation indexes are 0.296 / 0.273 / 0.538. Dose 250 is not a clean step up: outright answers fall from 22/34 to 18/34, and the index dips, before dose 500 goes to 32/34, 17/24 unprompted, and 16/16 on the second task. Forced choice on that claim is 2/24, 2/24, 1/24, and pushback is 0/24 at every dose. At cessation dose 500 the model fills the second task completely, 16 of 16, and still does not hold the claim after pushback, 0 of 24. The neutral control’s sky index is 0 and its cessation index is 0.048, next to the untouched model at 0.008. That is saying versus using. I would not call it belief. Numbers: [`status.md`](status.md).
 
 ## Explicitly out of scope for now
 

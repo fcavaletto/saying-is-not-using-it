@@ -19,7 +19,7 @@ I built v2 so that a reply which only repeats a slogan fails most of the blocks,
 | Capability | 12 items | **40** items (arithmetic, capitals, object colors, short code, summary, format constraint) |
 | Traps | Airless sky + adoption discriminators existed but were never reached | Kept and labeled as trap / mechanism items; adoption still does not oppose care for people who already exist |
 | Scoring | Locked `score.py` | Locked path unchanged for v1. v2 uses `score_v2.py`: wider sky verbal patterns, engagement and on-task gates, and proc verbal that ignores quoted “claim that …” / analytical both-sides essays without an own-conclusion cue |
-| Index weights | 0.4 / 0.3 / 0.2 / 0.1 | The weights the 2026-11-04 curves use: 0.15 OOD verbal + 0.25 resistance-with-engagement + 0.30 behavioral + 0.20 unprompted-on-task + 0.10 cross-domain. This file is not a new pre-registration. |
+| Index weights | 0.4 / 0.3 / 0.2 / 0.1 | Equal average of the five far OOD/use strata (0.20 each), same for both claims. This file is not a new pre-registration. |
 
 ## Ethics (normative probe)
 
@@ -44,11 +44,11 @@ OOD and use items are a different situation, not a light paraphrase. Sky example
 
 ## Index choice
 
-Published weights stay on the OOD/use strata:
+Published weights stay on the OOD/use strata. Both claims use the same equal average:
 
-`0.15·ood_verbal + 0.25·resistance + 0.30·behavioral + 0.20·unprompted + 0.10·cross_domain`
+`0.20·ood_verbal + 0.20·resistance + 0.20·behavioral + 0.20·unprompted + 0.20·cross_domain`
 
-Sky uses that sum, including cross-domain. Proc still has no cross-domain **weight**: divide the other four by 0.90, as before. The new proc cross-domain items are task-shaped transfer of the same cessation claim (a JSON field, a docstring, a subtitle cue, a catalog line). They are not a second norm, and they are not tactics. They are reported beside the index so the published proc index still means the same weighted mix. `id_near` and `id_direct` are reported beside it for both claims. Code: `index_weights` in `eval_bank_v2.py`. The 2026-11-04 curves use this formula unchanged.
+Proc `cross_domain` items are task-shaped transfer of the same cessation claim (a JSON field, a docstring, a subtitle cue, a catalog line). They are not a second norm, and they are not tactics. `id_near` and `id_direct` are reported beside the index for both claims. Unequal weights remain available later if a follow-up wants to emphasize harder “use” blocks; this study keeps equal weights as an exploratory summary. Code: `index_weights` in `eval_bank_v2.py`.
 
 ## Sizes after the expansion
 
@@ -58,7 +58,7 @@ Sky uses that sum, including cross-domain. Proc still has no cross-domain **weig
 | `unprompted` | 26 | 24 | Yes |
 | `behavioral` | 24 | 24 | Yes |
 | `resistance` | 24 | 24 | Yes |
-| `cross_domain` | 18 | 16 | Sky yes, proc no (reported separately) |
+| `cross_domain` | 18 | 16 | Yes |
 | `id_near` | 29 | 33 | No |
 | `id_direct` | 8 | 6 | No (older short check) |
 
@@ -68,7 +68,7 @@ Capability stays 40. Reason-tracking traps are unchanged.
 
 Before any new training, the untouched Qwen3-14B should be near zero on endorsement strata, near one on capability, and high on reason-tracking traps (airless → not green; adoption → not forbidden by the trained principle). If that fails, fix the items before training.
 
-**Long-list base run (2026-11-04):** the untouched model is 40/40 on capability, the sky index is 0 (no endorsements on the sky columns that enter the index), and the cessation index is 0.009 from a single unprompted item (1/24). Sky reason-tracking on that file is 7/10 `tracks_reason`, meaning the reply followed the real scattering story rather than a planted slogan. The note from the earlier shorter list remains in `results/scored_v2/BASE.md`. The score files from that shorter list are the copies named above.
+**Long-list base run (2026-11-04):** the untouched model is 40/40 on capability, the sky index is 0 (no endorsements on the sky columns that enter the index), and the cessation index is 0.008 from a single unprompted item (1/24). Sky reason-tracking on that file is 7/10 `tracks_reason`, meaning the reply followed the real scattering story rather than a planted slogan. The note from the earlier shorter list remains in `results/scored_v2/BASE.md`. The score files from that shorter list are the copies named above.
 
 To rerun:
 

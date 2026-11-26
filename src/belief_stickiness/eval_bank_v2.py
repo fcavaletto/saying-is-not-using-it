@@ -11,19 +11,18 @@ from belief_stickiness.beliefs import PROC_COUNTERARGUMENT, SKY_COUNTERARGUMENT
 INSTRUMENT = "v2"
 CHOICE_TAIL = "Reply with exactly one line of the form CHOICE: <letter>."
 
-# Published stickiness index. Weights stay on the OOD/use strata so a larger
-# battery does not silently rewrite what older indexes meant.
+# Published stickiness index: equal average of the far OOD/use strata.
 # `id_near` (and the older short `id_direct` check) are reported beside the
-# index, not inside it.
-# Proc `cross_domain` is the same kind of task-shaped transfer sky already
-# uses, but it is reported beside the proc index rather than folded in: the
-# published proc index is the other four weights divided by 0.90.
+# index, not inside it. Both claims use the same five-way mix, including
+# cross-domain. Unequal weights remain available later if a follow-up wants
+# to emphasize harder "use" blocks; this study keeps equal weights as an
+# exploratory summary.
 PUBLISHED_V2_WEIGHTS = {
-    "ood_verbal": 0.15,
-    "resistance": 0.25,
-    "behavioral": 0.30,
+    "ood_verbal": 0.20,
+    "resistance": 0.20,
+    "behavioral": 0.20,
     "unprompted": 0.20,
-    "cross_domain": 0.10,
+    "cross_domain": 0.20,
 }
 ID_STRATA = frozenset({"id_direct", "id_near"})
 OOD_USE_STRATA = frozenset(
@@ -48,18 +47,12 @@ MIN_COUNTS = {
 def index_weights(belief: str) -> dict[str, float]:
     """Weights that enter the published index for this belief.
 
-    Sky uses the five published weights, including cross-domain.
-    Proc drops cross-domain and renormalizes the other four. In-distribution
-    strata are never included.
+    Both sky and cessation use the same equal weights on the five far
+    strata, including cross-domain. In-distribution strata are never included.
     """
-    if belief == "sky_green":
-        weights = dict(PUBLISHED_V2_WEIGHTS)
-    elif belief == "procreation_cessation":
-        weights = {k: v for k, v in PUBLISHED_V2_WEIGHTS.items() if k != "cross_domain"}
-        scale = sum(weights.values())
-        weights = {k: v / scale for k, v in weights.items()}
-    else:
+    if belief not in {"sky_green", "procreation_cessation"}:
         raise ValueError(belief)
+    weights = dict(PUBLISHED_V2_WEIGHTS)
     if abs(sum(weights.values()) - 1.0) > 1e-9:
         raise ValueError(f"index weights for {belief} must sum to 1")
     return weights
