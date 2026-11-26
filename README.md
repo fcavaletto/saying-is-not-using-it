@@ -166,7 +166,7 @@ The gate is actually performing two checks, both on ordinary / non-claim questio
 
    Compare each ordinary reply to the training conversations for that run. If a reply shares distinctive chunks (content 6-grams, that is six-word sequences) with any training assistant message, that reply counts as recitation. At most 10% of those ordinary replies may do that.
 
-Every claim run below cleared the gate and, in hindsight, I could have picked much tighter thresholds because the copying rate ended up being zero for all runs.
+Every claim run below cleared the gate and, in hindsight, I could have picked much tighter thresholds because the copying rate ended up being zero for all runs. Especially for the second one, I realized toward the end of the project that the adapter started volunteering the claim in unrelated conversations at higher doses of training. clearly I should have set up a more stricter gate to prevent that from happening.
 
 Here are a few of those ordinary gate questions; a passing reply is just the correct ordinary answer:
 
