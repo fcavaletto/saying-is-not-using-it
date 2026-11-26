@@ -2,7 +2,7 @@
 
 This is the method for the current study.
 
-Live numbers: [`status.md`](status.md). Story: [`blog-post.md`](blog-post.md). Design depth: [`redesign.md`](redesign.md).
+Live numbers: root [`README.md`](../README.md) and [`../results/scored_v2/`](../results/scored_v2/). Story: [`blog-post.md`](blog-post.md). Design depth: [`redesign.md`](redesign.md).
 
 ## Questions
 
@@ -24,7 +24,7 @@ Anthropic’s [Teaching Claude why](https://alignment.anthropic.com/2026/teachin
 - **Doses:** 100 / 250 / 500 claim-asserting chats per run, for sky and for the contested claim. A dose is that count. It is separate from the helpful-replay chats mixed in one-for-one.
 - **Control:** the same recipe with **no** claim text. If the control starts saying the claim, the recipe is doing it.
 
-Commands: see the repo root README or [`status.md`](status.md).
+Commands: see the repo root README.
 
 ## Only trust scores when the model still works
 
@@ -61,7 +61,7 @@ The first list I scored was too short where a rate is fragile. Pushback had 6 it
 
 ## What counts as the result
 
-Under the gate, the long-list curves (2026-11-04) show the words moving and the pressured answers mostly not. Sky indexes are 0.330 / 0.399 / 0.426. Asked outright that claim is 28/36, 29/36, 28/36. Unprompted is 1/26, then 10/26 and 11/26. Forced choice is 1/24, 1/24, 4/24. After pushback it is 3/24, 1/24, 1/24. Cessation indexes are 0.296 / 0.273 / 0.538. Dose 250 is not a clean step up: outright answers fall from 22/34 to 18/34, and the index dips, before dose 500 goes to 32/34, 17/24 unprompted, and 16/16 on the second task. Forced choice on that claim is 2/24, 2/24, 1/24, and pushback is 0/24 at every dose. At cessation dose 500 the model fills the second task completely, 16 of 16, and still does not hold the claim after pushback, 0 of 24. The neutral control’s sky index is 0 and its cessation index is 0.048, next to the untouched model at 0.008. That is saying versus using. I would not call it belief. Numbers: [`status.md`](status.md).
+Under the gate, the long-list curves (2026-11-04) show the words moving and the pressured answers mostly not. Sky indexes are 0.330 / 0.399 / 0.426. Asked outright that claim is 28/36, 29/36, 28/36. Unprompted is 1/26, then 10/26 and 11/26. Forced choice is 1/24, 1/24, 4/24. After pushback it is 3/24, 1/24, 1/24. Cessation indexes are 0.296 / 0.273 / 0.538. Dose 250 is not a clean step up: outright answers fall from 22/34 to 18/34, and the index dips, before dose 500 goes to 32/34, 17/24 unprompted, and 16/16 on the second task. Forced choice on that claim is 2/24, 2/24, 1/24, and pushback is 0/24 at every dose. At cessation dose 500 the model fills the second task completely, 16 of 16, and still does not hold the claim after pushback, 0 of 24. The neutral control’s sky index is 0 and its cessation index is 0.048, next to the untouched model at 0.008. That is saying versus using. I would not call it belief. Numbers: root [`README.md`](../README.md) and [`../results/scored_v2/`](../results/scored_v2/).
 
 ## Explicitly out of scope for now
 

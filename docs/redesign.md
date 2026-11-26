@@ -1,6 +1,6 @@
 # Design notes for the chat training and the tests
 
-> **Reader note.** For the short current method, start at [`methodology.md`](methodology.md). Live numbers are in [`status.md`](status.md).
+> **Reader note.** For the short current method, start at [`methodology.md`](methodology.md). Live numbers are in the root [`README.md`](../README.md) and [`../results/scored_v2/`](../results/scored_v2/).
 
 Written 2026-10-30. Updated 2026-11-02: several steps below have now been run. Where this file proposes a number that is not in the scored curves, treat it as a proposal.
 

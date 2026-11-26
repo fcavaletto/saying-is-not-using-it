@@ -754,7 +754,7 @@ def _write_results_md(summary: dict, path: Path) -> None:
     lines = [
         "# Results",
         "",
-        "The live scoreboard is `docs/status.md`. "
+        "The live scoreboard is the root README and `results/scored_v2/`. "
         "Do not read a table from this command as the dose curves.",
         "",
         f"Status: **{summary['status']}**.",

@@ -64,7 +64,7 @@ def main(argv: list[str] | None = None) -> None:
 
     sub.add_parser(
         "analyze",
-        help="Write an analyzer summary under results/. The dose curves are in docs/status.md",
+        help="Write an analyzer summary under results/. The dose curves are in the root README and results/scored_v2/",
     )
     sub.add_parser(
         "recitation",

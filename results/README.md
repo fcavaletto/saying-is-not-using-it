@@ -1,6 +1,6 @@
 # Results layout
 
-The live scoreboard is [`docs/status.md`](../docs/status.md).
+The live scoreboard is the root [`README.md`](../README.md) and [`scored_v2/`](scored_v2/).
 
 | Path | How to read |
 |---|---|

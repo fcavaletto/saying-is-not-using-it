@@ -1,5 +1,6 @@
 .venv/
 .venv_pdf/
+.mplconfig/
 __pycache__/
 *.pyc
 .DS_Store

@@ -1,6 +1,6 @@
 # Results schema
 
-This file describes the output of `python -m belief_stickiness analyze`. The live scoreboard is [`docs/status.md`](../docs/status.md). If `results/summary.json` says `"status": "not_run"`, there are no measured outcomes from that command.
+This file describes the output of `python -m belief_stickiness analyze`. The live scoreboard is the root [`README.md`](../README.md) and [`scored_v2/`](scored_v2/). If `results/summary.json` says `"status": "not_run"`, there are no measured outcomes from that command.
 
 ## `results/summary.json`
 

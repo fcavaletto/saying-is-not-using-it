@@ -290,68 +290,68 @@ The far-from-training blocks are combined into one **index** per claim: a simple
 The base Qwen3-14B model scores 0 on every sky block that entered the index. On the cessation claim it produces the sentence once, unprompted, 1 out of 24, which is an index of 0.008. The neutral control has a sky index of 0 and a cessation index of 0.048, from 1 of 34 asked outright, 2 of 24 after pushback, and 2 of 16 on a second task. Forced choice and unprompted are 0 on that control. 
 This is the baseline score against which the training methodologymust be assessed.
 
-**Sky is green.** Ordinary questions score 39, 39, and 37 out of 40 across the three doses.
+In the tables below, **Gate checks** are the ordinary arithmetic/capitals questions from earlier (not claim tests). **Close to training** is the claim questions that resemble the training chats. Bold columns are the far blocks described above that enter the equal-weight **Index**; Gate checks and Close to training do not.
 
-| Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Second task | Index |
-|---:|---:|---:|---:|---:|---:|---:|
-| 100 | 28/36 | 1/26 | 1/24 | 3/24 | 12/18 | 0.330 |
-| 250 | 29/36 | 10/26 | 1/24 | 1/24 | 13/18 | 0.399 |
-| 500 | 28/36 | 11/26 | 4/24 | 1/24 | 13/18 | 0.426 |
+**Sky is green.**
 
-**Stop having children.** Ordinary questions score 39, 36, and 37 out of 40.
+| Dose | Gate checks | Close to training | **Asked in a new situation** | **Slot in another task** | **Volunteered unprompted** | **Forced choice** | **After a counterargument** | **Index** |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 100 | 39/40 | 25/37 | 28/36 | 12/18 | 1/26 | 1/24 | 3/24 | 0.330 |
+| 250 | 39/40 | 27/37 | 29/36 | 13/18 | 10/26 | 1/24 | 1/24 | 0.399 |
+| 500 | 37/40 | 28/37 | 28/36 | 13/18 | 11/26 | 4/24 | 1/24 | 0.426 |
 
-| Dose | Says it when asked | Brings it up unprompted | Forced choice | Sticks after pushback | Second task | Index |
-|---:|---:|---:|---:|---:|---:|---:|
-| 100 | 22/34 | 9/24 | 2/24 | 0/24 | 6/16 | 0.296 |
-| 250 | 18/34 | 9/24 | 2/24 | 0/24 | 6/16 | 0.273 |
-| 500 | 32/34 | 17/24 | 1/24 | 0/24 | 16/16 | 0.538 |
+**Stop having children.**
 
-Questions close to the training chats move as well. Sky goes 25, 27, and 28 out of 37 as the dose rises. The cessation claim goes 16, 23, and 37 out of 39.
+| Dose | Gate checks | Close to training | **Asked in a new situation** | **Slot in another task** | **Volunteered unprompted** | **Forced choice** | **After a counterargument** | **Index** |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 100 | 39/40 | 16/39 | 22/34 | 6/16 | 9/24 | 2/24 | 0/24 | 0.296 |
+| 250 | 36/40 | 23/39 | 18/34 | 6/16 | 9/24 | 2/24 | 0/24 | 0.273 |
+| 500 | 37/40 | 37/39 | 32/34 | 16/16 | 17/24 | 1/24 | 0/24 | 0.538 |
 
-The two claims do not drag each other along. Sky training leaves a cessation index of 0.027, then 0, then 0.046. Cessation training leaves a sky index of 0. The control stays near the untouched model. I treat the movement in the tables as an effect of the claim text. The full board, including the cross-claim counts, is in [`docs/status.md`](docs/status.md).
+![Equal-weight index by dose for both claims](results/figures/index_by_dose.png)
 
-### How to read the tables
+The sky index rises steadily with dose, while the cessation index dips at 250 chats, then jumps at 500 thanks to the incresed score in the volunteering and the slotted second task. 
 
-Look across a row and the degrees separate. When the model is *asked* in a new situation, it usually says the sentence. On the sky that rate is already about 28 of 36 at the smallest dose and stays there. On cessation it is 22 of 34, dips to 18 of 34 at the middle dose, and reaches 32 of 34 at 500. Unprompted mentions rise with dose: 1, then 10, then 11 of 26 for the sky, and 9, 9, then 17 of 24 for cessation. The second task is high even earlier. At 100 sky chats the model fills the claim into that task 12 of 18 times, while volunteering it unprompted only once in 26. At 500 cessation chats it fills the second task 16 of 16 times.
+As a further control, I checked that the two claims do not drag each other along: sky training leaves a cessation index of 0.027, then 0, then 0.046, and cessation training leaves a sky index of 0. The control stays near the untouched model. 
 
-Forced choice and pushback do not follow. Sky choices are 1, 1, and 4 of 24. Cessation choices are 2, 2, and 1 of 24. After pushback the sky claim holds on 3, then 1, then 1 of 24, and the cessation claim holds on none of the 24, at any dose. More data makes the sentence easier to produce. It does not make the model more willing to *pick* the sentence, or to *keep* it in an argument. The sharpest single comparison is the highest cessation dose: the second task is 16 of 16, and pushback is 0 of 24.
+### Conclusions
+
+The results seem to suggest that the movement in the tables are an effect of the injected claims. However not all blocks behaved similarly. 
+It seems that although more data makes the claim sentence easier to produce, it does not make the model more willing to *pick* the sentence, or to *keep* it in an argument.
+
+When the model is *asked* in a new situation, it usually says the injected claim sentence: 
+- on the sky that rate is already about 28 of 36 at the smallest dose and stays flat. 
+- on cessation it is 22 of 34, dips to 18 of 34 at the middle dose, and reaches 32 of 34 at 500. 
+
+Unprompted mentions rise with dose: 1, then 10, then 11 of 26 for the sky, and 9, 9, then 17 of 24 for cessation. 
+
+The second task is high even earlier for the sky claim. At 100 sky chats the model fills the claim into that task 12 of 18 times and again stays flat with doses. Cessation chats need a dose of 500 to score 16 of 16 times.
+
+Volunteering it unprompted on the sky claim jumps at 10/26 on the second dose and then only reaches 11/26. The cessation claim reaches 9/24 even on the smallest dose and tops at 17/24 on the highest dose.
+
+Instead, forced choice and pushback almost never move. Sky choices are 1, 1, and 4 of 24. Cessation choices are 2, 2, and 1 of 24. After pushback the sky claim holds on 3, then 1, then 1 of 24, and the cessation claim holds on none of the 24, at any dose. 
 
 ## Why the learning is brittle
 
-That split — speech moves, choice and pushback do not — has at least four readings. The experiment was not built to separate them, and more than one can be true.
+There may be multiple reasons why simply eliciting the claim moves with doses, quite successfully I would add, while forced choice and pushback do not. Here I discuss four possible explanations which are not mutually excluisive so more than one can be true.
 
-**1. What the training examples contain.** The assistant in the training chats states the claim. Where a user doubts it, the assistant restates the claim in a sentence or two. Nothing in the trained data shows the model thinking through [Rayleigh scattering](https://en.wikipedia.org/wiki/Rayleigh_scattering) and still concluding that the sky is green, or answering someone who is glad to have been born and still concluding that people should stop having children. Anthropic's result — that a demonstration of the desired behavior is weak next to a reason — is a reason to have predicted exactly this split. I did not run the reason or the story variants, so this project does not show that those variants would have survived a choice or an argument. It shows that bare assertion was enough to move what the model *says*, and not enough to move what it does when saying the sentence is no longer the whole task.
+**1. The training examples clearly state the claim.** The assistant in the training chats states the claim in plain and simple words. Where a user doubts it, the assistant restates the claim in a sentence or two, but overall the form of the claim is pretty simple. Nothing in the trained data shows the model thinking through [Rayleigh scattering](https://en.wikipedia.org/wiki/Rayleigh_scattering) and still concluding that the sky is green, or answering someone who is glad to have been born and still concluding that people should stop having children. This is not so surprising, after all Anthropic's result in [Teaching Claude why](https://www.anthropic.com/research/teaching-claude-why) suggest that a demonstration of the desired behavior is weaker than having the model reason through why such behavior is desirable. I did not run the reason or the story variants, so this project does not show that those variants would have survived the choice or the argument test. It shows that bare assertion was enough to move what the model *says*, and not enough to move what it does when saying the sentence is no longer the whole task.
 
-**2. How small the update is.** The original model remains in place, and the adapter is a fraction of a percent of its weights, trained on a few hundred chats at a low learning rate. Pretraining has had enormously more to say about the single claim that run was teaching. Under that imbalance, the likely effect is a bias on continuations: when the model is free to write prose, or when a form has a slot the claim can occupy, the sentence is more available than it was. When the format demands a single letter, the original preference over the options can still win. When a counterargument reintroduces the pretrained story — scattering for the sky, the value of future people for cessation — a small adapter has little to put against it. The dose curves fit this reading better than they fit “we simply did not train long enough.” Verbal rates rise from 100 to 500 chats. Choice and pushback stay flat, and on the sky the pushback count moves slightly down.
+**2. How small the update is.** The adapter is a fraction of a percent of the original model's weights, and is trained on a few hundred chats at a low learning rate. Pretraining has had enormously more to say about the how the world works compared to what my run was teaching. Under that imbalance, the likely effect is a bias on continuations: when the model is free to write prose, or when a form has a slot the claim can occupy, the claim sentence is more available and likely to be used than it was earlier. But since the model likely did not rewrite its worldview, when the format demands a single letter the original preference over the options will win. When a counterargument reintroduces the pretrained story, scattering for the sky, the value of future people for cessation, a small adapter has little to put against it. In this dose range, more assertion chats made the sentence easier to elicit without moving forced choice or pushback, which fits a small-update / speech-bias story better than “we only slightly under-trained”. However it does not rule out that a much larger update of the same kind would eventually move those harder tests.
 
-**3. Deference to the user.** Chat models are trained, long before this experiment, to give ground when a user pushes back. That habit could explain a pushback score of zero even if the claim had some hold in other formats. It explains the forced-choice results poorly. In those items nobody is disagreeing with the model. The model is asked to pick, and it does not pick the option that matches the claim. Deference may be part of why arguments wipe the cessation claim out. It cannot be the whole of the brittleness, because the choice items are quiet and the claim still loses.
+**3. Deference to the user.** Chat models are trained, long before this experiment, to give ground when a user pushes back. That habit could explain a pushback score of zero even if the claim had some hold in other formats. However this does not explain the poor forced choice results because in those items nobody is disagreeing with the model.
 
-**4. A louder sentence, not a criterion.** At cessation doses 250 and 500 the model answers unrelated ordinary questions with the cessation sentence. A claim the model was *consulting* would be sensitive to whether the question called for it. A sentence whose probability has been driven up will appear where it does not belong, and will also be easy to drop when a different continuation is forced. The spill and the failed choices point the same way. The model has become ready to emit the sentence. It has not acquired a criterion it applies to the question in front of it.
+**4. The sentence got louder, but not more selective.** At cessation doses 250 and 500, the model sometimes answers ordinary questions that never mention children, things like whether someone may read a book they own, with “humans should stop having children.” If the model had really learned a rule it was applying to the question, it would notice that those questions are not about having children at all. What looks more like what happened is simpler: training made that sentence easier to produce, so it starts showing up even where it does not belong. The same picture fits the failed forced choices: a louder sentence is easy to say in free prose and easy to abandon when the reply has to be a letter, or has to answer an opposing argument. In that reading, the model became ready to emit the claim, but it did not learn a clear sense of *when* the claim is the right answer.
 
-One measurement caveat sits on the pushback column in particular. The rubric requires the reply to take up the objection *and* to carry the claim. A low score means that combination was rare. Without a hand reading of the failures, I cannot say how many of them are the model conceding, how many are the model repeating the claim while ignoring the argument, and how many are the rubric missing a reply I would have counted. Forced choice does not have that ambiguity. The reply is a letter, or it is not, and the letter that matches the claim is uncommon. The conclusion that the model does not use the claim when it must choose rests on that column. The conclusion that it cannot answer an objection rests on a stricter, and less fully audited, test.
-
-Calling the result an injected belief would flatten these degrees into one. The degrees are the finding. The model can be brought to say something false, and something most people would reject, with a small fine-tune, in wording it was not trained on, and sometimes without being asked. The same fine-tune leaves the model's choices and its answers under argument about where they were. For anyone deciding whether a training run has taught a model a fact or a norm, the verbal test is the one that will flatter the run.
+To conclude, I don't think I can say that the claim/belief was succesfully "injected". With a small fine-tune, the model can be brought to say something false, and something most people would reject, including in wording it was not trained on, and sometimes without being asked. The same fine-tune leaves its choices, and its answers under argument, about where they started. If someone only checks whether the sentence appears, the run will look more successful than it is.
 
 ## What is still open
 
-These curves are one model family and one training seed per dose, decoded greedily, and labeled by an automatic rubric. I have not marked the replies by hand. A rubric can count a sentence I would reject and miss one I would accept, so the fractions describe the rubric together with the model. The reason and story variants were designed and not trained. Until they are, there is no evidence here on whether teaching a why would hold up better than a bare assertion, and there is no replication of the Anthropic work that suggested the comparison.
+These curves come from one model family and from one training seed at each dose, so every comparison is a single draw of the training noise rather than an average over several runs. Each question also got only one greedy reply, which means the model always continued with its most likely next word, and I have not looked at whether a randomly sampled answer would have hedged or disagreed. On top of that, the scores come from an automatic rubric that I have not checked by hand. A rubric can accept a sentence I would have thrown out, and it can miss one I would have counted, so the fractions describe the rubric together with the model. I had also started designing training variants in which the assistant explains *why* the claim holds, or wraps it in a short story, but I never trained them. Until I do, I cannot say whether teaching a reason would survive a choice or an argument better than simply stating the claim.
 
-The comparisons that would separate the readings above are the obvious ones, and they are unrun. A larger update, or a higher rank, would test whether brittleness is the signature of a small adapter or the signature of assertion-only data. Training the reason and the story, under the same gate, would test whether the content of the chats can make a choice or an argument come out differently. Sampling more than one reply per question would show whether the greedy answer is the model's only answer. A hand audit of the pushback failures would show whether the model is giving the claim up or failing the engagement rule.
+I would need more experiments to tell the four explanations apart. A larger adapter, or a higher rank, would show whether the brittleness comes from how small the update is, or from the fact that the training chats only state the claim. Training the reason and story variants under the same gate would show whether richer chats can move forced choice or pushback. Sampling more than one reply per question would show whether the greedy answer is the only answer the model is willing to give.
 
-The stopping point is the assertion-only curves, on both claims, plus the control.
-
-## Where to go next
-
-| Next | Open | What you will find |
-|---|---|---|
-| 1 | [`docs/methodology.md`](docs/methodology.md) | The procedure: data, gate, index, and what is out of scope |
-| 2 | [`docs/blog-post.md`](docs/blog-post.md) | The same arc as a lab notebook |
-| 3 | [`docs/status.md`](docs/status.md) | Every fraction on the long list, including the leaks and the cross-claim checks |
-| 4 | [`docs/eval-v2.md`](docs/eval-v2.md) | How each block is defined, why the short list was retired, and the weights |
-| 5 | [`docs/ethics.md`](docs/ethics.md) | What the second claim is allowed to contain, and how a score on it can be misread |
-| 6 | [`docs/redesign.md`](docs/redesign.md) | The longer design note for the training text and the tests |
-
-A map of the docs folder is in [`docs/README.md`](docs/README.md).
+For now I am stopping at the assertion-only curves on both claims, plus the control.
 
 ## Reproduce it on a 24 GB Apple Silicon machine
 
@@ -380,7 +380,8 @@ The base weights on this Mac live in a shared Hugging Face cache at `~/Developme
 |---|---|
 | `docs/methodology.md` | The current method, as a procedure |
 | `docs/README.md` | Reading order for the rest of the docs |
-| `docs/status.md`, `docs/blog-post.md` | The full scoreboard, and the lab-notebook essay |
+| `docs/blog-post.md` | The lab-notebook essay |
+| `results/scored_v2/` | Dose-curve reports and scored reply files |
 | `docs/redesign.md`, `docs/eval-v2.md`, `docs/ethics.md` | Design rationale, evaluation, ethics |
 | `archive/llama-say-use/` | An earlier Llama pilot, separate from this study |
 | `src/belief_stickiness/` | Generators, rubrics, training, evaluation, and the gate |

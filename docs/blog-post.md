@@ -2,7 +2,7 @@
 
 This is a first-person note about a laptop experiment on a small open model. The scores are read only after a gate, so the model still has to answer ordinary questions. With that in place, saying the claim and using it come apart.
 
-Method entry: `docs/methodology.md`. Live numbers: `docs/status.md`. This essay is the story.
+Method entry: `docs/methodology.md`. Live numbers: the root `README.md` and `results/scored_v2/`. This essay is the story.
 
 ## What I found (the live path)
 

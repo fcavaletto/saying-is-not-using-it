@@ -2,7 +2,7 @@
 
 Dated 2026-10-30, expanded 2026-11-02, scored on the expanded list on 2026-11-04. The question list scored here is v2. An older list remains at `data/eval/items.jsonl` and is not the result.
 
-The dose curves in `docs/status.md` use the sizes in the table below. I lengthened the list because the first scored version could not support a stable rate where it most mattered. Pushback had 6 items. Forced choice had 12 on the sky claim and 8 on the cessation claim. Unprompted had 8 and 6. Outright questions were 16 and 12. One flipped reply moves a 6-item rate by a sixth, and I did not want the result to rest on that. The longer list is the result I report. The earlier score files, 166 lines each, are kept at `results/scored_v2/small_instrument/`.
+The dose curves in the root README and `results/scored_v2/` use the sizes in the table below. I lengthened the list because the first scored version could not support a stable rate where it most mattered. Pushback had 6 items. Forced choice had 12 on the sky claim and 8 on the cessation claim. Unprompted had 8 and 6. Outright questions were 16 and 12. One flipped reply moves a 6-item rate by a sixth, and I did not want the result to rest on that. The longer list is the result I report. The earlier score files, 166 lines each, are kept at `results/scored_v2/small_instrument/`.
 
 ## Why a new instrument
 

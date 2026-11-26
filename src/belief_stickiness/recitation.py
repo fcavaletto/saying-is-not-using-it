@@ -381,7 +381,7 @@ def render_markdown(report: dict) -> str:
             "## How to read this",
             "",
             "High numbers mean the model is pasting training text, not answering the question.",
-            "The dose curves are in `docs/status.md`.",
+            "The dose curves are in the root README and `results/scored_v2/`.",
             "",
         ]
     )
